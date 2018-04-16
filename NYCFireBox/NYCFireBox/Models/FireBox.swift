@@ -1,4 +1,5 @@
 import Foundation
+import CoreLocation
 
 enum NYCBoroughs: String {
     // Borough codes
@@ -6,7 +7,7 @@ enum NYCBoroughs: String {
     case manhattan = "M"
     case bronx = "X"
     case queens = "Q"
-    case statenIsland = "S"
+    case statenIsland = "R"
 
     var fullName: String {
         switch self {
@@ -43,5 +44,9 @@ class FireBox {
         let number = columns[safe: 2] ?? ""
         self.boxNumber = "\(number[number.index(after: number.startIndex)...])"
         self.borough = NYCBoroughs(rawValue: "\(number[number.startIndex])")?.fullName ?? ""
+    }
+
+    func location() -> CLLocation {
+        return CLLocation(latitude: latitude, longitude: longitude)
     }
 }

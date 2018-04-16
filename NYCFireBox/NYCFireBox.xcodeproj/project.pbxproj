@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
+		B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96192812084D7E1001F54BD /* FireBoxCell.swift */; };
 		B9E7C3E32084B902005C4BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */; };
 		B9E7C3E52084B902005C4BC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E42084B902005C4BC8 /* ViewController.swift */; };
 		B9E7C3E82084B902005C4BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E62084B902005C4BC8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		B961927E2084CCAC001F54BD /* CollectionsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsExt.swift; sourceTree = "<group>"; };
+		B96192812084D7E1001F54BD /* FireBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxCell.swift; sourceTree = "<group>"; };
 		B9E7C3DF2084B902005C4BC8 /* NYCFireBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCFireBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9E7C3E42084B902005C4BC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B96192802084D7C3001F54BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B96192812084D7E1001F54BD /* FireBoxCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B9E7C3D62084B902005C4BC8 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		B9E7C3E12084B902005C4BC8 /* NYCFireBox */ = {
 			isa = PBXGroup;
 			children = (
+				B96192802084D7C3001F54BD /* Views */,
 				B961927D2084CC97001F54BD /* Extensions */,
 				B9E7C3F72084BBC5005C4BC8 /* Models */,
 				B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */,
@@ -172,6 +183,7 @@
 			files = (
 				B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */,
 				B9E7C3E52084B902005C4BC8 /* ViewController.swift in Sources */,
+				B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */,
 				B9E7C3E32084B902005C4BC8 /* AppDelegate.swift in Sources */,
 				B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */,
 			);

@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
         tableView.separatorStyle = .none
-        showNoResult(true)
     }
 
     private func getLocations() {
@@ -39,20 +38,19 @@ class ViewController: UIViewController {
         }
     }
 
-    private func shouldShowResults() -> Bool {
-        return !(searchController.searchBar.text?.isEmpty ?? true)
-    }
-
     private func showNoResult(_ shouldShow: Bool) {
-        let rect = CGRect(origin: CGPoint(x: 0,y :0),
-                          size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-        let messageLabel = UILabel(frame: rect)
-        messageLabel.text = "No results"
-        messageLabel.textColor = .gray
-        messageLabel.textAlignment = .center
-        messageLabel.adjustsFontSizeToFitWidth = true
-
-        tableView.backgroundView = messageLabel;
+        if shouldShow {
+            let rect = CGRect(origin: CGPoint(x: 0,y :0),
+                              size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            let messageLabel = UILabel(frame: rect)
+            messageLabel.text = "No results"
+            messageLabel.textColor = .gray
+            messageLabel.textAlignment = .center
+            messageLabel.adjustsFontSizeToFitWidth = true
+            tableView.backgroundView = messageLabel;
+        } else {
+            tableView.backgroundView = nil
+        }
     }
 
     private func clearSearch() {
@@ -105,7 +103,8 @@ extension ViewController: UISearchResultsUpdating {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shouldShowResults() ? filteredBoxes.count : 0
+        showNoResult(filteredBoxes.isEmpty)
+       return filteredBoxes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

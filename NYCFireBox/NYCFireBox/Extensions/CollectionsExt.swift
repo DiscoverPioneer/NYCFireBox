@@ -5,4 +5,3 @@ extension Collection {
         return (startIndex..<endIndex).contains(index) ? self[index] : nil
     }
 }
-

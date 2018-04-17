@@ -13,7 +13,6 @@ class FireBoxCell: UITableViewCell {
         addressLabel.text = box.address + "\n" + box.borough
         mapView.layer.borderColor = UIColor.gray.cgColor
 
-
         let pin = MKPointAnnotation()
         pin.title = String(describing: box.boxNumber)
         pin.coordinate = box.location().coordinate

@@ -9,6 +9,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupViews()
         getLocations()
     }
@@ -36,6 +37,14 @@ class ViewController: UIViewController {
         for row in rows ?? [] {
             fireBoxes.append(FireBox(string: row))
         }
+    }
+
+    private func setupNavigationBar() {
+        let infoButton = UIBarButtonItem(title: "Info",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(onInfoButton(_:)))
+        self.navigationItem.leftBarButtonItem = infoButton
     }
 
     private func showNoResult(_ shouldShow: Bool) {
@@ -92,6 +101,46 @@ class ViewController: UIViewController {
         mapItem.name = box.address
 
         MKMapItem.openMaps(with: [mapItem], launchOptions: options)
+    }
+
+    // MARK: Actions
+    @objc private func onInfoButton(_ sender: UIBarButtonItem) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let contact = UIAlertAction(title: "Contact Us", style: .default) { [weak self] (action) in
+            self?.open(email: InfoURL.contact.rawValue)
+        }
+
+        let website = UIAlertAction(title: "Website", style: .default) { [weak self] (action) in
+            self?.open(url: InfoURL.website.rawValue)
+        }
+
+        let liveIncidents = UIAlertAction(title: "Live Incidents", style: .default) { [weak self] (action) in
+            self?.open(url: InfoURL.liveIncidents.rawValue)
+        }
+
+        let mobile = UIAlertAction(title: "Mobile MDT", style: .default) { [weak self] (action) in
+            self?.open(url: InfoURL.mobileMDT.rawValue)
+        }
+
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        actionSheet.addAction(contact)
+        actionSheet.addAction(website)
+        actionSheet.addAction(liveIncidents)
+        actionSheet.addAction(mobile)
+        actionSheet.addAction(cancel)
+        present(actionSheet, animated: true, completion: nil)
+    }
+
+    private func open(url: String) {
+        guard let url = URL(string: url) else { return }
+        UIApplication.shared.open(url)
+    }
+
+    private func open(email: String) {
+        if let url = URL(string: "mailto:\(email)") {
+            UIApplication.shared.open(url)
+        }
     }
 }
 

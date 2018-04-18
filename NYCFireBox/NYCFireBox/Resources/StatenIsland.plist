@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Eng.151 Lad. 76 Thawing App. 63</string>
+		<key>address</key>
+		<string> 7219 Amboy Rd.</string>
+		<key>coordinate</key>
+		<string>40.512684, -74.238855</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.152 Bat. 21 Foam 152 </string>
+		<key>address</key>
+		<string>256 Hylan Blvd.</string>
+		<key>coordinate</key>
+		<string>40.611657, -74.070773</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.153 Lad. 77 </string>
+		<key>address</key>
+		<string>74 Broad St.</string>
+		<key>coordinate</key>
+		<string>40.625184, -74.077717</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.154 Brush Fire 4, Foam 154 </string>
+		<key>address</key>
+		<string>3730 Victory Blvd.</string>
+		<key>coordinate</key>
+		<string>40.597923, -74.181003</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.155 Lad. 78 </string>
+		<key>address</key>
+		<string>14 Brighton Ave.</string>
+		<key>coordinate</key>
+		<string>40.63777, -74.087641</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.156 Brush Fire 3 </string>
+		<key>address</key>
+		<string>412 Broadway</string>
+		<key>coordinate</key>
+		<string>40.631073, -74.116572</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.157 Lad. 80 </string>
+		<key>address</key>
+		<string>1573 Castleton Ave.</string>
+		<key>coordinate</key>
+		<string>40.635903, -74.135738</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.158 </string>
+		<key>address</key>
+		<string>65 Harbor Rd.</string>
+		<key>coordinate</key>
+		<string>40.635352, -74.160239</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.159 Sat.5 </string>
+		<key>address</key>
+		<string>1592 Richmond Rd.</string>
+		<key>coordinate</key>
+		<string>40.590916, -74.100861</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.160 Div. 8, Res. 5, Tac.2 </string>
+		<key>address</key>
+		<string>1850 Clove Rd.</string>
+		<key>coordinate</key>
+		<string>40.607309, -74.089143</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.161 Lad. 81 Brush Fire 5 </string>
+		<key>address</key>
+		<string>278 McClean Ave.</string>
+		<key>coordinate</key>
+		<string>40.596825, -74.070141</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.162 Lad. 82 Bat. 23 </string>
+		<key>address</key>
+		<string>256 Nelson Ave.</string>
+		<key>coordinate</key>
+		<string>40.543292, -74.147027</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.163 Lad. 83 Purple K Unit 163 </string>
+		<key>address</key>
+		<string>875 Jewett Ave.</string>
+		<key>coordinate</key>
+		<string>40.615341, -74.131117</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.164 Lad. 84 Brush Fire 1 </string>
+		<key>address</key>
+		<string>1560 Drumgoole Rd. West</string>
+		<key>coordinate</key>
+		<string>40.535468, -74.196233</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.165 Lad 85 </string>
+		<key>address</key>
+		<string>3067 Richmond Rd.</string>
+		<key>coordinate</key>
+		<string>40.575823, -74.123632</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.166 Lad 86 Brush Fire 2 </string>
+		<key>address</key>
+		<string>1400 Richmond Ave.</string>
+		<key>coordinate</key>
+		<string>40.614355, -74.157821</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.167 Lad. 87 Foam 167 </string>
+		<key>address</key>
+		<string>345 Annadale Rd.</string>
+		<key>coordinate</key>
+		<string>40.554430, -74.176081</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad. 79 Bat.22 </string>
+		<key>address</key>
+		<string>1189 Castleton Ave.</string>
+		<key>coordinate</key>
+		<string>40.634010, -74.122251</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Engine 168</string>
+		<key>address</key>
+		<string>1100 Veterans Rd. East</string>
+		<key>coordinate</key>
+		<string>40.553880, -74.213233</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Marine 9 </string>
+		<key>address</key>
+		<string>355 Front St</string>
+		<key>coordinate</key>
+		<string>40.62993,-74.072368</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Oceanic Hook &amp; Ladder</string>
+		<key>address</key>
+		<string>4010 victory blvd</string>
+		<key>coordinate</key>
+		<string>40.593247,-74.187781</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Richmond Eng. Co 1 VFD</string>
+		<key>address</key>
+		<string>3664 Richmond Rd</string>
+		<key>coordinate</key>
+		<string>40.571949,-74.143465</string>
+	</dict>
+</array>
+</plist>

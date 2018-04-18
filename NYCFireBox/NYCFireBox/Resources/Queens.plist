@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Eng. 251 </string>
+		<key>address</key>
+		<string>254-20 Union Turnpike</string>
+		<key>coordinate</key>
+		<string>40.7439014,-73.7158478</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 258 Lad. 115 </string>
+		<key>address</key>
+		<string>10-40 47th Ave.</string>
+		<key>coordinate</key>
+		<string>40.7451838, -73.9515781</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 259 Lad. 128 Bat. 45 </string>
+		<key>address</key>
+		<string>33-51 Greenpoint Ave.</string>
+		<key>coordinate</key>
+		<string>40.7362223, -73.9329794</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 260 Foam 260 </string>
+		<key>address</key>
+		<string>11 - 15 37th Ave.</string>
+		<key>coordinate</key>
+		<string>40.7595648, -73.9402226</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 262</string>
+		<key>address</key>
+		<string> 30-89 21 St.</string>
+		<key>coordinate</key>
+		<string>40.76753, -73.9292339</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 263 Lad. 117 </string>
+		<key>address</key>
+		<string>42-06 Astoria Blvd.</string>
+		<key>coordinate</key>
+		<string>40.7685147, -73.9087882</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 264 Lad. 134 Eng.328 </string>
+		<key>address</key>
+		<string>16-15 Central Ave.</string>
+		<key>coordinate</key>
+		<string>40.604503, -73.752285</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 265 Lad. 121 Bat. 47 </string>
+		<key>address</key>
+		<string>303 Beach 49 St.</string>
+		<key>coordinate</key>
+		<string>40.5933774, -73.7796852</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 266 Brush Fire 7 </string>
+		<key>address</key>
+		<string>92-20 Rockaway Beach Blvd.</string>
+		<key>coordinate</key>
+		<string>40.5721697, -73.8573324</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 268 Lad. 137 </string>
+		<key>address</key>
+		<string>257 Beach 116th St.</string>
+		<key>coordinate</key>
+		<string>40.58069, -73.838264</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 273 Lad. 129 </string>
+		<key>address</key>
+		<string>40-18 Union St.</string>
+		<key>coordinate</key>
+		<string>40.759876, -73.826577</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 274 Bat. 52 </string>
+		<key>address</key>
+		<string>41-20 Murray St.</string>
+		<key>coordinate</key>
+		<string>40.762476, -73.812914</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 275 Lad. 133 </string>
+		<key>address</key>
+		<string>111-36 Merrick Blvd.</string>
+		<key>coordinate</key>
+		<string>40.69345, -73.781083</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 285 Lad. 142 </string>
+		<key>address</key>
+		<string>103-17 98 St.</string>
+		<key>coordinate</key>
+		<string>40.6824949, -73.8421146</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 286 Lad. 135 </string>
+		<key>address</key>
+		<string>66-44 Myrtle Ave.</string>
+		<key>coordinate</key>
+		<string>40.701214, -73.886629</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 287 Lad.136, Bat. 46 </string>
+		<key>address</key>
+		<string>86-53 Grand Ave.</string>
+		<key>coordinate</key>
+		<string>40.736421, -73.878851</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 289 Lad. 138 </string>
+		<key>address</key>
+		<string>97-28 43rd Ave.</string>
+		<key>coordinate</key>
+		<string>40.7489473, -73.8568591</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 291 Lad. 140 </string>
+		<key>address</key>
+		<string>56-07 Metropolitan Ave.</string>
+		<key>coordinate</key>
+		<string>40.7129421, -73.906705</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 292 Rescue 4 </string>
+		<key>address</key>
+		<string>64- 18 Queens Blvd.</string>
+		<key>coordinate</key>
+		<string>40.740667, -73.900988</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 293 Thawing App. 65 </string>
+		<key>address</key>
+		<string>89-40 87 St.</string>
+		<key>coordinate</key>
+		<string>40.688597, -73.856055</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 294 Lad. 143 </string>
+		<key>address</key>
+		<string>101-02 Jamaica Ave.</string>
+		<key>coordinate</key>
+		<string>40.694698, -73.84615</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 295, Lad. 144 </string>
+		<key>address</key>
+		<string>12-49 149 St.</string>
+		<key>coordinate</key>
+		<string>40.7627394, -73.8161821</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 297 Lad. 130 </string>
+		<key>address</key>
+		<string>119-11 14th Rd.</string>
+		<key>coordinate</key>
+		<string>40.785008, -73.848043</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 298 Lad. 127 Bat. 50 </string>
+		<key>address</key>
+		<string>153- 11 Hillside Ave.</string>
+		<key>coordinate</key>
+		<string>40.707595, -73.80416</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 299 Lad. 152 </string>
+		<key>address</key>
+		<string>61 -20 Utopia Parkway</string>
+		<key>coordinate</key>
+		<string>40.7381529, -73.793348</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 301 Lad. 150 </string>
+		<key>address</key>
+		<string>91-02 197th Street.</string>
+		<key>coordinate</key>
+		<string>40.714466, -73.763100</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 302 Lad. 155 </string>
+		<key>address</key>
+		<string>143-15 RockawayBlvd.</string>
+		<key>coordinate</key>
+		<string>40.674054, -73.795027</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 303 Lad. 126 </string>
+		<key>address</key>
+		<string>104-12 Princeton St.</string>
+		<key>coordinate</key>
+		<string>40.6935589,-73.8068555</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 304 Lad. 162 </string>
+		<key>address</key>
+		<string>218-44 97th Ave.</string>
+		<key>coordinate</key>
+		<string>40.716831, -73.735969</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 305 Lad. 151 </string>
+		<key>address</key>
+		<string>111-02 Queens Blvd.</string>
+		<key>coordinate</key>
+		<string>40.7443272, -73.9301865</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 306 </string>
+		<key>address</key>
+		<string>40-18 214 Pl.</string>
+		<key>coordinate</key>
+		<string>40.7639186, -73.7697435</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 307 Lad. 154 </string>
+		<key>address</key>
+		<string>81 - 17 Northern Blvd.</string>
+		<key>coordinate</key>
+		<string>40.755801, -73.885599</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 308 Bat. 51 JFK Hose Wagon </string>
+		<key>address</key>
+		<string>107- 12 Lefferts Blvd.</string>
+		<key>coordinate</key>
+		<string>40.6839936, -73.8231229</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 311 Lad. 158 </string>
+		<key>address</key>
+		<string>145-50 Springfield Blvd.</string>
+		<key>coordinate</key>
+		<string>40.663582, -73.759833</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 312 Bat. 49 </string>
+		<key>address</key>
+		<string>22-63 35 St.</string>
+		<key>coordinate</key>
+		<string>40.773351, -73.910324</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 313 Lad. 164 </string>
+		<key>address</key>
+		<string>44-01 244 St.</string>
+		<key>coordinate</key>
+		<string>40.766804, -73.742237</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 314 </string>
+		<key>address</key>
+		<string>142-04 Brookville Blvd.</string>
+		<key>coordinate</key>
+		<string>40.664157, -73.740886</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 315 Lad. 125 </string>
+		<key>address</key>
+		<string>159-06 Union Turnpike</string>
+		<key>coordinate</key>
+		<string>40.720039, -73.807718</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 316 LGA Hose Wagon </string>
+		<key>address</key>
+		<string>27-12 Kearny St.</string>
+		<key>coordinate</key>
+		<string>40.762381, -73.869066</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 317 Lad. 165 Bat. 54 </string>
+		<key>address</key>
+		<string>117-11 196 St.</string>
+		<key>coordinate</key>
+		<string>40.6930867, -73.7557605</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 319 </string>
+		<key>address</key>
+		<string>78-11 67 Rd.</string>
+		<key>coordinate</key>
+		<string>40.7124481, -73.8749079</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 320 Lad. 167 </string>
+		<key>address</key>
+		<string>36- 18 Francis Lewis Blvd.</string>
+		<key>coordinate</key>
+		<string>40.76332, -73.786972</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 324 Sat 4, Div. 14 </string>
+		<key>address</key>
+		<string>108-01 Horace Harding Exp</string>
+		<key>coordinate</key>
+		<string>40.737981, -73.851772</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 325 Lad. 163 </string>
+		<key>address</key>
+		<string>41 -24 51 St.</string>
+		<key>coordinate</key>
+		<string>40.7452875, -73.9135307</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 326 Lad. 160 Bat. 53 </string>
+		<key>address</key>
+		<string>64-04 Springfield Blvd</string>
+		<key>coordinate</key>
+		<string>40.7474529,-73.7557206</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 329 Manfold Wagon </string>
+		<key>address</key>
+		<string>402 Beach 169 St.</string>
+		<key>coordinate</key>
+		<string>40.567422, -73.882676</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 331 Lad. 173 </string>
+		<key>address</key>
+		<string>158-57 Cross Bay Blvd.</string>
+		<key>coordinate</key>
+		<string>40.659931, -73.839947</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad. 116 </string>
+		<key>address</key>
+		<string>37-20 29th St.</string>
+		<key>coordinate</key>
+		<string>40.755397, -73.933263</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Squad 270</string>
+		<key>address</key>
+		<string>91 45 121 st</string>
+		<key>coordinate</key>
+		<string>40.695184,-73.826004</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Squad 288</string>
+		<key>address</key>
+		<string>56 29 68 st.</string>
+		<key>coordinate</key>
+		<string>40.726039,-73.896235</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hazmat 1</string>
+		<key>address</key>
+		<string>56 29 68 st.</string>
+		<key>coordinate</key>
+		<string>40.726039,-73.896235</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>West Hamilton beach Vfd</string>
+		<key>address</key>
+		<string>102 33 davenport ct, Hamilton Beach</string>
+		<key>coordinate</key>
+		<string>40.653973,-73.828255</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Broad Channel VFD</string>
+		<key>address</key>
+		<string>15 Noel rd</string>
+		<key>coordinate</key>
+		<string>40.607823,-73.818512</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Roxbury VFD</string>
+		<key>address</key>
+		<string>42 State Road</string>
+		<key>coordinate</key>
+		<string>40.565419,-73.891008</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rockaway Point VFD</string>
+		<key>address</key>
+		<string>204 26 rockaway point Bl</string>
+		<key>coordinate</key>
+		<string>40.550779,-73.933226</string>
+	</dict>
+</array>
+</plist>

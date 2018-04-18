@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Eng. 201 Lad. 114 </string>
+		<key>address</key>
+		<string>5113 4th Ave.</string>
+		<key>coordinate</key>
+		<string>40.645842, -74.013231</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 202 Lad. 101 Bat. 32 </string>
+		<key>address</key>
+		<string>31 Richards St.</string>
+		<key>coordinate</key>
+		<string>40.680574, -74.006437</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 205 Lad. 118 </string>
+		<key>address</key>
+		<string>74 Middagh St.</string>
+		<key>coordinate</key>
+		<string>40.700141, -73.992096</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 206 Foam 206 </string>
+		<key>address</key>
+		<string>1201 Grand St.</string>
+		<key>coordinate</key>
+		<string>40.715113, -73.928051</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 207 Lad. 110 Bat. 31 Div. 6 Sat. 6 </string>
+		<key>address</key>
+		<string>172 Tillary St.</string>
+		<key>coordinate</key>
+		<string>40.695990, -73.983210</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 210 </string>
+		<key>address</key>
+		<string>160 Carlton Ave.</string>
+		<key>coordinate</key>
+		<string>40.692874, -73.972825</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 211 Lad. 119 </string>
+		<key>address</key>
+		<string>26 Hooper St.</string>
+		<key>coordinate</key>
+		<string>40.701494, -73.962431</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 214 Lad. 111 </string>
+		<key>address</key>
+		<string>495 Hancock St.</string>
+		<key>coordinate</key>
+		<string>40.684186, -73.935677</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 216 Lad. 108 Bat. 35 </string>
+		<key>address</key>
+		<string>187 Union Ave.</string>
+		<key>coordinate</key>
+		<string>40.7060024, -73.9504737</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 217 </string>
+		<key>address</key>
+		<string>940 Dekalb Ave.</string>
+		<key>coordinate</key>
+		<string>40.692946, -73.937698</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 218 </string>
+		<key>address</key>
+		<string>650 Hart St.</string>
+		<key>coordinate</key>
+		<string>40.698212, -73.927170</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 219 Lad. 105 </string>
+		<key>address</key>
+		<string>494 Dean St.</string>
+		<key>coordinate</key>
+		<string>40.681458, -73.974005</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 220 Lad. 122 </string>
+		<key>address</key>
+		<string>530 11 St.</string>
+		<key>coordinate</key>
+		<string>40.664864, -73.981558</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 221 Lad. 104 </string>
+		<key>address</key>
+		<string>161 S. 2nd St.</string>
+		<key>coordinate</key>
+		<string>40.7129836, -73.9612985</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 222 Bat. 37 </string>
+		<key>address</key>
+		<string>32 Ralph Ave.</string>
+		<key>coordinate</key>
+		<string>40.6893205, -73.9239892</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 224 </string>
+		<key>address</key>
+		<string>274 Hicks St.</string>
+		<key>coordinate</key>
+		<string>40.693073, -73.996895</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 225 Lad. 107 Bat. 39 </string>
+		<key>address</key>
+		<string>799 Lincoln Ave.</string>
+		<key>coordinate</key>
+		<string>40.669068, -73.865540</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 226 </string>
+		<key>address</key>
+		<string>409 State St.</string>
+		<key>coordinate</key>
+		<string>40.686902, -73.982697</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 227 </string>
+		<key>address</key>
+		<string>423 Ralph Ave.</string>
+		<key>coordinate</key>
+		<string>40.674729, -73.922034</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 228 Purple K Unit 228 </string>
+		<key>address</key>
+		<string>436 39 St.</string>
+		<key>coordinate</key>
+		<string>40.651798, -74.005291</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 229 Lad. 146 Purple K Unit 229 </string>
+		<key>address</key>
+		<string>75 Richardson St</string>
+		<key>coordinate</key>
+		<string>40.718407, -73.948931</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 230 </string>
+		<key>address</key>
+		<string>701 Park Ave.</string>
+		<key>coordinate</key>
+		<string>40.6980549, -73.947537</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 231 Lad. 120 Bat. 44 </string>
+		<key>address</key>
+		<string>107 Watkins St.</string>
+		<key>coordinate</key>
+		<string>40.670318, -73.908029</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 233 Lad. 176 Field Comm 1 Moblile Command 1 </string>
+		<key>address</key>
+		<string>25 Rockaway Ave.</string>
+		<key>coordinate</key>
+		<string>40.682528, -73.911681</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 234 Lad. 123 Bat. 38 </string>
+		<key>address</key>
+		<string>1352 St. John s Pl.</string>
+		<key>coordinate</key>
+		<string>40.6707137, -73.9334833</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 235 Bat. 57 </string>
+		<key>address</key>
+		<string>206 Monroe St.</string>
+		<key>coordinate</key>
+		<string>40.685156, -73.951099</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 236 </string>
+		<key>address</key>
+		<string>998 Liberty Ave.</string>
+		<key>coordinate</key>
+		<string>40.677834, -73.872943</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 237 </string>
+		<key>address</key>
+		<string>43 Morgan Ave.</string>
+		<key>coordinate</key>
+		<string>40.705346, -73.931614</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 238 Lad. 106 Foam Tender </string>
+		<key>address</key>
+		<string>205 Greenpoint Ave.</string>
+		<key>coordinate</key>
+		<string>40.730542, -73.950649</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 239 </string>
+		<key>address</key>
+		<string>395 4 Ave.</string>
+		<key>coordinate</key>
+		<string>40.671728, -73.987088</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 240 Bat. 48 </string>
+		<key>address</key>
+		<string>1307 Prospect Ave.</string>
+		<key>coordinate</key>
+		<string>40.6512027, -73.9757935</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 241 Lad. 109 </string>
+		<key>address</key>
+		<string>6630 3rd Ave.</string>
+		<key>coordinate</key>
+		<string>40.638103, -74.024773</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 242 RAC 5 </string>
+		<key>address</key>
+		<string>9219 5 Ave.</string>
+		<key>coordinate</key>
+		<string>40.61732, -74.029371</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 243 Lad. 168 Bat. 42 </string>
+		<key>address</key>
+		<string>8653 18th Ave.</string>
+		<key>coordinate</key>
+		<string>40.606259, -74.003696</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 245 Lad. 161 Bat. 43 </string>
+		<key>address</key>
+		<string>2929 W.8th St.</string>
+		<key>coordinate</key>
+		<string>40.576767, -73.976479</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 246 Lad. 169 </string>
+		<key>address</key>
+		<string>2732 E.11 St.</string>
+		<key>coordinate</key>
+		<string>40.584279, -73.959249</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 247 Bat. 40 Thawing App. 64 </string>
+		<key>address</key>
+		<string>1336 60th St.</string>
+		<key>coordinate</key>
+		<string>40.628403, -73.997815</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 248 Bat. 41</string>
+		<key>address</key>
+		<string> 2900 Snyder Ave.</string>
+		<key>coordinate</key>
+		<string>40.648881, -73.950324</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 249 Lad. 113 </string>
+		<key>address</key>
+		<string>491 Rogers Ave.</string>
+		<key>coordinate</key>
+		<string>40.660196, -73.953489</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 250 </string>
+		<key>address</key>
+		<string>126 Foster Ave.</string>
+		<key>coordinate</key>
+		<string>40.627684, -73.976349</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 253 </string>
+		<key>address</key>
+		<string>2429 86 St.</string>
+		<key>coordinate</key>
+		<string>40.5987863, -73.9886334</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 254 Lad. 153 </string>
+		<key>address</key>
+		<string>901 Ave. U</string>
+		<key>coordinate</key>
+		<string>40.5984679, -73.961949</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 255 Lad. 157 </string>
+		<key>address</key>
+		<string>1367 Rogers Ave.</string>
+		<key>coordinate</key>
+		<string>40.636386, -73.950937</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 257 Lad. 170 Bat. 58 </string>
+		<key>address</key>
+		<string>1361 Rockaway Pkwy</string>
+		<key>coordinate</key>
+		<string>40.646560, -73.903904</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 271 Lad. 124 Bat. 28 </string>
+		<key>address</key>
+		<string>392 Himrod St.</string>
+		<key>coordinate</key>
+		<string>40.703811, -73.916176</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 276 Lad. 156 Bat. 33 </string>
+		<key>address</key>
+		<string>1635 E.14 St.</string>
+		<key>coordinate</key>
+		<string>40.60939, -73.959033</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 277 Lad. 112 </string>
+		<key>address</key>
+		<string>582 Knickerbocker Ave.</string>
+		<key>coordinate</key>
+		<string>40.6965516, -73.9143852</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 279 Lad. 131 </string>
+		<key>address</key>
+		<string>252 Lorraine St.</string>
+		<key>coordinate</key>
+		<string>40.672301, -73.999451</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 280 Lad. 132 Rescue Collapse 2 </string>
+		<key>address</key>
+		<string>489 St. Johns Pl.</string>
+		<key>coordinate</key>
+		<string>40.673342, -73.961765</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 281 Lad. 147 </string>
+		<key>address</key>
+		<string>1210 Cortelyou Rd.</string>
+		<key>coordinate</key>
+		<string>40.640080, -73.966955</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 282 Lad. 148 </string>
+		<key>address</key>
+		<string>4210 12 Ave.</string>
+		<key>coordinate</key>
+		<string>40.640187, -73.99077</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 283 Div. 15 </string>
+		<key>address</key>
+		<string>885 Howard Ave.</string>
+		<key>coordinate</key>
+		<string>40.6611818, -73.9183004</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 284 Lad. 149 Sat. 3 </string>
+		<key>address</key>
+		<string>1157 79 St.</string>
+		<key>coordinate</key>
+		<string>40.619926, -74.012524</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 290 Lad. 103 </string>
+		<key>address</key>
+		<string>480 Sheffield Ave.</string>
+		<key>coordinate</key>
+		<string>40.665136, -73.895152</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 309 Lad. 159 </string>
+		<key>address</key>
+		<string>1851 E.48 St.</string>
+		<key>coordinate</key>
+		<string>40.6152469, -73.928117</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 310 Lad. 174 </string>
+		<key>address</key>
+		<string>5105 Snyder Ave.</string>
+		<key>coordinate</key>
+		<string>40.650174, -73.929160</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 318 Lad. 166 </string>
+		<key>address</key>
+		<string>2510 Neptune Ave.</string>
+		<key>coordinate</key>
+		<string>40.578112, -73.992691</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 321 Foam 321 Brush Fire 6 </string>
+		<key>address</key>
+		<string>2165 Gerritsen Ave.</string>
+		<key>coordinate</key>
+		<string>40.602248, -73.935608</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 323 </string>
+		<key>address</key>
+		<string>6405 Ave. N.</string>
+		<key>coordinate</key>
+		<string>40.6198314, -73.9157828</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 330 Lad. 172 </string>
+		<key>address</key>
+		<string>2312 65 St.</string>
+		<key>coordinate</key>
+		<string>40.612148, -73.979138</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 332 Lad. 175 </string>
+		<key>address</key>
+		<string>165 Bradford St.</string>
+		<key>coordinate</key>
+		<string>40.675331, -73.892861</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad. 102 </string>
+		<key>address</key>
+		<string>850 Bedford Ave.</string>
+		<key>coordinate</key>
+		<string>40.695617, -73.956349</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rescue 2 </string>
+		<key>address</key>
+		<string>1472 Bergen St.</string>
+		<key>coordinate</key>
+		<string>40.675280, -73.935015</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sqd 1. Tech Resp. Vec. </string>
+		<key>address</key>
+		<string>788 Union St.</string>
+		<key>coordinate</key>
+		<string>40.674827, -73.976390</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sqd. 252 </string>
+		<key>address</key>
+		<string>617 Central Ave.</string>
+		<key>coordinate</key>
+		<string>40.688674, -73.908174</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Marine 6 Safety Bat. </string>
+		<key>address</key>
+		<string>Blg. 292, Brooklyn Navy Yard.</string>
+		<key>coordinate</key>
+		<string>40.69733, -73.97139</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gerritsen beach VFD</string>
+		<key>address</key>
+		<string>52 seba ave</string>
+		<key>coordinate</key>
+		<string>40.588249,-73.922148</string>
+	</dict>
+</array>
+</plist>

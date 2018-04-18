@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Eng. 38 Lad. 51</string>
+		<key>address</key>
+		<string>3446 Eastchester Rd.</string>
+		<key>coordinate</key>
+		<string>40.877975, -73.846486</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 42</string>
+		<key>address</key>
+		<string>1781 Monroe Ave.</string>
+		<key>coordinate</key>
+		<string>40.846132, -73.906247</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 43 Lad. 59 </string>
+		<key>address</key>
+		<string>1901 Sedgwick Ave.</string>
+		<key>coordinate</key>
+		<string>40.855179, -73.916506</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 45 Lad. 58 Bat 18</string>
+		<key>address</key>
+		<string>925 E. Tremont Ave.</string>
+		<key>coordinate</key>
+		<string>40.841826, -73.883500</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 46 Lad 27</string>
+		<key>address</key>
+		<string>460 Cross Bronx Exway</string>
+		<key>coordinate</key>
+		<string>40.8439419, -73.8973385</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 48 Lad. 56 Div. 7</string>
+		<key>address</key>
+		<string>2417 Webster Ave</string>
+		<key>coordinate</key>
+		<string>40.859405, -73.893234</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 50 Lad 19 Bat. 26 </string>
+		<key>address</key>
+		<string>1155 Washington Ave.</string>
+		<key>coordinate</key>
+		<string>40.829671, -73.907767</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 52 Lad 52</string>
+		<key>address</key>
+		<string>4550 Riverdale Ave</string>
+		<key>coordinate</key>
+		<string>40.888615, -73.907804</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 60 Lad. 17 Bat 14</string>
+		<key>address</key>
+		<string>341 E. 143 St.</string>
+		<key>coordinate</key>
+		<string>40.81316,-73.922102</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 62 Lad. 32 </string>
+		<key>address</key>
+		<string>3431 White Plains Rd.</string>
+		<key>coordinate</key>
+		<string>40.875354, -73.866604</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 63 Lad. 39 Bat. 15</string>
+		<key>address</key>
+		<string>755 E.233 St.</string>
+		<key>coordinate</key>
+		<string>40.8927685, -73.8553811</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 64 Lad. 47</string>
+		<key>address</key>
+		<string>1214 Castle Hill Rd.</string>
+		<key>coordinate</key>
+		<string>40.831929, -73.851104</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 66 Lad. 61</string>
+		<key>address</key>
+		<string>21 Asch Loop West</string>
+		<key>coordinate</key>
+		<string>40.870478, -73.830803</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 68 Lad. 49 </string>
+		<key>address</key>
+		<string>1160 Ogden Ave.</string>
+		<key>coordinate</key>
+		<string>40.837079, -73.927006</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 70 Lad. 53 </string>
+		<key>address</key>
+		<string>169 Schofield St.</string>
+		<key>coordinate</key>
+		<string>40.845344, -73.783961</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 71 Lad. 55 Div. 6 </string>
+		<key>address</key>
+		<string>718 Melrose Ave.</string>
+		<key>coordinate</key>
+		<string>40.820366, -73.915726</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 72 Sat.2 </string>
+		<key>address</key>
+		<string>3929 E. Tremont Ave.</string>
+		<key>coordinate</key>
+		<string>40.821279, -73.818546</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 73 Lad. 42 </string>
+		<key>address</key>
+		<string>655 Prospect Ave.</string>
+		<key>coordinate</key>
+		<string>40.8149671, -73.9034883</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 75 Lad. 33 Bat. 19 </string>
+		<key>address</key>
+		<string>2283 Jerome Ave.</string>
+		<key>coordinate</key>
+		<string>40.8587845,-73.9036527</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 79 Lad. 37 Bat. 27 </string>
+		<key>address</key>
+		<string>2928 Briggs Ave.</string>
+		<key>coordinate</key>
+		<string>40.870249, -73.886748</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 81 Lad. 46 </string>
+		<key>address</key>
+		<string>3025 Bailey Ave.</string>
+		<key>coordinate</key>
+		<string>40.876724, -73.903343</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 82 Lad. 31 </string>
+		<key>address</key>
+		<string>1213 Intervale Ave.</string>
+		<key>coordinate</key>
+		<string>40.828772, -73.894649</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 83 Lad. 29 </string>
+		<key>address</key>
+		<string>618 E.138 St.</string>
+		<key>coordinate</key>
+		<string>40.805797, -73.915798</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 88 Lad. 38 </string>
+		<key>address</key>
+		<string>2225 Belmont Ave.</string>
+		<key>coordinate</key>
+		<string>40.851615, -73.887460</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 89 Lad. 50 </string>
+		<key>address</key>
+		<string>2924 Bruckner Blvd.</string>
+		<key>coordinate</key>
+		<string>40.833079, -73.827353</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 90 Lad. 41 </string>
+		<key>address</key>
+		<string>1843 White Plains Rd.</string>
+		<key>coordinate</key>
+		<string>40.846250, -73.866504</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 92 Lad. 44 Bat. 17 </string>
+		<key>address</key>
+		<string>1259 Morris Ave.</string>
+		<key>coordinate</key>
+		<string>40.834548, -73.913223</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 94 Lad. 48 Bat. 3 </string>
+		<key>address</key>
+		<string>1226 Seneca Ave.</string>
+		<key>coordinate</key>
+		<string>40.818779, -73.888855</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 96 Lad. 54 Foam 96 </string>
+		<key>address</key>
+		<string>689 Story Ave.</string>
+		<key>coordinate</key>
+		<string>40.821079, -73.882205</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng. 97 Thawing App. 62 </string>
+		<key>address</key>
+		<string>1454 Astor Ave.</string>
+		<key>coordinate</key>
+		<string>40.859762, -73.844279</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rescue 3, RAC.3, Collapse Rig 3</string>
+		<key>address</key>
+		<string> 453 E.176 St.</string>
+		<key>coordinate</key>
+		<string>40.8461892, -73.8992755</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sqd. 41 </string>
+		<key>address</key>
+		<string>330 E.150 St.</string>
+		<key>coordinate</key>
+		<string>40.817244, -73.920125</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bat. 20 Sqd. 61 </string>
+		<key>address</key>
+		<string>1518 Williamsbridge Rd.</string>
+		<key>coordinate</key>
+		<string>40.844579, -73.846579</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Aviation hose co. (Vol.)</string>
+		<key>address</key>
+		<string>1820 gildersleeve ave</string>
+		<key>coordinate</key>
+		<string>40.808965,-73.856536</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Edgewater park vol hose 1(Vol.)</string>
+		<key>address</key>
+		<string>Main st and alder drive</string>
+		<key>coordinate</key>
+		<string>0.0,0.0</string>
+	</dict>
+</array>
+</plist>

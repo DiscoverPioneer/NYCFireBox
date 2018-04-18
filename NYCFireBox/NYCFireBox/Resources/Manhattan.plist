@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Eng.1, Lad.24 </string>
+		<key>address</key>
+		<string>142 W.31 St.</string>
+		<key>coordinate</key>
+		<string>40.748479, -73.991141</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.3, Lad.12, Bat.7, Hi-Rise</string>
+		<key>address</key>
+		<string>150 W.19 St.</string>
+		<key>coordinate</key>
+		<string>40.7413571, -73.9967699</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.4, Lad.15, Decon.</string>
+		<key>address</key>
+		<string>42 South St.</string>
+		<key>coordinate</key>
+		<string>40.709832, -73.982408</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.5</string>
+		<key>address</key>
+		<string>340E.14St.</string>
+		<key>coordinate</key>
+		<string>40.7313959, -73.983472</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.6</string>
+		<key>address</key>
+		<string>49 Beekman St.</string>
+		<key>coordinate</key>
+		<string>40.7099428, -74.005414</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.7, Lad.1, Bat.1 </string>
+		<key>address</key>
+		<string>100 Duane St.</string>
+		<key>coordinate</key>
+		<string>40.715929, -74.005791</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.8, Lad.2,Bat.8 </string>
+		<key>address</key>
+		<string>165E.51St.</string>
+		<key>coordinate</key>
+		<string>40.756793,-73.971112</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.9, Lad.6, Sat.1 </string>
+		<key>address</key>
+		<string>75 Canal St.</string>
+		<key>coordinate</key>
+		<string>40.715396, -73.992817</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.10, Lad.10</string>
+		<key>address</key>
+		<string>124 Liberty St.</string>
+		<key>coordinate</key>
+		<string>40.7098708, -74.0124185</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.14</string>
+		<key>address</key>
+		<string>14 E.18 St.</string>
+		<key>coordinate</key>
+		<string>40.73796, -73.99102</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.15</string>
+		<key>address</key>
+		<string>269 Henry St.</string>
+		<key>coordinate</key>
+		<string>40.714068, -73.984346</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.16, Lad.7</string>
+		<key>address</key>
+		<string>234 E.29 St.</string>
+		<key>coordinate</key>
+		<string>40.7418804, -73.9787591</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.18</string>
+		<key>address</key>
+		<string>132 W.10th St.</string>
+		<key>coordinate</key>
+		<string>40.7344269, -74.0003629</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.21</string>
+		<key>address</key>
+		<string>238 E.40 St.</string>
+		<key>coordinate</key>
+		<string>40.748652, -73.974023</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.22, Lad.13, Bat.10</string>
+		<key>address</key>
+		<string> 159 E.85 St.</string>
+		<key>coordinate</key>
+		<string>40.778705, -73.955219</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.23</string>
+		<key>address</key>
+		<string>215 W.58St.</string>
+		<key>coordinate</key>
+		<string>40.7665312, -73.9803397</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.24, Lad.5, Div.1</string>
+		<key>address</key>
+		<string>227 6 Ave.</string>
+		<key>coordinate</key>
+		<string>40.728062, -74.00353</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.26</string>
+		<key>address</key>
+		<string>220 W.37 St.</string>
+		<key>coordinate</key>
+		<string>40.753118, -73.9903609</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.28, Lad.11</string>
+		<key>address</key>
+		<string>222E.2St.</string>
+		<key>coordinate</key>
+		<string>40.7841484, -73.9661407</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.33, Lad.9 </string>
+		<key>address</key>
+		<string>42 Great Jones St.</string>
+		<key>coordinate</key>
+		<string>40.727002, -73.992513</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.34, Lad.21</string>
+		<key>address</key>
+		<string>440 W.38 St.</string>
+		<key>coordinate</key>
+		<string>40.756531, -73.99651</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.35, Lad.14, Bat.12</string>
+		<key>address</key>
+		<string>2282 3 Ave.</string>
+		<key>coordinate</key>
+		<string>40.8031661, -73.9361187</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.37, Lad.40</string>
+		<key>address</key>
+		<string> 415 W.125 St.</string>
+		<key>coordinate</key>
+		<string>40.811949, -73.954592</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.39, Lad.16 </string>
+		<key>address</key>
+		<string>157 E.67 St.</string>
+		<key>coordinate</key>
+		<string>40.7670054, -73.9636624</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.40, Lad.35 </string>
+		<key>address</key>
+		<string>131 Amsterdam Ave.</string>
+		<key>coordinate</key>
+		<string>40.774651, -73.984487</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.44</string>
+		<key>address</key>
+		<string>221 E. i5 St.</string>
+		<key>coordinate</key>
+		<string>40.7436477, -73.9891927</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.47</string>
+		<key>address</key>
+		<string>502W.113 St.</string>
+		<key>coordinate</key>
+		<string>40.804982, -73.962887</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.53, Lad.43, Rac.1</string>
+		<key>address</key>
+		<string>1836 3 Ave.</string>
+		<key>coordinate</key>
+		<string>40.788859, -73.947262</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.54, Lad.4 Bat.9 </string>
+		<key>address</key>
+		<string>783 8 Ave.</string>
+		<key>coordinate</key>
+		<string>40.7608953, -73.9873628</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.55, Bat.2 </string>
+		<key>address</key>
+		<string>363 Broome St.</string>
+		<key>coordinate</key>
+		<string>40.7199528, -73.9957007</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.58, Lad.26 </string>
+		<key>address</key>
+		<string>1367 5 Ave.</string>
+		<key>coordinate</key>
+		<string>40.798909, -73.947321</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.59, Lad.30 </string>
+		<key>address</key>
+		<string>111 W.133 St.</string>
+		<key>coordinate</key>
+		<string>40.813318, -73.942434</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.65</string>
+		<key>address</key>
+		<string>33 W.43 St.</string>
+		<key>coordinate</key>
+		<string>40.7548908, -73.981989</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.67</string>
+		<key>address</key>
+		<string>518 W.170 St.</string>
+		<key>coordinate</key>
+		<string>40.8414358, -73.9368539</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.69, Lad.28, Bat.16</string>
+		<key>address</key>
+		<string>248 W.143 St.</string>
+		<key>coordinate</key>
+		<string>40.820842, -73.94182</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.74</string>
+		<key>address</key>
+		<string>120 W.83 St.</string>
+		<key>coordinate</key>
+		<string>40.7847425, -73.9746586</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.76, Lad.22,Thaw61,Bat.11</string>
+		<key>address</key>
+		<string>145 W.100St.</string>
+		<key>coordinate</key>
+		<string>40.796565, -73.9671819</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.80, Lad.23 </string>
+		<key>address</key>
+		<string>503 W.139 St.</string>
+		<key>coordinate</key>
+		<string>40.8217452, -73.9508747</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.84, Lad.34 </string>
+		<key>address</key>
+		<string>513 W.161 St.</string>
+		<key>coordinate</key>
+		<string>40.8357799, -73.9411248</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.91</string>
+		<key>address</key>
+		<string>242E.111 St.</string>
+		<key>coordinate</key>
+		<string>40.8012439, -73.9575386</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.93, Lad.45, Bat.13</string>
+		<key>address</key>
+		<string>515 W.181 St.</string>
+		<key>coordinate</key>
+		<string>40.8485275, -73.9317787</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eng.95, Lad.36, Foam 88 </string>
+		<key>address</key>
+		<string>29 Vermilyea Ave.</string>
+		<key>coordinate</key>
+		<string>40.8650604, -73.9253279</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad.3,  Bat.6</string>
+		<key>address</key>
+		<string>108E.13St.</string>
+		<key>coordinate</key>
+		<string>40.7332333, -73.9892572</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad.8</string>
+		<key>address</key>
+		<string>14 N. Moore St.</string>
+		<key>coordinate</key>
+		<string>40.719697, -74.0066619</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad.18, Bat.4</string>
+		<key>address</key>
+		<string> 25 Pitt St.</string>
+		<key>coordinate</key>
+		<string>40.7163069, -73.9835159</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad.20, Amb.4</string>
+		<key>address</key>
+		<string>253 Lafayette St.</string>
+		<key>coordinate</key>
+		<string>40.7233662, -73.996723</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lad.25, Div.2</string>
+		<key>address</key>
+		<string>205 W.77 St.</string>
+		<key>coordinate</key>
+		<string>40.782291, -73.979769</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rescue 1</string>
+		<key>address</key>
+		<string>530 W.43 St.</string>
+		<key>coordinate</key>
+		<string>40.760722, -73.996576</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tac.1, Rac.4, Dewater Unit, Decon Support</string>
+		<key>address</key>
+		<string> Roosevelt Island</string>
+		<key>coordinate</key>
+		<string>40.7621302, -73.9499426</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Squad 18</string>
+		<key>address</key>
+		<string>132 w10th street</string>
+		<key>coordinate</key>
+		<string>40.734606,-74.000396</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Marine 1 </string>
+		<key>address</key>
+		<string> Foot of Bloomfield St, North River</string>
+		<key>coordinate</key>
+		<string>40.740735,-74.012015</string>
+	</dict>
+</array>
+</plist>

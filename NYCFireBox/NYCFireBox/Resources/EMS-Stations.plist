@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Division 1</string>
+		<key>address</key>
+		<string>Pier 36 271 Marginal St. NY 10002</string>
+		<key>coordinate</key>
+		<string>40.710080, -73.986271</string>
+		<key>phone</key>
+		<string>2129644518</string>
+		<key>fax</key>
+		<string>2129644667</string>
+		<key>borough</key>
+		<string>Manhattan</string>
+		<key>area</key>
+		<string>Lower East Side</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 04</string>
+		<key>address</key>
+		<string>Pier 36 271 Marginal St. NY 10002</string>
+		<key>coordinate</key>
+		<string>40.710080, -73.986271</string>
+		<key>phone</key>
+		<string>2129644651</string>
+		<key>fax</key>
+		<string>2129644668</string>
+		<key>borough</key>
+		<string>Manhattan</string>
+		<key>area</key>
+		<string>Lower East Side</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 07</string>
+		<key>address</key>
+		<string>512 West 23rd St. NY 10011</string>
+		<key>coordinate</key>
+		<string>40.747596, -74.005000</string>
+		<key>phone</key>
+		<string>2122423679</string>
+		<key>fax</key>
+		<string>2122423928</string>
+		<key>borough</key>
+		<string>Manhattan</string>
+		<key>area</key>
+		<string>West Side Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 08</string>
+		<key>address</key>
+		<string>435 East 26th St. NY 10010</string>
+		<key>coordinate</key>
+		<string>40.737999, -73.975306</string>
+		<key>phone</key>
+		<string>2122134069</string>
+		<key>fax</key>
+		<string>2122138932</string>
+		<key>borough</key>
+		<string>Manhattan</string>
+		<key>area</key>
+		<string>Kips Bay Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 10</string>
+		<key>address</key>
+		<string>1918 1st Ave. NY 10029</string>
+		<key>coordinate</key>
+		<string>40.784422, -73.942804</string>
+		<key>phone</key>
+		<string>2128604865</string>
+		<key>fax</key>
+		<string>2128604902</string>
+		<key>borough</key>
+		<string>Manhattan</string>
+		<key>area</key>
+		<string>Yorkville Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 13</string>
+		<key>address</key>
+		<string>501 West 172nd St. 10033</string>
+		<key>coordinate</key>
+		<string>40.842629, -73.935589</string>
+		<key>phone</key>
+		<string>2129231827</string>
+		<key>fax</key>
+		<string>2129231805</string>
+		<key>borough</key>
+		<string>Manhattan</string>
+		<key>area</key>
+		<string>Washington Heights</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 16</string>
+		<key>address</key>
+		<string>15 West 136th St. NY 10037</string>
+		<key>coordinate</key>
+		<string>40.813843, -73.937920</string>
+		<key>phone</key>
+		<string>2122816620</string>
+		<key>fax</key>
+		<string>2122816658</string>
+		<key>borough</key>
+		<string>Manhattan</string>
+		<key>area</key>
+		<string>Harlem Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Division 2</string>
+		<key>address</key>
+		<string>3134 Park Ave. NY 10451</string>
+		<key>coordinate</key>
+		<string>40.823928, -73.917197</string>
+		<key>phone</key>
+		<string>7186655167</string>
+		<key>fax</key>
+		<string>7186655909</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Melrose</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 03</string>
+		<key>address</key>
+		<string>501 Zerega Ave 10473</string>
+		<key>coordinate</key>
+		<string>40.817787, -73.843871</string>
+		<key>phone</key>
+		<string>7184300080</string>
+		<key>fax</key>
+		<string>7184300072</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Soundview Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 14</string>
+		<key>address</key>
+		<string>234 East 149th St. NY 10451</string>
+		<key>coordinate</key>
+		<string>40.817028, -73.925635</string>
+		<key>phone</key>
+		<string>7186651832</string>
+		<key>fax</key>
+		<string>7186659257</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>South Bronx Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 15</string>
+		<key>address</key>
+		<string>4109 White Plains Rd. 10466</string>
+		<key>coordinate</key>
+		<string>40.891018, -73.858958</string>
+		<key>phone</key>
+		<string>7184056274</string>
+		<key>fax</key>
+		<string>7184055314</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Williamsbridge Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 17</string>
+		<key>address</key>
+		<string>1080 Ogden Ave, NY 10452</string>
+		<key>coordinate</key>
+		<string>40.834970, -73.928062</string>
+		<key>phone</key>
+		<string>7185885555</string>
+		<key>fax</key>
+		<string>7185883721</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>High Bridge Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 18</string>
+		<key>address</key>
+		<string>1647 Washington Ave. NY 10457</string>
+		<key>coordinate</key>
+		<string>40.840907, -73.901709</string>
+		<key>phone</key>
+		<string>7187160167</string>
+		<key>fax</key>
+		<string>7187161958</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Bathgate Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 19</string>
+		<key>address</key>
+		<string>2285 Jerome Ave. NY 10468</string>
+		<key>coordinate</key>
+		<string>40.858669, -73.903955</string>
+		<key>phone</key>
+		<string>7189331974</string>
+		<key>fax</key>
+		<string>7189332123</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>University Heights Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 20</string>
+		<key>address</key>
+		<string>1410 Pelham Pwky South 10461</string>
+		<key>coordinate</key>
+		<string>40.856337, -73.847362</string>
+		<key>phone</key>
+		<string>7189183918</string>
+		<key>fax</key>
+		<string>7189187529</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Morris Park Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 26</string>
+		<key>address</key>
+		<string>1264 Boston Rd. NY 10456</string>
+		<key>coordinate</key>
+		<string>40.830663, -73.900646</string>
+		<key>phone</key>
+		<string>7183780980</string>
+		<key>fax</key>
+		<string>7183780982</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Morrisania Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 27</string>
+		<key>address</key>
+		<string>243 East 233 St. NY 10470</string>
+		<key>coordinate</key>
+		<string>40.896540, -73.868825</string>
+		<key>phone</key>
+		<string>7182311286</string>
+		<key>fax</key>
+		<string>7182311528</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Woodlawn Station</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 55</string>
+		<key>address</key>
+		<string>3134 Park Ave. NY 10451</string>
+		<key>coordinate</key>
+		<string>40.823928, -73.917197</string>
+		<key>phone</key>
+		<string>7189933562</string>
+		<key>fax</key>
+		<string>7189933701</string>
+		<key>borough</key>
+		<string>Bronx</string>
+		<key>area</key>
+		<string>Melrose Place</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Division 3</string>
+		<key>address</key>
+		<string>420 East 83rd St. NY 11236</string>
+		<key>coordinate</key>
+		<string>40.6426323,-73.9177703</string>
+		<key>phone</key>
+		<string>7189689750</string>
+		<key>fax</key>
+		<string>7185314133</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Cumberland</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 31</string>
+		<key>address</key>
+		<string>420 East 83rd St. NY 11236</string>
+		<key>coordinate</key>
+		<string>40.6426323,-73.9177703</string>
+		<key>phone</key>
+		<string>7184037234</string>
+		<key>fax</key>
+		<string>7186257458</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Cumberland</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 32</string>
+		<key>address</key>
+		<string>347 Bond St. NY 11231</string>
+		<key>coordinate</key>
+		<string>40.678406, -73.990364</string>
+		<key>phone</key>
+		<string>7182221290</string>
+		<key>fax</key>
+		<string>7182221730</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Carroll Gardens</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 35</string>
+		<key>address</key>
+		<string>332 Metropolitan Ave. NY 11211</string>
+		<key>coordinate</key>
+		<string>40.714175, -73.956943</string>
+		<key>phone</key>
+		<string>7183847039</string>
+		<key>fax</key>
+		<string>7183847050</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Williamsburg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 38</string>
+		<key>address</key>
+		<string>554 Winthrop St. NY 11203</string>
+		<key>coordinate</key>
+		<string>40.657469, -73.941867</string>
+		<key>phone</key>
+		<string>7182218052</string>
+		<key>fax</key>
+		<string>7182218071</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Wingate</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 39</string>
+		<key>address</key>
+		<string>265 Pennsylvania Ave. 11207</string>
+		<key>coordinate</key>
+		<string>40.671165, -73.895473</string>
+		<key>phone</key>
+		<string>7183857345</string>
+		<key>fax</key>
+		<string>7183456390</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Pennsylvania</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 44</string>
+		<key>address</key>
+		<string>266 Roackaway Ave. NY 11233</string>
+		<key>coordinate</key>
+		<string>40.674133, -73.911509</string>
+		<key>phone</key>
+		<string>7185661615</string>
+		<key>fax</key>
+		<string>7185661797</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Brownsville</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 57</string>
+		<key>address</key>
+		<string>131 Throop Ave. NY 11206</string>
+		<key>coordinate</key>
+		<string>40.700162, -73.944212</string>
+		<key>phone</key>
+		<string>7183025660</string>
+		<key>fax</key>
+		<string>7183025662</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Bedford Stuyvesant</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 58</string>
+		<key>address</key>
+		<string>420 East 83rd St. NY 11236</string>
+		<key>coordinate</key>
+		<string>40.642543, -73.917760</string>
+		<key>phone</key>
+		<string>7189689781</string>
+		<key>fax</key>
+		<string>7185313304</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Canarsie</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 59</string>
+		<key>address</key>
+		<string>101-10 Foster Ave., NY 11236</string>
+		<key>coordinate</key>
+		<string>40.650851, -73.900256</string>
+		<key>phone</key>
+		<string>7189273400</string>
+		<key>fax</key>
+		<string>7189273403</string>
+		<key>borough</key>
+		<string>Brooklyn</string>
+		<key>area</key>
+		<string>Spring Creek</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Division 4</string>
+		<key>address</key>
+		<string>159-10 Goethals Ave. 11432</string>
+		<key>coordinate</key>
+		<string>40.718536, -73.807512</string>
+		<key>phone</key>
+		<string>7189692029</string>
+		<key>fax</key>
+		<string>7183802595</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Hillcrest</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 45</string>
+		<key>address</key>
+		<string>58-65 52nd Rd. NY 11377</string>
+		<key>coordinate</key>
+		<string>40.734597, -73.907341</string>
+		<key>phone</key>
+		<string>7188995416</string>
+		<key>fax</key>
+		<string>7188995588</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Woodside</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 46</string>
+		<key>address</key>
+		<string>79-01 Broadway NY 11378</string>
+		<key>coordinate</key>
+		<string>40.744658, -73.886263</string>
+		<key>phone</key>
+		<string>7183345646</string>
+		<key>fax</key>
+		<string>7183345648</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Elmhurst</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 47</string>
+		<key>address</key>
+		<string>303 Beach 49 St. NY 11692</string>
+		<key>coordinate</key>
+		<string>40.593694, -73.779023</string>
+		<key>phone</key>
+		<string>7184719658</string>
+		<key>fax</key>
+		<string>7184719663</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Rockaway</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 49</string>
+		<key>address</key>
+		<string>25-03 Hoyt Ave. South NY 11432</string>
+		<key>coordinate</key>
+		<string>40.772884, -73.921161</string>
+		<key>phone</key>
+		<string>7187281867</string>
+		<key>fax</key>
+		<string>7189321037</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Astoria</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 50</string>
+		<key>address</key>
+		<string>159-10 Goethals Ave. NY 11432</string>
+		<key>coordinate</key>
+		<string>40.718536, -73.807512</string>
+		<key>phone</key>
+		<string>7188832102</string>
+		<key>fax</key>
+		<string>7188836117</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Hillcrest</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 52</string>
+		<key>address</key>
+		<string>135-16 38th Ave. NY 11354</string>
+		<key>coordinate</key>
+		<string>40.760307, -73.832103</string>
+		<key>phone</key>
+		<string>7189619050</string>
+		<key>fax</key>
+		<string>7189619059</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Flushing</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 53</string>
+		<key>address</key>
+		<string>Fort Totten Building 103</string>
+		<key>coordinate</key>
+		<string>40.791236, -73.780830</string>
+		<key>phone</key>
+		<string>7182818303</string>
+		<key>fax</key>
+		<string>7182813343</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Fort Totten Outpost</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 54</string>
+		<key>address</key>
+		<string>222-15 Merrick Blvd. NY 11413</string>
+		<key>coordinate</key>
+		<string>40.678449, -73.746653</string>
+		<key>phone</key>
+		<string>7185250945</string>
+		<key>fax</key>
+		<string>7185250055</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Springfield Gardens</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rikers Island Outpost</string>
+		<key>address</key>
+		<string>14-16 Hazen St. NY 11370</string>
+		<key>coordinate</key>
+		<string>40.788915, -73.883096</string>
+		<key>phone</key>
+		<string>7185461929</string>
+		<key>fax</key>
+		<string>7185461925</string>
+		<key>borough</key>
+		<string>Queens</string>
+		<key>area</key>
+		<string>Rikers Island</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Division 5</string>
+		<key>address</key>
+		<string>460 Brielle Ave. NY 10314</string>
+		<key>coordinate</key>
+		<string>40.590434, -74.132328</string>
+		<key>phone</key>
+		<string>7189797175</string>
+		<key>fax</key>
+		<string>7189799788</string>
+		<key>borough</key>
+		<string>Staten Island</string>
+		<key>area</key>
+		<string>Willowbrook</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 22</string>
+		<key>address</key>
+		<string>460 Brielle Ave. NY 10314</string>
+		<key>coordinate</key>
+		<string>40.590434, -74.132328</string>
+		<key>phone</key>
+		<string>7189799811</string>
+		<key>fax</key>
+		<string>7189879765</string>
+		<key>borough</key>
+		<string>Staten Island</string>
+		<key>area</key>
+		<string>Willowbrook</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 23</string>
+		<key>address</key>
+		<string>1100 Rossville Ave. NY 10309</string>
+		<key>coordinate</key>
+		<string>40.553772, -74.213448</string>
+		<key>phone</key>
+		<string>7189487250</string>
+		<key>fax</key>
+		<string>7189487296</string>
+		<key>borough</key>
+		<string>Staten Island</string>
+		<key>area</key>
+		<string>Rossville</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 40</string>
+		<key>address</key>
+		<string>5011 7th Ave., NY 11220</string>
+		<key>coordinate</key>
+		<string>40.642077, -74.005995</string>
+		<key>phone</key>
+		<string>7184373539</string>
+		<key>fax</key>
+		<string>7184370744</string>
+		<key>borough</key>
+		<string>Staten Island</string>
+		<key>area</key>
+		<string>Sunset Park</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Station 43</string>
+		<key>address</key>
+		<string>2601 Ocean Pwky. NY 11235</string>
+		<key>coordinate</key>
+		<string>40.585238, -73.965887</string>
+		<key>phone</key>
+		<string>7186165551</string>
+		<key>fax</key>
+		<string>7186164496</string>
+		<key>borough</key>
+		<string>Staten Island</string>
+		<key>area</key>
+		<string>Gravesend</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Haz Tac Training</string>
+		<key>address</key>
+		<string>SOC Randalls Island Bldg 8</string>
+		<key>coordinate</key>
+		<string>40.792028, -73.919440</string>
+		<key>phone</key>
+		<string>2123604580</string>
+		<key>fax</key>
+		<string>2128603830</string>
+		<key>borough</key>
+		<string>Special Operations</string>
+		<key>area</key>
+		<string>Randalls Island</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Haz Tac Battalion</string>
+		<key>address</key>
+		<string>135-16 38th Ave. NY 11354</string>
+		<key>coordinate</key>
+		<string>40.760319, -73.832188</string>
+		<key>phone</key>
+		<string>7189610795</string>
+		<key>fax</key>
+		<string>7189610003</string>
+		<key>borough</key>
+		<string>Special Operations</string>
+		<key>area</key>
+		<string>New York</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fort Totten</string>
+		<key>address</key>
+		<string>Fort Totten Building 325</string>
+		<key>coordinate</key>
+		<string>40.791539, -73.774336</string>
+		<key>phone</key>
+		<string>7182818325</string>
+		<key>fax</key>
+		<string>7183523954</string>
+		<key>borough</key>
+		<string>EMS Academy</string>
+		<key>area</key>
+		<string>New York</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fort Totten Admin</string>
+		<key>address</key>
+		<string>Fort Totten Building 409B</string>
+		<key>coordinate</key>
+		<string>40.791539, -73.774336</string>
+		<key>phone</key>
+		<string>7182818409</string>
+		<key>fax</key>
+		<string>7182818460</string>
+		<key>borough</key>
+		<string>EMS Academy</string>
+		<key>area</key>
+		<string>New York</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>CFRD Training</string>
+		<key>address</key>
+		<string>Fort Totten Building 405</string>
+		<key>coordinate</key>
+		<string>40.794041, -73.777235</string>
+		<key>phone</key>
+		<string>7182818405</string>
+		<key>fax</key>
+		<string>7183528852</string>
+		<key>borough</key>
+		<string>EMS Academy</string>
+		<key>area</key>
+		<string>New York</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>EVOC</string>
+		<key>address</key>
+		<string>Fort Totten Building 138</string>
+		<key>coordinate</key>
+		<string>40.789393, -73.772060</string>
+		<key>phone</key>
+		<string>7182818329</string>
+		<key>fax</key>
+		<string>7182818391</string>
+		<key>borough</key>
+		<string>EMS Academy</string>
+		<key>area</key>
+		<string>New York</string>
+	</dict>
+</array>
+</plist>

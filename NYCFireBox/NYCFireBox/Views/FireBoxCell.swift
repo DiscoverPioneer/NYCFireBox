@@ -15,11 +15,11 @@ class FireBoxCell: UITableViewCell {
 
         let pin = MKPointAnnotation()
         pin.title = String(describing: box.boxNumber)
-        pin.coordinate = box.location().coordinate
+        pin.coordinate = box.coordinates.toCoordinates()
         mapView.addAnnotation(pin)
 
         let radius: Double = 500
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(box.location().coordinate,
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(box.coordinates.toCoordinates(),
                                                                   radius * 1.2, radius * 1.2)
         mapView.setRegion(coordinateRegion, animated: true)
     }

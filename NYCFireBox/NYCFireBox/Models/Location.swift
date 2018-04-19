@@ -12,7 +12,6 @@ struct Location {
 
     init(string: String) {
         let substrings = string.split(separator: ",")
-        print("Substrings \(substrings)")
         self.latitude = Double(substrings.first?.replacingOccurrences(of: " ", with: "") ?? "") ?? 0
         self.longitude = Double(substrings.last?.replacingOccurrences(of: " ", with: "") ?? "") ?? 0
     }

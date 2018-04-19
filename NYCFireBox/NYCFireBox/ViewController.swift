@@ -4,6 +4,8 @@ import MapKit
 class ViewController: UIViewController {
     private var fireBoxes: [FireBox] = []
     private var filteredBoxes: [FireBox] = []
+    private var firehouses: [Firehouse] = []
+    private var emsStations: [EMSStation] = []
     private var searchController = UISearchController(searchResultsController: nil)
     @IBOutlet var tableView: UITableView!
 
@@ -31,11 +33,19 @@ class ViewController: UIViewController {
     }
 
     private func getLocations() {
-        guard let filePath = Bundle.main.path(forResource: "Fire Boxes", ofType: "csv") else { return }
-        let contents = try? String(contentsOfFile: filePath, encoding: .utf8)
-        let rows = contents?.components(separatedBy: "\n")
-        for row in rows ?? [] {
-            fireBoxes.append(FireBox(string: row))
+        DataProvider.getFireBoxes { [weak self] (fireBoxes) in
+            self?.fireBoxes = fireBoxes
+        }
+
+        DataProvider.getEMSStations { [weak self] (emsStations) in
+            self?.emsStations = emsStations
+        }
+
+        let boroughs: [NYCBoroughs] = [.statenIsland, .queens, .manhattan, .brooklyn, .bronx]
+        for borough in boroughs {
+            DataProvider.getFirehouses(forBorough: borough, completionHandler: { [weak self] (firehouses) in
+                self?.firehouses.append(contentsOf: firehouses)
+            })
         }
     }
 
@@ -86,9 +96,8 @@ class ViewController: UIViewController {
     }
 
     private func openMaps(forBox box: FireBox) {
-        let location = box.location()
+        let locationCoordinates = box.coordinates.toCoordinates()
         let regionDistance: CLLocationDistance = 500
-        let locationCoordinates = location.coordinate
         let coordinates = CLLocationCoordinate2DMake(locationCoordinates.latitude, locationCoordinates.longitude)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         let options = [
@@ -107,19 +116,19 @@ class ViewController: UIViewController {
     @objc private func onInfoButton(_ sender: UIBarButtonItem) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let contact = UIAlertAction(title: "Contact Us", style: .default) { [weak self] (action) in
-            self?.open(email: InfoURL.contact.rawValue)
+            self?.open(email: NetworkConstants.InfoURL.contact)
         }
 
         let website = UIAlertAction(title: "Website", style: .default) { [weak self] (action) in
-            self?.open(url: InfoURL.website.rawValue)
+            self?.open(url: NetworkConstants.InfoURL.website)
         }
 
         let liveIncidents = UIAlertAction(title: "Live Incidents", style: .default) { [weak self] (action) in
-            self?.open(url: InfoURL.liveIncidents.rawValue)
+            self?.open(url: NetworkConstants.InfoURL.liveIncidents)
         }
 
         let mobile = UIAlertAction(title: "Mobile MDT", style: .default) { [weak self] (action) in
-            self?.open(url: InfoURL.mobileMDT.rawValue)
+            self?.open(url: NetworkConstants.InfoURL.mobileMDT)
         }
 
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92B145820889ECF0060145F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
 		B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96192812084D7E1001F54BD /* FireBoxCell.swift */; };
 		B9AF806F208768AE00C74225 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF806E208768AE00C74225 /* Constants.swift */; };
@@ -15,7 +16,7 @@
 		B9AF80752087735500C74225 /* EMSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF80742087735500C74225 /* EMSStation.swift */; };
 		B9AF80772087825900C74225 /* Bronx.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80762087825900C74225 /* Bronx.plist */; };
 		B9AF80792087825F00C74225 /* EMS-Stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80782087825F00C74225 /* EMS-Stations.plist */; };
-		B9AF807B2087826200C74225 /* StatenIsland.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807A2087826200C74225 /* StatenIsland.plist */; };
+		B9AF807B2087826200C74225 /* Staten Island.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807A2087826200C74225 /* Staten Island.plist */; };
 		B9AF807D2087826500C74225 /* Queens.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807C2087826500C74225 /* Queens.plist */; };
 		B9AF807F2087826800C74225 /* Manhattan.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807E2087826800C74225 /* Manhattan.plist */; };
 		B9AF80812087826E00C74225 /* Brooklyn.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80802087826E00C74225 /* Brooklyn.plist */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B92B145720889ECF0060145F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		B961927E2084CCAC001F54BD /* CollectionsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsExt.swift; sourceTree = "<group>"; };
 		B96192812084D7E1001F54BD /* FireBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxCell.swift; sourceTree = "<group>"; };
 		B9AF806E208768AE00C74225 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 		B9AF80742087735500C74225 /* EMSStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMSStation.swift; sourceTree = "<group>"; };
 		B9AF80762087825900C74225 /* Bronx.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Bronx.plist; sourceTree = "<group>"; };
 		B9AF80782087825F00C74225 /* EMS-Stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EMS-Stations.plist"; sourceTree = "<group>"; };
-		B9AF807A2087826200C74225 /* StatenIsland.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StatenIsland.plist; sourceTree = "<group>"; };
+		B9AF807A2087826200C74225 /* Staten Island.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Staten Island.plist"; sourceTree = "<group>"; };
 		B9AF807C2087826500C74225 /* Queens.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Queens.plist; sourceTree = "<group>"; };
 		B9AF807E2087826800C74225 /* Manhattan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Manhattan.plist; sourceTree = "<group>"; };
 		B9AF80802087826E00C74225 /* Brooklyn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Brooklyn.plist; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B92B145620889EAD0060145F /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				B92B145720889ECF0060145F /* DataProvider.swift */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
 		B961927D2084CC97001F54BD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		B9E7C3E12084B902005C4BC8 /* NYCFireBox */ = {
 			isa = PBXGroup;
 			children = (
+				B92B145620889EAD0060145F /* DataProviders */,
 				B96192802084D7C3001F54BD /* Views */,
 				B961927D2084CC97001F54BD /* Extensions */,
 				B9E7C3F72084BBC5005C4BC8 /* Models */,
@@ -116,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E7C3FB2084CC4A005C4BC8 /* Fire Boxes.csv */,
-				B9AF807A2087826200C74225 /* StatenIsland.plist */,
+				B9AF807A2087826200C74225 /* Staten Island.plist */,
 				B9AF807C2087826500C74225 /* Queens.plist */,
 				B9AF807E2087826800C74225 /* Manhattan.plist */,
 				B9AF80782087825F00C74225 /* EMS-Stations.plist */,
@@ -204,7 +215,7 @@
 				B9E7C3FC2084CC4A005C4BC8 /* Fire Boxes.csv in Resources */,
 				B9AF80772087825900C74225 /* Bronx.plist in Resources */,
 				B9AF80792087825F00C74225 /* EMS-Stations.plist in Resources */,
-				B9AF807B2087826200C74225 /* StatenIsland.plist in Resources */,
+				B9AF807B2087826200C74225 /* Staten Island.plist in Resources */,
 				B9AF80812087826E00C74225 /* Brooklyn.plist in Resources */,
 				B9AF807D2087826500C74225 /* Queens.plist in Resources */,
 			);
@@ -217,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92B145820889ECF0060145F /* DataProvider.swift in Sources */,
 				B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */,
 				B9AF80752087735500C74225 /* EMSStation.swift in Sources */,
 				B9E7C3E52084B902005C4BC8 /* ViewController.swift in Sources */,

@@ -35,7 +35,8 @@ class FireBox {
 
     init(string: String) {
         let columns = string.components(separatedBy: ",")
-        self.coordinates = Location(longitude: Double(columns[safe: 0] ?? "") ?? 0,
+        self.coordinates = Location(name: columns[safe: 3] ?? "",
+                                    longitude: Double(columns[safe: 0] ?? "") ?? 0,
                                     latitude: Double(columns[safe: 1] ?? "") ?? 0)
         self.address = columns[safe: 3] ?? ""
         let number = columns[safe: 2] ?? ""

@@ -7,7 +7,9 @@ class ViewController: UIViewController {
     private var firehouses: [Firehouse] = []
     private var emsStations: [EMSStation] = []
     private var searchController = UISearchController(searchResultsController: nil)
+
     @IBOutlet var tableView: UITableView!
+    var mapView = MKMapView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,14 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
         tableView.separatorStyle = .none
+        tableView.backgroundView = mapView
+
+        let radius: Double = 3000
+        let startCoordinates = CLLocationCoordinate2D(latitude: NYCCoordinates.latitude,
+                                                      longitude: NYCCoordinates.longitude)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(startCoordinates,
+                                                                  radius * 1.5, radius * 1.5)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
 
     private func getLocations() {
@@ -39,12 +49,18 @@ class ViewController: UIViewController {
 
         DataProvider.getEMSStations { [weak self] (emsStations) in
             self?.emsStations = emsStations
+            for station in emsStations {
+                self?.updateMap(withLocations: [station.coordinates])
+            }
         }
 
         let boroughs: [NYCBoroughs] = [.statenIsland, .queens, .manhattan, .brooklyn, .bronx]
         for borough in boroughs {
             DataProvider.getFirehouses(forBorough: borough, completionHandler: { [weak self] (firehouses) in
                 self?.firehouses.append(contentsOf: firehouses)
+                for firehouse in firehouses {
+                    self?.updateMap(withLocations: [firehouse.coordinates])
+                }
             })
         }
     }
@@ -58,18 +74,7 @@ class ViewController: UIViewController {
     }
 
     private func showNoResult(_ shouldShow: Bool) {
-        if shouldShow {
-            let rect = CGRect(origin: CGPoint(x: 0,y :0),
-                              size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-            let messageLabel = UILabel(frame: rect)
-            messageLabel.text = "No results"
-            messageLabel.textColor = .gray
-            messageLabel.textAlignment = .center
-            messageLabel.adjustsFontSizeToFitWidth = true
-            tableView.backgroundView = messageLabel;
-        } else {
-            tableView.backgroundView = nil
-        }
+        tableView.backgroundView?.isHidden = !shouldShow
     }
 
     private func clearSearch() {
@@ -95,21 +100,30 @@ class ViewController: UIViewController {
         return 4
     }
 
-    private func openMaps(forBox box: FireBox) {
-        let locationCoordinates = box.coordinates.toCoordinates()
-        let regionDistance: CLLocationDistance = 500
-        let coordinates = CLLocationCoordinate2DMake(locationCoordinates.latitude, locationCoordinates.longitude)
-        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
+//    private func openMaps(forBox box: FireBox) {
+//        let locationCoordinates = box.coordinates.toCoordinates()
+//        let regionDistance: CLLocationDistance = 500
+//        let coordinates = CLLocationCoordinate2DMake(locationCoordinates.latitude, locationCoordinates.longitude)
+//        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+//        let options = [
+//            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+//            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+//        ]
+//
+//        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+//        let mapItem = MKMapItem(placemark: placemark)
+//        mapItem.name = box.address
+//
+//        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
+//    }
 
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = box.address
-
-        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
+    private func updateMap(withLocations locations: [Location]) {
+        for location in locations {
+            let pin = MKPointAnnotation()
+            pin.title = String(describing: location.name)
+            pin.coordinate = location.toCoordinates()
+            mapView.addAnnotation(pin)
+        }
     }
 
     // MARK: Actions
@@ -176,7 +190,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openMaps(forBox: filteredBoxes[indexPath.row])
+//        openMaps(forBox: filteredBoxes[indexPath.row])
     }
 }
 

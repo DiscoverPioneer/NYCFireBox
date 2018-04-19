@@ -14,6 +14,7 @@ class Firehouse {
     init(dictionary: [String: Any]) {
         self.name = dictionary["name"] as? String ?? ""
         self.address = dictionary["address"] as? String ?? ""
-        self.coordinates = Location(string: dictionary["coordinate"] as? String ?? "")
+        self.coordinates = Location(name: dictionary["name"] as? String ?? "",
+                                    coordinates: dictionary["coordinate"] as? String ?? "")
     }
 }

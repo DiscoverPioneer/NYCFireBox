@@ -28,3 +28,7 @@ struct NetworkConstants {
     }
 }
 
+struct NYCCoordinates {
+    static let longitude = -74.0060
+    static let latitude = 40.7128
+}

@@ -1,17 +1,20 @@
 import Foundation
 import CoreLocation
 
-struct Location {
+class Location {
+    var name: String
     var longitude: Double
     var latitude: Double
 
-    init(longitude: Double, latitude: Double) {
+    init(name: String,longitude: Double, latitude: Double) {
+        self.name = name
         self.longitude = longitude
         self.latitude = latitude
     }
 
-    init(string: String) {
-        let substrings = string.split(separator: ",")
+    init(name: String, coordinates: String) {
+        self.name = name
+        let substrings = coordinates.split(separator: ",")
         self.latitude = Double(substrings.first?.replacingOccurrences(of: " ", with: "") ?? "") ?? 0
         self.longitude = Double(substrings.last?.replacingOccurrences(of: " ", with: "") ?? "") ?? 0
     }

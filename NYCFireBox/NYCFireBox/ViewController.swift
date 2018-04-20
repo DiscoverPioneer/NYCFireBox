@@ -165,6 +165,10 @@ class ViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
+
+    override func resignFirstResponder() -> Bool {
+        return searchController.searchBar.resignFirstResponder()
+    }
 }
 
 extension ViewController: UISearchResultsUpdating {
@@ -190,7 +194,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        openMaps(forBox: filteredBoxes[indexPath.row])
+        _ = resignFirstResponder()
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let detailsVC = storyboard.instantiateViewController(withIdentifier: "FireBoxDetailsController") as? FireBoxDetailsController {
+            navigationController?.pushViewController(detailsVC, animated: true)
+            detailsVC.update(withBox: fireBoxes[indexPath.row])
+        }
     }
 }
 

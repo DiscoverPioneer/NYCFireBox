@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fi7-dG-qhC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fi7-dG-qhC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,6 +82,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="44.527736131934034"/>
+        </scene>
+        <!--Fire Box Details Controller-->
+        <scene sceneID="pof-2A-iDc">
+            <objects>
+                <viewController storyboardIdentifier="FireBoxDetailsController" id="0ka-Np-3hc" customClass="FireBoxDetailsController" customModule="NYCFireBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RfK-xp-nS5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-KN-BbN">
+                                <rect key="frame" x="15" y="40" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dIl-HQ-7XO">
+                                <rect key="frame" x="15" y="90.5" width="345" height="486.5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-n0-RwB">
+                                <rect key="frame" x="57.5" y="607" width="260" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cno-yl-O4R">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5hN-Qa-PEs"/>
+                                            <constraint firstAttribute="width" constant="120" id="fLS-QZ-weT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Directions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onDirections:" destination="0ka-Np-3hc" eventType="touchUpInside" id="byU-Cc-Qtz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kC4-b9-LJQ">
+                                        <rect key="frame" x="140" y="0.0" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="FV0-kn-vYS"/>
+                                            <constraint firstAttribute="height" constant="30" id="L2e-1k-016"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Rundown">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onRundown:" destination="0ka-Np-3hc" eventType="touchUpInside" id="P6x-jO-LrW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nBr-KN-BbN" firstAttribute="top" secondItem="KoG-gC-dW0" secondAttribute="top" constant="20" id="4uH-eH-rmN"/>
+                            <constraint firstItem="KoG-gC-dW0" firstAttribute="bottom" secondItem="nqh-n0-RwB" secondAttribute="bottom" constant="30" id="PHX-oF-URr"/>
+                            <constraint firstItem="dIl-HQ-7XO" firstAttribute="top" secondItem="nBr-KN-BbN" secondAttribute="bottom" constant="30" id="QjL-cM-9nt"/>
+                            <constraint firstItem="nqh-n0-RwB" firstAttribute="top" secondItem="dIl-HQ-7XO" secondAttribute="bottom" constant="30" id="Ssg-1p-tLM"/>
+                            <constraint firstItem="KoG-gC-dW0" firstAttribute="trailing" secondItem="dIl-HQ-7XO" secondAttribute="trailing" constant="15" id="XJo-yo-xKQ"/>
+                            <constraint firstItem="KoG-gC-dW0" firstAttribute="trailing" secondItem="nBr-KN-BbN" secondAttribute="trailing" constant="15" id="Y9j-FE-mec"/>
+                            <constraint firstItem="dIl-HQ-7XO" firstAttribute="leading" secondItem="KoG-gC-dW0" secondAttribute="leading" constant="15" id="aKo-La-r4P"/>
+                            <constraint firstItem="nBr-KN-BbN" firstAttribute="leading" secondItem="KoG-gC-dW0" secondAttribute="leading" constant="15" id="oCU-GI-LBc"/>
+                            <constraint firstItem="nqh-n0-RwB" firstAttribute="centerX" secondItem="RfK-xp-nS5" secondAttribute="centerX" id="pdw-Nb-IZg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KoG-gC-dW0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pk1-HX-RtP"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="nBr-KN-BbN" id="hJl-lc-d40"/>
+                        <outlet property="mapView" destination="dIl-HQ-7XO" id="mhg-Bx-5Y8"/>
+                        <outlet property="openMapsButton" destination="cno-yl-O4R" id="xYw-HF-2TY"/>
+                        <outlet property="rundownButton" destination="kC4-b9-LJQ" id="G4q-81-Irb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIp-Nh-3IU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="44.527736131934034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N6c-dH-CCM">

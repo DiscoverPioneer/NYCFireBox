@@ -10,50 +10,67 @@ class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     var mapView = MKMapView()
+    var noResultsLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setupViews()
         getLocations()
     }
 
+    override func resignFirstResponder() -> Bool {
+        return searchController.searchBar.resignFirstResponder()
+    }
+
     private func setupViews() {
         self.view.backgroundColor = .white
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Enter box number"
-        searchController.searchBar.delegate = self
-        searchController.searchBar.keyboardType = .numberPad
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController = searchController
+        setupNavigationBar()
+        setupTableView()
+        setupNoResults()
+        setupMapView()
+    }
 
+    private func setupNoResults() {
+        noResultsLabel.text = "No Results"
+        noResultsLabel.textColor = .gray
+        noResultsLabel.textAlignment = .center
+        noResultsLabel.frame = CGRect(origin: CGPoint(x: 0,y :0),
+                                      size: CGSize(width: self.view.bounds.size.width,
+                                                   height: self.view.bounds.size.height))
+    }
+
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
         tableView.separatorStyle = .none
         tableView.backgroundView = mapView
+    }
 
+    private func setupMapView() {
         let radius: Double = 3000
         let startCoordinates = CLLocationCoordinate2D(latitude: NYCCoordinates.latitude,
                                                       longitude: NYCCoordinates.longitude)
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(startCoordinates,
                                                                   radius * 1.5, radius * 1.5)
         mapView.setRegion(coordinateRegion, animated: true)
+        mapView.frame = CGRect(origin: CGPoint(x: 0,y :0),
+                               size: CGSize(width: self.view.bounds.size.width,
+                                            height: self.view.bounds.size.height))
     }
 
     private func getLocations() {
         DataProvider.getFireBoxes { [weak self] (fireBoxes) in
             self?.fireBoxes = fireBoxes
         }
-
+        
         DataProvider.getEMSStations { [weak self] (emsStations) in
             self?.emsStations = emsStations
             for station in emsStations {
                 self?.updateMap(withLocations: [station.coordinates])
             }
         }
-
+        
         let boroughs: [NYCBoroughs] = [.statenIsland, .queens, .manhattan, .brooklyn, .bronx]
         for borough in boroughs {
             DataProvider.getFirehouses(forBorough: borough, completionHandler: { [weak self] (firehouses) in
@@ -63,23 +80,41 @@ class ViewController: UIViewController {
                 }
             })
         }
+        showNoResult(true)
     }
 
     private func setupNavigationBar() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Enter box number"
+        searchController.searchBar.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.keyboardType = .numberPad
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+
         let infoButton = UIBarButtonItem(title: "Info",
                                          style: .plain,
                                          target: self,
                                          action: #selector(onInfoButton(_:)))
+        let mapButton = UIBarButtonItem(title: "Map",
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(onMapButton(_:)))
         self.navigationItem.leftBarButtonItem = infoButton
+        self.navigationItem.rightBarButtonItem = mapButton
     }
 
     private func showNoResult(_ shouldShow: Bool) {
+        let shouldShowMap = searchController.searchBar.text?.isEmpty ?? true
+        tableView.backgroundView = shouldShowMap ? mapView : noResultsLabel
         tableView.backgroundView?.isHidden = !shouldShow
     }
 
     private func clearSearch() {
         filteredBoxes.removeAll()
         tableView.reloadData()
+        showNoResult(filteredBoxes.isEmpty)
     }
 
     private func filter(searchQuery: String? ) {
@@ -100,29 +135,15 @@ class ViewController: UIViewController {
         return 4
     }
 
-//    private func openMaps(forBox box: FireBox) {
-//        let locationCoordinates = box.coordinates.toCoordinates()
-//        let regionDistance: CLLocationDistance = 500
-//        let coordinates = CLLocationCoordinate2DMake(locationCoordinates.latitude, locationCoordinates.longitude)
-//        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-//        let options = [
-//            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-//            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-//        ]
-//
-//        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-//        let mapItem = MKMapItem(placemark: placemark)
-//        mapItem.name = box.address
-//
-//        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
-//    }
-
     private func updateMap(withLocations locations: [Location]) {
         for location in locations {
             let pin = MKPointAnnotation()
             pin.title = String(describing: location.name)
             pin.coordinate = location.toCoordinates()
             mapView.addAnnotation(pin)
+//            mapView.selectAnnotation(pin, animated: false)
+//            mapView.deselectAnnotation(pin, animated: false)
+//            setupMapView
         }
     }
 
@@ -155,6 +176,12 @@ class ViewController: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
 
+    @objc private func onMapButton(_ sender: UIBarButtonItem) {
+        searchController.searchBar.text?.removeAll()
+        searchController.isActive = false
+        clearSearch()
+    }
+
     private func open(url: String) {
         guard let url = URL(string: url) else { return }
         UIApplication.shared.open(url)
@@ -164,10 +191,6 @@ class ViewController: UIViewController {
         if let url = URL(string: "mailto:\(email)") {
             UIApplication.shared.open(url)
         }
-    }
-
-    override func resignFirstResponder() -> Bool {
-        return searchController.searchBar.resignFirstResponder()
     }
 }
 
@@ -179,7 +202,6 @@ extension ViewController: UISearchResultsUpdating {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        showNoResult(filteredBoxes.isEmpty)
        return filteredBoxes.count
     }
 

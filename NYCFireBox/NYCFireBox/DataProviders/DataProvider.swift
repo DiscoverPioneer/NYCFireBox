@@ -33,10 +33,14 @@ class DataProvider {
                 let toURL =  URL(string: localURL),
                 shouldDownload {
                 loadData(fromURL: fromURL, to: toURL, completionHandler: {
-                    completionHandler(getLocalFirehouses(forBorough: borough))
+                    DispatchQueue.main.async {
+                        completionHandler(getLocalFirehouses(forBorough: borough))
+                    }
                 })
             } else {
-                completionHandler(getLocalFirehouses(forBorough: borough))
+                DispatchQueue.main.async {
+                    completionHandler(getLocalFirehouses(forBorough: borough))
+                }
             }
         }
     }
@@ -46,10 +50,14 @@ class DataProvider {
             if shouldDownload {
                 let path = Bundle.main.path(forResource: "EMS-Stations", ofType: "plist")
                 loadData(fromURL: URL(string: NetworkConstants.Datasource.emsStations)!, to: URL(string: path!)! , completionHandler: {
-                    completionHandler(getLocalEMSStations())
+                    DispatchQueue.main.async {
+                        completionHandler(getLocalEMSStations())
+                    }
                 })
             } else {
-                completionHandler(getLocalEMSStations())
+                DispatchQueue.main.async {
+                    completionHandler(getLocalEMSStations())
+                }
             }
         }
     }

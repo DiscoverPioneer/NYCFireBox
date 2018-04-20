@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(startCoordinates,
                                                                   radius * 1.5, radius * 1.5)
         mapView.setRegion(coordinateRegion, animated: true)
+        mapView.delegate = self
         mapView.frame = CGRect(origin: CGPoint(x: 0,y :0),
                                size: CGSize(width: self.view.bounds.size.width,
                                             height: self.view.bounds.size.height))
@@ -141,9 +142,6 @@ class ViewController: UIViewController {
             pin.title = String(describing: location.name)
             pin.coordinate = location.toCoordinates()
             mapView.addAnnotation(pin)
-//            mapView.selectAnnotation(pin, animated: false)
-//            mapView.deselectAnnotation(pin, animated: false)
-//            setupMapView
         }
     }
 
@@ -229,6 +227,19 @@ extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let totalCharacters = (searchBar.text?.appending(text).count ?? 0) - range.length
         return totalCharacters <= maxQueryLength()
+    }
+}
+
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotationReuseID")
+        annotationView.isEnabled = true
+        let label = UILabel()
+        label.text = annotation.title ?? ""
+        annotationView.canShowCallout = true
+        annotationView.leftCalloutAccessoryView = label
+
+        return annotationView
     }
 }
 

@@ -218,7 +218,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let detailsVC = storyboard.instantiateViewController(withIdentifier: "FireBoxDetailsController") as? FireBoxDetailsController {
             navigationController?.pushViewController(detailsVC, animated: true)
-            detailsVC.update(withBox: fireBoxes[indexPath.row])
+            detailsVC.update(withBox: fireBoxes[indexPath.row], firehouses: firehouses, emsStations: emsStations)
         }
     }
 }
@@ -234,10 +234,8 @@ extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotationReuseID")
         annotationView.isEnabled = true
-        let label = UILabel()
-        label.text = annotation.title ?? ""
         annotationView.canShowCallout = true
-        annotationView.leftCalloutAccessoryView = label
+        annotationView.leftCalloutAccessoryView = UILabel()
 
         return annotationView
     }

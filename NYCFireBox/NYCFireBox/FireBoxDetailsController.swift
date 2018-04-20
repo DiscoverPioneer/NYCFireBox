@@ -10,6 +10,7 @@ class FireBoxDetailsController: UIViewController {
     @IBOutlet weak var rundownButton: UIButton!
 
     var firebox: FireBox?
+    var locations: [Location] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,24 +40,55 @@ class FireBoxDetailsController: UIViewController {
         pin.coordinate = coordinates
         mapView.addAnnotation(pin)
 
-        let radius: Double = 500
+        let radius: Double = 1000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates,
                                                                   radius * 1.5,
                                                                   radius * 1.5)
         mapView.setRegion(coordinateRegion, animated: true)
+        updateMap(withLocations: locations)
     }
 
     func color(forAnnotation annotation: MKAnnotation) -> UIColor {
         return annotation.title ?? "" == firebox?.boxNumber ?? "" ? .blue : .red
     }
 
-    func update(withBox firebox: FireBox) {
+    func update(withBox firebox: FireBox, firehouses: [Firehouse], emsStations: [EMSStation]) {
         self.firebox = firebox
+
+        for firehouse in firehouses {
+            self.locations.append(firehouse.coordinates)
+        }
+
+        for emsStation in emsStations {
+            self.locations.append(emsStation.coordinates)
+        }
+    }
+
+    private func updateMap(withLocations locations: [Location]) {
+        for location in locations {
+            let pin = MKPointAnnotation()
+            pin.title = String(describing: location.name)
+            pin.coordinate = location.toCoordinates()
+            mapView.addAnnotation(pin)
+        }
     }
 
     //MARK: - Actions
     @IBAction func onDirections(_ sender: Any) {
+        guard let firebox = firebox else { return }
+        let locationCoordinates = firebox.coordinates.toCoordinates()
+        let regionDistance: CLLocationDistance = 500
+        let coordinates = CLLocationCoordinate2DMake(locationCoordinates.latitude, locationCoordinates.longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
 
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = firebox.address
+        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
     }
 
 
@@ -73,6 +105,9 @@ extension FireBoxDetailsController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotationReuseID")
         annotationView.markerTintColor = color(forAnnotation: annotation)
+        annotationView.isEnabled = true
+        annotationView.canShowCallout = true
+        annotationView.leftCalloutAccessoryView = UILabel()
         return annotationView
     }
 }

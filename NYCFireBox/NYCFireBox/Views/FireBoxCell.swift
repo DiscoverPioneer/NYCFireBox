@@ -12,6 +12,7 @@ class FireBoxCell: UITableViewCell {
     func populate(withBox box: FireBox) {
         addressLabel.text = box.address + "\n" + box.borough
         mapView.layer.borderColor = UIColor.gray.cgColor
+        mapView.delegate = self
 
         let pin = MKPointAnnotation()
         pin.title = String(describing: box.boxNumber)
@@ -26,5 +27,13 @@ class FireBoxCell: UITableViewCell {
 
     override func prepareForReuse() {
         mapView.removeAnnotations(mapView.annotations)
+    }
+}
+
+extension FireBoxCell: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotationReuseID")
+        annotationView.markerTintColor = .blue
+        return annotationView
     }
 }

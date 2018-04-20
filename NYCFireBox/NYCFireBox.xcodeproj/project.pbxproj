@@ -28,6 +28,7 @@
 		B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */; };
 		B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
 		B9E7C3FC2084CC4A005C4BC8 /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3FB2084CC4A005C4BC8 /* Fire Boxes.csv */; };
+		B9F1A888208A3F1A002DCD1D /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B9E7C3EE2084B902005C4BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBox.swift; sourceTree = "<group>"; };
 		B9E7C3FB2084CC4A005C4BC8 /* Fire Boxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Fire Boxes.csv"; sourceTree = "<group>"; };
+		B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDistance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				B9AF8070208771F200C74225 /* Firehouse.swift */,
 				B9AF80722087723D00C74225 /* Location.swift */,
 				B9AF80742087735500C74225 /* EMSStation.swift */,
+				B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B92B145820889ECF0060145F /* DataProvider.swift in Sources */,
+				B9F1A888208A3F1A002DCD1D /* LocationDistance.swift in Sources */,
 				B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */,
 				B9AF80752087735500C74225 /* EMSStation.swift in Sources */,
 				B9E7C3E52084B902005C4BC8 /* ViewController.swift in Sources */,

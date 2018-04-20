@@ -11,6 +11,7 @@ class FireBoxDetailsController: UIViewController {
 
     var firebox: FireBox?
     var locations: [Location] = []
+    var nearbyLocations: [LocationDistance] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,7 @@ class FireBoxDetailsController: UIViewController {
         for emsStation in emsStations {
             self.locations.append(emsStation.coordinates)
         }
+        calculateNearbyLocations()
     }
 
     private func updateMap(withLocations locations: [Location]) {
@@ -71,6 +73,21 @@ class FireBoxDetailsController: UIViewController {
             pin.coordinate = location.toCoordinates()
             mapView.addAnnotation(pin)
         }
+    }
+
+    private func calculateNearbyLocations() {
+        guard  let firebox = firebox else { return }
+        var distances: [LocationDistance] = []
+        for location in locations {
+            let distance = firebox.coordinates.toLocation().distance(from: location.toLocation())
+            distances.append(LocationDistance(distance: distance, origin: firebox.coordinates, destination: location))
+        }
+
+        distances.sort { (location1, location2 ) -> Bool in
+            location1.distance < location2.distance
+        }
+
+        self.nearbyLocations = Array(distances.prefix(10))
     }
 
     //MARK: - Actions
@@ -93,7 +110,16 @@ class FireBoxDetailsController: UIViewController {
 
 
     @IBAction func onRundown(_ sender: Any) {
-
+        let alertController = UIAlertController()
+        alertController.title = "Nearby locations"
+        var message = ""
+        for location in nearbyLocations {
+            message.append(contentsOf: location.destination.name + "\n\n")
+        }
+        alertController.message = message
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        (presentedViewController ?? self).present(alertController, animated: true, completion: nil)
     }
 
     @objc private func onBack(_ sender: UIBarButtonItem) {

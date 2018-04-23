@@ -9,8 +9,9 @@ class ViewController: UIViewController {
     private var searchController = UISearchController(searchResultsController: nil)
 
     @IBOutlet var tableView: UITableView!
-    var mapView = MKMapView()
-    var noResultsLabel = UILabel()
+    private var mapView = MKMapView()
+    private var noResultsLabel = UILabel()
+    private var mapNavButton: UIBarButtonItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,18 +100,20 @@ class ViewController: UIViewController {
                                          style: .plain,
                                          target: self,
                                          action: #selector(onInfoButton(_:)))
-        let mapButton = UIBarButtonItem(title: "Map",
+        mapNavButton = UIBarButtonItem(title: "Map",
                                         style: .plain,
                                         target: self,
                                         action: #selector(onMapButton(_:)))
         self.navigationItem.leftBarButtonItem = infoButton
-        self.navigationItem.rightBarButtonItem = mapButton
+        self.navigationItem.rightBarButtonItem = mapNavButton
     }
 
     private func showNoResult(_ shouldShow: Bool) {
         let shouldShowMap = searchController.searchBar.text?.isEmpty ?? true
         tableView.backgroundView = shouldShowMap ? mapView : noResultsLabel
         tableView.backgroundView?.isHidden = !shouldShow
+
+        navigationItem.rightBarButtonItem = shouldShowMap ? nil : mapNavButton
     }
 
     private func clearSearch() {

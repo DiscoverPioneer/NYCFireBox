@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     }
 
     override func resignFirstResponder() -> Bool {
+        searchController.isActive = false
         return searchController.searchBar.resignFirstResponder()
     }
 
@@ -171,6 +172,8 @@ class ViewController: UIViewController {
         actionSheet.addAction(liveIncidents)
         actionSheet.addAction(mobile)
         actionSheet.addAction(cancel)
+
+        _ = resignFirstResponder()
         present(actionSheet, animated: true, completion: nil)
     }
 

@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     }
 
     override func resignFirstResponder() -> Bool {
-        searchController.isActive = false
         return searchController.searchBar.resignFirstResponder()
     }
 
@@ -177,6 +176,7 @@ class ViewController: UIViewController {
         actionSheet.addAction(cancel)
 
         _ = resignFirstResponder()
+        searchController.isActive = false
         present(actionSheet, animated: true, completion: nil)
     }
 
@@ -224,7 +224,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let detailsVC = storyboard.instantiateViewController(withIdentifier: "FireBoxDetailsController") as? FireBoxDetailsController {
             navigationController?.pushViewController(detailsVC, animated: true)
-            detailsVC.update(withBox: fireBoxes[indexPath.row], firehouses: firehouses, emsStations: emsStations)
+            detailsVC.update(withBox: filteredBoxes[indexPath.row], firehouses: firehouses, emsStations: emsStations)
         }
     }
 }

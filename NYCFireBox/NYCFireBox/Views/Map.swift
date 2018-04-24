@@ -37,10 +37,10 @@ class Map: UIView {
     private func setupViews() {
         mapView.delegate = self
         mapTypeSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16),
-                                                        NSAttributedStringKey.foregroundColor: UIColor.white],
+                                                        NSAttributedStringKey.foregroundColor: UIColor.lightGray],
                                                        for: .normal)
         mapTypeSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18),
-                                                        NSAttributedStringKey.foregroundColor: UIColor.white],
+                                                        NSAttributedStringKey.foregroundColor: UIColor.gray],
                                                        for: .selected)
         mapTypeSegmentedControl.selectedSegmentIndex = MapType.standard.rawValue
 
@@ -52,13 +52,11 @@ class Map: UIView {
         layer.cornerRadius = 5
     }
 
-    func setupMapRegion(startCoordinates: CLLocationCoordinate2D?, radius: Double) {
-        let startCoordinates = CLLocationCoordinate2D(latitude: NYCCoordinates.latitude,
-                                                      longitude: NYCCoordinates.longitude)
-
+    func setupMapRegion(startCoordinates: CLLocationCoordinate2D, radius: Double) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(startCoordinates,
                                                                   radius * 1.5, radius * 1.5)
         mapView.setRegion(coordinateRegion, animated: true)
+        mapView.showsUserLocation = true
     }
 
     func addMarker(toLocation location: Location, color: UIColor) {
@@ -80,6 +78,10 @@ class Map: UIView {
     }
 
     @IBAction func onUserLocation(_ sender: UIButton) {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            setupMapRegion(startCoordinates: mapView.userLocation.coordinate,
+                           radius: 1000)
+        }
     }
 }
 
@@ -89,6 +91,11 @@ extension Map: MKMapViewDelegate {
         annotationView.isEnabled = true
         annotationView.canShowCallout = true
         annotationView.leftCalloutAccessoryView = UILabel()
+
+        if annotation.isKind(of: MKUserLocation.self) {
+            annotationView.markerTintColor = .green
+            return annotationView
+        }
 
         if let annotationName = annotation.title ?? "" {
             annotationView.markerTintColor = markerColors[annotationName] ?? .red

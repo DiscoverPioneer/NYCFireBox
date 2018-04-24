@@ -9,7 +9,7 @@ class ViewController: UIViewController {
     private var searchController = UISearchController(searchResultsController: nil)
 
     @IBOutlet var tableView: UITableView!
-    private var mapView = MKMapView()
+    private var mapView: Map?
     private var noResultsLabel = UILabel()
     private var mapNavButton: UIBarButtonItem?
 
@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     private func setupViews() {
         self.view.backgroundColor = .white
         setupNavigationBar()
+        setupMapView()
         setupTableView()
         setupNoResults()
-        setupMapView()
     }
 
     private func setupNoResults() {
@@ -49,16 +49,12 @@ class ViewController: UIViewController {
     }
 
     private func setupMapView() {
-        let radius: Double = 3000
+        mapView = Map(frame: CGRect(origin: CGPoint(x: 0,y :0),
+                                       size: CGSize(width: view.bounds.size.width,
+                                                    height: view.bounds.size.height)))
         let startCoordinates = CLLocationCoordinate2D(latitude: NYCCoordinates.latitude,
                                                       longitude: NYCCoordinates.longitude)
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(startCoordinates,
-                                                                  radius * 1.5, radius * 1.5)
-        mapView.setRegion(coordinateRegion, animated: true)
-        mapView.delegate = self
-        mapView.frame = CGRect(origin: CGPoint(x: 0,y :0),
-                               size: CGSize(width: self.view.bounds.size.width,
-                                            height: self.view.bounds.size.height))
+        mapView?.setupMapRegion(startCoordinates: startCoordinates, radius: 3000)
     }
 
     private func getLocations() {
@@ -141,10 +137,7 @@ class ViewController: UIViewController {
 
     private func updateMap(withLocations locations: [Location]) {
         for location in locations {
-            let pin = MKPointAnnotation()
-            pin.title = String(describing: location.name)
-            pin.coordinate = location.toCoordinates()
-            mapView.addAnnotation(pin)
+            mapView?.addMarker(toLocation: location, color: .red)
         }
     }
 
@@ -235,15 +228,3 @@ extension ViewController: UISearchBarDelegate {
         return totalCharacters <= maxQueryLength()
     }
 }
-
-extension ViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotationReuseID")
-        annotationView.isEnabled = true
-        annotationView.canShowCallout = true
-        annotationView.leftCalloutAccessoryView = UILabel()
-
-        return annotationView
-    }
-}
-

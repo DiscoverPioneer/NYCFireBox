@@ -6,7 +6,7 @@ class FireBoxDetailsController: UIViewController {
 
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var openMapsButton: UIButton!
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: Map!
     @IBOutlet weak var rundownButton: UIButton!
 
     var firebox: FireBox?
@@ -15,6 +15,11 @@ class FireBoxDetailsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupNavigationBar()
         setupViews()
     }
@@ -28,24 +33,14 @@ class FireBoxDetailsController: UIViewController {
     }
 
     private func setupViews() {
-        mapView.layer.borderColor = UIColor.gray.cgColor
-        mapView.delegate = self
+        mapView.addBorder(color: .gray)
 
         guard let firebox = firebox else { return }
         title = "Box \(firebox.boxNumber)"
         addressLabel.text = firebox.address + "\n" + firebox.borough
 
-        let pin = MKPointAnnotation()
-        let coordinates = firebox.coordinates.toCoordinates()
-        pin.title = String(describing: firebox.boxNumber)
-        pin.coordinate = coordinates
-        mapView.addAnnotation(pin)
-
-        let radius: Double = 1000
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates,
-                                                                  radius * 1.5,
-                                                                  radius * 1.5)
-        mapView.setRegion(coordinateRegion, animated: true)
+        mapView.addMarker(toLocation: firebox.coordinates, color: .blue)
+        mapView.setupMapRegion(startCoordinates: firebox.coordinates.toCoordinates(), radius: 1000)
         updateMap(withLocations: locations)
     }
 
@@ -68,10 +63,7 @@ class FireBoxDetailsController: UIViewController {
 
     private func updateMap(withLocations locations: [Location]) {
         for location in locations {
-            let pin = MKPointAnnotation()
-            pin.title = String(describing: location.name)
-            pin.coordinate = location.toCoordinates()
-            mapView.addAnnotation(pin)
+            mapView.addMarker(toLocation: location, color: .red)
         }
     }
 
@@ -127,13 +119,3 @@ class FireBoxDetailsController: UIViewController {
     }
 }
 
-extension FireBoxDetailsController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotationReuseID")
-        annotationView.markerTintColor = color(forAnnotation: annotation)
-        annotationView.isEnabled = true
-        annotationView.canShowCallout = true
-        annotationView.leftCalloutAccessoryView = UILabel()
-        return annotationView
-    }
-}

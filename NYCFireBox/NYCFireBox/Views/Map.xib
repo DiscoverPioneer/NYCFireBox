@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Map" customModule="NYCFireBox" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="lyz-KL-x7U"/>
+                <outlet property="mapTypeSegmentedControl" destination="EAr-pE-3Di" id="Qjo-iS-SwM"/>
+                <outlet property="mapView" destination="KHH-fV-w3i" id="TiZ-6f-8XD"/>
+                <outlet property="userLocationButton" destination="v72-nR-Wdr" id="NJe-im-pDe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KHH-fV-w3i">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </mapView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EAr-pE-3Di">
+                    <rect key="frame" x="0.0" y="627" width="375" height="41"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ic2-Ep-3WP"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                        <segment title="Satellite"/>
+                    </segments>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onMapTypeChanged:" destination="-1" eventType="valueChanged" id="PTD-Oa-2YI"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v72-nR-Wdr">
+                    <rect key="frame" x="10" y="587" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="8i3-gH-ph7"/>
+                        <constraint firstAttribute="height" constant="30" id="cie-Kk-QkT"/>
+                    </constraints>
+                    <connections>
+                        <action selector="onUserLocation:" destination="-1" eventType="touchUpInside" id="u8G-fB-M6j"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EAr-pE-3Di" firstAttribute="top" secondItem="v72-nR-Wdr" secondAttribute="bottom" constant="10" id="75E-FH-Wuu"/>
+                <constraint firstItem="KHH-fV-w3i" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Boi-oa-yEC"/>
+                <constraint firstItem="EAr-pE-3Di" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ccu-xJ-x5g"/>
+                <constraint firstItem="KHH-fV-w3i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aJ4-Eg-iJg"/>
+                <constraint firstItem="v72-nR-Wdr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="dRk-Q3-FHp"/>
+                <constraint firstItem="KHH-fV-w3i" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="icO-1k-kvI"/>
+                <constraint firstItem="EAr-pE-3Di" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="jht-8g-Fxc"/>
+                <constraint firstItem="KHH-fV-w3i" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kqA-EU-afF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EAr-pE-3Di" secondAttribute="trailing" id="olO-00-ddz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		B92B145820889ECF0060145F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B92B145C2089F6BA0060145F /* FireBoxDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */; };
+		B9533443208F5AAB001BCCD5 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
 		B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
 		B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96192812084D7E1001F54BD /* FireBoxCell.swift */; };
+		B99E041A208E0C0A00B7AE60 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99E0419208E0C0A00B7AE60 /* Map.swift */; };
 		B9AF806F208768AE00C74225 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF806E208768AE00C74225 /* Constants.swift */; };
 		B9AF8071208771F200C74225 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8070208771F200C74225 /* Firehouse.swift */; };
 		B9AF80732087723D00C74225 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF80722087723D00C74225 /* Location.swift */; };
@@ -34,8 +36,10 @@
 /* Begin PBXFileReference section */
 		B92B145720889ECF0060145F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxDetailsController.swift; sourceTree = "<group>"; };
+		B9533442208F5AAB001BCCD5 /* Map.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Map.xib; sourceTree = "<group>"; };
 		B961927E2084CCAC001F54BD /* CollectionsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsExt.swift; sourceTree = "<group>"; };
 		B96192812084D7E1001F54BD /* FireBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxCell.swift; sourceTree = "<group>"; };
+		B99E0419208E0C0A00B7AE60 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		B9AF806E208768AE00C74225 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9AF8070208771F200C74225 /* Firehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firehouse.swift; sourceTree = "<group>"; };
 		B9AF80722087723D00C74225 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				B96192812084D7E1001F54BD /* FireBoxCell.swift */,
+				B99E0419208E0C0A00B7AE60 /* Map.swift */,
+				B9533442208F5AAB001BCCD5 /* Map.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */,
 				B9E7C3EA2084B902005C4BC8 /* Assets.xcassets in Resources */,
 				B9E7C3E82084B902005C4BC8 /* Main.storyboard in Resources */,
+				B9533443208F5AAB001BCCD5 /* Map.xib in Resources */,
 				B9AF807F2087826800C74225 /* Manhattan.plist in Resources */,
 				B9E7C3FC2084CC4A005C4BC8 /* Fire Boxes.csv in Resources */,
 				B9AF80772087825900C74225 /* Bronx.plist in Resources */,
@@ -241,6 +248,7 @@
 				B9E7C3E52084B902005C4BC8 /* ViewController.swift in Sources */,
 				B9AF80732087723D00C74225 /* Location.swift in Sources */,
 				B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */,
+				B99E041A208E0C0A00B7AE60 /* Map.swift in Sources */,
 				B92B145C2089F6BA0060145F /* FireBoxDetailsController.swift in Sources */,
 				B9E7C3E32084B902005C4BC8 /* AppDelegate.swift in Sources */,
 				B9AF8071208771F200C74225 /* Firehouse.swift in Sources */,

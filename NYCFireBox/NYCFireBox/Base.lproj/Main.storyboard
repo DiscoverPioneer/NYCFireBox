@@ -92,22 +92,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-KN-BbN">
-                                <rect key="frame" x="15" y="40" width="345" height="20.5"/>
+                                <rect key="frame" x="15" y="84" width="345" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dIl-HQ-7XO">
-                                <rect key="frame" x="15" y="90.5" width="345" height="486.5"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BH-j4-vtV" customClass="Map" customModule="NYCFireBox" customModuleProvider="target">
+                                <rect key="frame" x="15" y="134" width="345" height="442.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-n0-RwB">
                                 <rect key="frame" x="57.5" y="607" width="260" height="30"/>
                                 <subviews>
@@ -156,13 +149,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1BH-j4-vtV" firstAttribute="top" secondItem="nBr-KN-BbN" secondAttribute="bottom" constant="30" id="0rB-gb-C2l"/>
                             <constraint firstItem="nBr-KN-BbN" firstAttribute="top" secondItem="KoG-gC-dW0" secondAttribute="top" constant="20" id="4uH-eH-rmN"/>
+                            <constraint firstItem="nqh-n0-RwB" firstAttribute="top" secondItem="1BH-j4-vtV" secondAttribute="bottom" constant="30" id="FqN-su-7f5"/>
+                            <constraint firstItem="KoG-gC-dW0" firstAttribute="trailing" secondItem="1BH-j4-vtV" secondAttribute="trailing" constant="15" id="OPz-RH-pUm"/>
                             <constraint firstItem="KoG-gC-dW0" firstAttribute="bottom" secondItem="nqh-n0-RwB" secondAttribute="bottom" constant="30" id="PHX-oF-URr"/>
-                            <constraint firstItem="dIl-HQ-7XO" firstAttribute="top" secondItem="nBr-KN-BbN" secondAttribute="bottom" constant="30" id="QjL-cM-9nt"/>
-                            <constraint firstItem="nqh-n0-RwB" firstAttribute="top" secondItem="dIl-HQ-7XO" secondAttribute="bottom" constant="30" id="Ssg-1p-tLM"/>
-                            <constraint firstItem="KoG-gC-dW0" firstAttribute="trailing" secondItem="dIl-HQ-7XO" secondAttribute="trailing" constant="15" id="XJo-yo-xKQ"/>
                             <constraint firstItem="KoG-gC-dW0" firstAttribute="trailing" secondItem="nBr-KN-BbN" secondAttribute="trailing" constant="15" id="Y9j-FE-mec"/>
-                            <constraint firstItem="dIl-HQ-7XO" firstAttribute="leading" secondItem="KoG-gC-dW0" secondAttribute="leading" constant="15" id="aKo-La-r4P"/>
+                            <constraint firstItem="1BH-j4-vtV" firstAttribute="leading" secondItem="KoG-gC-dW0" secondAttribute="leading" constant="15" id="cRx-6J-W7M"/>
                             <constraint firstItem="nBr-KN-BbN" firstAttribute="leading" secondItem="KoG-gC-dW0" secondAttribute="leading" constant="15" id="oCU-GI-LBc"/>
                             <constraint firstItem="nqh-n0-RwB" firstAttribute="centerX" secondItem="RfK-xp-nS5" secondAttribute="centerX" id="pdw-Nb-IZg"/>
                         </constraints>
@@ -171,14 +164,14 @@
                     <navigationItem key="navigationItem" id="pk1-HX-RtP"/>
                     <connections>
                         <outlet property="addressLabel" destination="nBr-KN-BbN" id="hJl-lc-d40"/>
-                        <outlet property="mapView" destination="dIl-HQ-7XO" id="mhg-Bx-5Y8"/>
+                        <outlet property="mapView" destination="1BH-j4-vtV" id="Gmn-e4-Nsb"/>
                         <outlet property="openMapsButton" destination="cno-yl-O4R" id="xYw-HF-2TY"/>
                         <outlet property="rundownButton" destination="kC4-b9-LJQ" id="G4q-81-Irb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIp-Nh-3IU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="44.527736131934034"/>
+            <point key="canvasLocation" x="2420" y="44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N6c-dH-CCM">
@@ -195,6 +188,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FG5-HN-PeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-225" y="45"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kgR-Dc-egG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vMW-zh-hIl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UhZ-4u-UEq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0ka-Np-3hc" kind="relationship" relationship="rootViewController" id="dhT-N3-ryh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMA-8W-JVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739.2" y="44.07796101949026"/>
         </scene>
     </scenes>
 </document>

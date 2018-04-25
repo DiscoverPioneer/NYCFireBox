@@ -160,12 +160,17 @@ class ViewController: UIViewController {
             self?.open(url: NetworkConstants.InfoURL.mobileMDT)
         }
 
+        let fdnewyork = UIAlertAction(title: "FDNewYork", style: .default) { [weak self] (action) in
+            self?.open(url: NetworkConstants.InfoURL.fdNewYork)
+        }
+        
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         actionSheet.addAction(contact)
         actionSheet.addAction(website)
         actionSheet.addAction(liveIncidents)
         actionSheet.addAction(mobile)
+        actionSheet.addAction(fdnewyork)
         actionSheet.addAction(cancel)
 
         _ = resignFirstResponder()

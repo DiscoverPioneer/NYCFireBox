@@ -6,6 +6,7 @@ struct NetworkConstants {
         static let website =  "http://pioneerapplications.com?ref=fireboxapp"
         static let liveIncidents = "https://itunes.apple.com/us/app/fire-buff/id592485608?mt=8"
         static let mobileMDT = "https://itunes.apple.com/us/app/mobile-mdt/id1251028336?mt=8"
+        static let fdNewYork = "http://www.fdnewyork.com/"
     }
 
     struct Datasource {

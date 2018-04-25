@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
     private var mapView: Map?
     private var noResultsLabel = UILabel()
     private var mapNavButton: UIBarButtonItem?
+    private var kStartQuery = "0000"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,7 @@ class SearchViewController: UIViewController {
         tableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
         tableView.backgroundView = mapView
     }
 
@@ -105,6 +107,7 @@ class SearchViewController: UIViewController {
 
     private func showNoResult(_ shouldShow: Bool) {
         let shouldShowMap = searchController.searchBar.text?.isEmpty ?? true
+            || searchController.searchBar.text ?? "" == kStartQuery
         tableView.backgroundView = shouldShowMap ? mapView : noResultsLabel
         tableView.backgroundView?.isHidden = !shouldShow
 
@@ -119,7 +122,6 @@ class SearchViewController: UIViewController {
 
     private func filter(searchQuery: String? ) {
         guard let searchText = searchQuery, searchText.count == maxQueryLength() else {
-            clearSearch()
             return
         }
 
@@ -128,6 +130,7 @@ class SearchViewController: UIViewController {
         }
 
         self.filteredBoxes = filteredBoxes
+        showNoResult(filteredBoxes.isEmpty)
         tableView.reloadData()
     }
 
@@ -139,6 +142,34 @@ class SearchViewController: UIViewController {
         for location in locations {
             mapView?.addMarker(toLocation: location, color: .red)
         }
+    }
+
+    private func removeLeadingZero(searchText: String) -> String {
+        if searchText.count > maxQueryLength() && searchText.first == "0" {
+            let startIndex = searchText.index(searchText.startIndex, offsetBy: 1)
+            return String(describing: searchText[startIndex...])
+        }
+
+        let endIndex = searchText.index(searchText.startIndex, offsetBy: 3)
+        return String(describing: searchText[...endIndex])
+    }
+
+    private func addLeadingZero(searchText: String) -> String {
+        if searchText.isEmpty { return kStartQuery }
+        let end = searchText.index(searchText.endIndex, offsetBy: -1)
+        var newText = String(describing: searchText[..<end])
+        while newText.count < 4 {
+            newText = "0" + newText
+        }
+        return newText
+    }
+
+    func getSearchQuery(text: String, newText: String, range: NSRange) -> String {
+        if (range.length == 1 && newText.count == 0) {
+            return addLeadingZero(searchText: text)
+        }
+
+        return removeLeadingZero(searchText: text.appending(newText))
     }
 
     // MARK: Actions
@@ -229,7 +260,18 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let totalCharacters = (searchBar.text?.appending(text).count ?? 0) - range.length
-        return totalCharacters <= maxQueryLength()
+        searchBar.text = getSearchQuery(text: searchBar.text ?? "", newText: text, range: range)
+        return false
+    }
+
+     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.text = kStartQuery
+        return true
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchBar.text ?? "").isEmpty {
+            searchBar.text = kStartQuery
+        }
     }
 }

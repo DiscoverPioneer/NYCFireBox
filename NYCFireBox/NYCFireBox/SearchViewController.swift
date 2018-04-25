@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
     private var fireBoxes: [FireBox] = []
     private var filteredBoxes: [FireBox] = []
     private var firehouses: [Firehouse] = []
@@ -196,13 +196,13 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UISearchResultsUpdating {
+extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filter(searchQuery: searchController.searchBar.text)
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return filteredBoxes.count
     }
@@ -227,7 +227,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension ViewController: UISearchBarDelegate {
+extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let totalCharacters = (searchBar.text?.appending(text).count ?? 0) - range.length
         return totalCharacters <= maxQueryLength()

@@ -24,7 +24,7 @@
 		B9AF807F2087826800C74225 /* Manhattan.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807E2087826800C74225 /* Manhattan.plist */; };
 		B9AF80812087826E00C74225 /* Brooklyn.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80802087826E00C74225 /* Brooklyn.plist */; };
 		B9E7C3E32084B902005C4BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */; };
-		B9E7C3E52084B902005C4BC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E42084B902005C4BC8 /* ViewController.swift */; };
+		B9E7C3E52084B902005C4BC8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E42084B902005C4BC8 /* SearchViewController.swift */; };
 		B9E7C3E82084B902005C4BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E62084B902005C4BC8 /* Main.storyboard */; };
 		B9E7C3EA2084B902005C4BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
 		B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */; };
@@ -53,7 +53,7 @@
 		B9AF80802087826E00C74225 /* Brooklyn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Brooklyn.plist; sourceTree = "<group>"; };
 		B9E7C3DF2084B902005C4BC8 /* NYCFireBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCFireBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9E7C3E42084B902005C4BC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9E7C3E42084B902005C4BC8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B9E7C3E72084B902005C4BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9E7C3E92084B902005C4BC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9E7C3EC2084B902005C4BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				B961927D2084CC97001F54BD /* Extensions */,
 				B9E7C3F72084BBC5005C4BC8 /* Models */,
 				B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */,
-				B9E7C3E42084B902005C4BC8 /* ViewController.swift */,
+				B9E7C3E42084B902005C4BC8 /* SearchViewController.swift */,
 				B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */,
 				B9E7C3E62084B902005C4BC8 /* Main.storyboard */,
 				B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */,
@@ -255,7 +255,7 @@
 				B9F1A888208A3F1A002DCD1D /* LocationDistance.swift in Sources */,
 				B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */,
 				B9AF80752087735500C74225 /* EMSStation.swift in Sources */,
-				B9E7C3E52084B902005C4BC8 /* ViewController.swift in Sources */,
+				B9E7C3E52084B902005C4BC8 /* SearchViewController.swift in Sources */,
 				B9AF80732087723D00C74225 /* Location.swift in Sources */,
 				B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */,
 				B99E041A208E0C0A00B7AE60 /* Map.swift in Sources */,

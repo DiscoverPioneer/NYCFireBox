@@ -39,8 +39,10 @@ class FireBoxDetailsController: UIViewController {
         title = "Box \(firebox.boxNumber)"
         addressLabel.text = firebox.address + "\n" + firebox.borough
 
-        mapView.addMarker(toLocation: firebox.coordinates, color: .blue)
-        mapView.setupMapRegion(startCoordinates: firebox.coordinates.toCoordinates(), radius: 1000)
+        if let location = firebox.coordinates, let coordinates = location.toCoordinates() {
+            mapView.addMarker(toLocation: location, color: .blue)
+            mapView.setupMapRegion(startCoordinates: coordinates, radius: 1000)
+        }
         updateMap(withLocations: locations)
     }
 
@@ -71,8 +73,12 @@ class FireBoxDetailsController: UIViewController {
         guard  let firebox = firebox else { return }
         var distances: [LocationDistance] = []
         for location in locations {
-            let distance = firebox.coordinates.toLocation().distance(from: location.toLocation())
-            distances.append(LocationDistance(distance: distance, origin: firebox.coordinates, destination: location))
+            if let fireboxLocation = firebox.coordinates?.toLocation(),
+                let destinationLocation = location.toLocation(),
+                let fireboxCoordinates = firebox.coordinates {
+                let distance = fireboxLocation.distance(from: destinationLocation)
+                distances.append(LocationDistance(distance: distance, origin: fireboxCoordinates, destination: location))
+            }
         }
 
         distances.sort { (location1, location2 ) -> Bool in
@@ -84,10 +90,8 @@ class FireBoxDetailsController: UIViewController {
 
     //MARK: - Actions
     @IBAction func onDirections(_ sender: Any) {
-        guard let firebox = firebox else { return }
-        let locationCoordinates = firebox.coordinates.toCoordinates()
+        guard let firebox = firebox, let coordinates = firebox.coordinates?.toCoordinates() else { return }
         let regionDistance: CLLocationDistance = 500
-        let coordinates = CLLocationCoordinate2DMake(locationCoordinates.latitude, locationCoordinates.longitude)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         let options = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
@@ -99,7 +103,6 @@ class FireBoxDetailsController: UIViewController {
         mapItem.name = firebox.address
         MKMapItem.openMaps(with: [mapItem], launchOptions: options)
     }
-
 
     @IBAction func onRundown(_ sender: Any) {
         let alertController = UIAlertController()

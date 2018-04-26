@@ -10,6 +10,7 @@
 		B92B145820889ECF0060145F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B92B145C2089F6BA0060145F /* FireBoxDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */; };
 		B9533443208F5AAB001BCCD5 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
+		B95456DC2091D98C0050080A /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B95456DB2091D98C0050080A /* Fire Boxes.csv */; };
 		B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
 		B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96192812084D7E1001F54BD /* FireBoxCell.swift */; };
 		B99E041A208E0C0A00B7AE60 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99E0419208E0C0A00B7AE60 /* Map.swift */; };
@@ -29,7 +30,6 @@
 		B9E7C3EA2084B902005C4BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
 		B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */; };
 		B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
-		B9E7C3FC2084CC4A005C4BC8 /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3FB2084CC4A005C4BC8 /* Fire Boxes.csv */; };
 		B9F1A888208A3F1A002DCD1D /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,7 @@
 		B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxDetailsController.swift; sourceTree = "<group>"; };
 		B9533442208F5AAB001BCCD5 /* Map.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Map.xib; sourceTree = "<group>"; };
 		B9533445208F6A3C001BCCD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B95456DB2091D98C0050080A /* Fire Boxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Fire Boxes.csv"; sourceTree = "<group>"; };
 		B961927E2084CCAC001F54BD /* CollectionsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsExt.swift; sourceTree = "<group>"; };
 		B96192812084D7E1001F54BD /* FireBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxCell.swift; sourceTree = "<group>"; };
 		B99E0419208E0C0A00B7AE60 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		B9E7C3EC2084B902005C4BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9E7C3EE2084B902005C4BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBox.swift; sourceTree = "<group>"; };
-		B9E7C3FB2084CC4A005C4BC8 /* Fire Boxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Fire Boxes.csv"; sourceTree = "<group>"; };
 		B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDistance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,7 @@
 		B9E7C3F42084BB6E005C4BC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B9E7C3FB2084CC4A005C4BC8 /* Fire Boxes.csv */,
+				B95456DB2091D98C0050080A /* Fire Boxes.csv */,
 				B9AF807A2087826200C74225 /* Staten Island.plist */,
 				B9AF807C2087826500C74225 /* Queens.plist */,
 				B9AF807E2087826800C74225 /* Manhattan.plist */,
@@ -235,12 +235,12 @@
 				B9E7C3E82084B902005C4BC8 /* Main.storyboard in Resources */,
 				B9533443208F5AAB001BCCD5 /* Map.xib in Resources */,
 				B9AF807F2087826800C74225 /* Manhattan.plist in Resources */,
-				B9E7C3FC2084CC4A005C4BC8 /* Fire Boxes.csv in Resources */,
 				B9AF80772087825900C74225 /* Bronx.plist in Resources */,
 				B9AF80792087825F00C74225 /* EMS-Stations.plist in Resources */,
 				B9AF807B2087826200C74225 /* Staten Island.plist in Resources */,
 				B9AF80812087826E00C74225 /* Brooklyn.plist in Resources */,
 				B9AF807D2087826500C74225 /* Queens.plist in Resources */,
+				B95456DC2091D98C0050080A /* Fire Boxes.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

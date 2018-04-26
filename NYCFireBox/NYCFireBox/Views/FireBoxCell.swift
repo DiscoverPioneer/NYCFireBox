@@ -14,15 +14,17 @@ class FireBoxCell: UITableViewCell {
         mapView.layer.borderColor = UIColor.gray.cgColor
         mapView.delegate = self
 
-        let pin = MKPointAnnotation()
-        pin.title = String(describing: box.boxNumber)
-        pin.coordinate = box.coordinates.toCoordinates()
-        mapView.addAnnotation(pin)
+        if let coordinates = box.coordinates?.toCoordinates() {
+            let pin = MKPointAnnotation()
+            pin.title = String(describing: box.boxNumber)
+            pin.coordinate = coordinates
+            mapView.addAnnotation(pin)
 
-        let radius: Double = 500
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(box.coordinates.toCoordinates(),
-                                                                  radius * 1.2, radius * 1.2)
-        mapView.setRegion(coordinateRegion, animated: true)
+            let radius: Double = 500
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates,
+                                                                      radius * 1.2, radius * 1.2)
+            mapView.setRegion(coordinateRegion, animated: true)
+        }
     }
 
     override func prepareForReuse() {

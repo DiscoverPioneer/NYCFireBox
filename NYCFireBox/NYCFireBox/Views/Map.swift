@@ -60,9 +60,10 @@ class Map: UIView {
     }
 
     func addMarker(toLocation location: Location, color: UIColor) {
+        guard  let coordinates = location.toCoordinates() else { return }
         let pin = MKPointAnnotation()
         pin.title = String(describing: location.name)
-        pin.coordinate = location.toCoordinates()
+        pin.coordinate = coordinates
         mapView.addAnnotation(pin)
         markerColors[location.name] = color
     }

@@ -37,10 +37,10 @@ class FireBoxDetailsController: UIViewController {
 
         guard let firebox = firebox else { return }
         title = "Box \(firebox.boxNumber)"
-        addressLabel.text = firebox.address + "\n" + firebox.borough
+        addressLabel.text = firebox.address + "\n" + (firebox.borough ?? "")
 
-        if let location = firebox.coordinates, let coordinates = location.toCoordinates() {
-            mapView.addMarker(toLocation: location, color: .blue)
+        if let coordinates = firebox.toCoordinates() {
+            mapView.addMarker(toLocation: firebox, color: .blue)
             mapView.setupMapRegion(startCoordinates: coordinates, radius: 1000)
         }
         updateMap(withLocations: locations)
@@ -50,16 +50,9 @@ class FireBoxDetailsController: UIViewController {
         return annotation.title ?? "" == firebox?.boxNumber ?? "" ? .blue : .red
     }
 
-    func update(withBox firebox: FireBox, firehouses: [Firehouse], emsStations: [EMSStation]) {
+    func update(withBox firebox: FireBox, locations: [Location]) {
         self.firebox = firebox
-
-        for firehouse in firehouses {
-            self.locations.append(firehouse.coordinates)
-        }
-
-        for emsStation in emsStations {
-            self.locations.append(emsStation.coordinates)
-        }
+        self.locations.append(contentsOf: locations)
         calculateNearbyLocations()
     }
 
@@ -73,11 +66,10 @@ class FireBoxDetailsController: UIViewController {
         guard  let firebox = firebox else { return }
         var distances: [LocationDistance] = []
         for location in locations {
-            if let fireboxLocation = firebox.coordinates?.toLocation(),
-                let destinationLocation = location.toLocation(),
-                let fireboxCoordinates = firebox.coordinates {
+            if let fireboxLocation = firebox.toLocation(),
+                let destinationLocation = location.toLocation() {
                 let distance = fireboxLocation.distance(from: destinationLocation)
-                distances.append(LocationDistance(distance: distance, origin: fireboxCoordinates, destination: location))
+                distances.append(LocationDistance(distance: distance, origin: firebox, destination: location))
             }
         }
 
@@ -90,7 +82,7 @@ class FireBoxDetailsController: UIViewController {
 
     //MARK: - Actions
     @IBAction func onDirections(_ sender: Any) {
-        guard let firebox = firebox, let coordinates = firebox.coordinates?.toCoordinates() else { return }
+        guard let firebox = firebox, let coordinates = firebox.toCoordinates() else { return }
         let regionDistance: CLLocationDistance = 500
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         let options = [

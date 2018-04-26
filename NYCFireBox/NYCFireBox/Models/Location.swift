@@ -3,20 +3,23 @@ import CoreLocation
 
 class Location {
     var name: String
+    var address: String
+    var borough: String?
+    var area: String?
     var longitude: Double?
     var latitude: Double?
 
-    init(name: String, longitude: Double?, latitude: Double?) {
+    init(name: String, address: String, borough: String?, area: String?, longitude: Double?, latitude: Double?) {
         self.name = name
         self.longitude = longitude
         self.latitude = latitude
+        self.address = address
+        self.borough = borough
+        self.area = area
     }
 
-    init(name: String, coordinates: String) {
-        self.name = name
-        let substrings = coordinates.split(separator: ",")
-        self.latitude = Double(substrings.first?.replacingOccurrences(of: " ", with: "") ?? "")
-        self.longitude = Double(substrings.last?.replacingOccurrences(of: " ", with: "") ?? "")
+    func fullAddress() -> String {
+        return address + (borough ?? "") + (area ?? "")
     }
 
     func toLocation() -> CLLocation? {

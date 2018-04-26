@@ -4,8 +4,7 @@ import MapKit
 class SearchViewController: UIViewController {
     private var fireBoxes: [FireBox] = []
     private var filteredBoxes: [FireBox] = []
-    private var firehouses: [Firehouse] = []
-    private var emsStations: [EMSStation] = []
+    private var locations: [Location] = []
     private var searchController = UISearchController(searchResultsController: nil)
 
     @IBOutlet var tableView: UITableView!
@@ -65,19 +64,19 @@ class SearchViewController: UIViewController {
         }
         
         DataProvider.getEMSStations { [weak self] (emsStations) in
-            self?.emsStations = emsStations
             for station in emsStations {
-                self?.updateMap(withLocations: [station.coordinates])
+                self?.locations.append(station)
             }
+            self?.updateMap(withLocations: emsStations)
         }
         
         let boroughs: [NYCBoroughs] = [.statenIsland, .queens, .manhattan, .brooklyn, .bronx]
         for borough in boroughs {
             DataProvider.getFirehouses(forBorough: borough, completionHandler: { [weak self] (firehouses) in
-                self?.firehouses.append(contentsOf: firehouses)
                 for firehouse in firehouses {
-                    self?.updateMap(withLocations: [firehouse.coordinates])
+                    self?.locations.append(firehouse)
                 }
+                self?.updateMap(withLocations: firehouses)
             })
         }
         showNoResult(true)
@@ -253,7 +252,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let detailsVC = storyboard.instantiateViewController(withIdentifier: "FireBoxDetailsController") as? FireBoxDetailsController {
             navigationController?.pushViewController(detailsVC, animated: true)
-            detailsVC.update(withBox: filteredBoxes[indexPath.row], firehouses: firehouses, emsStations: emsStations)
+            detailsVC.update(withBox: filteredBoxes[indexPath.row], locations: locations)
         }
     }
 }

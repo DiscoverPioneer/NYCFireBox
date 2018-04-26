@@ -1,39 +1,41 @@
 import Foundation
 
-class EMSStation {
-    var name: String
-    var address: String
-    var coordinates: Location
+class EMSStation: Location {
     var phone: String
     var fax: String
-    var borough: String
-    var area: String
 
     init(name: String,
          address: String,
-         coordinates: Location,
+         longitude: Double,
+         latitude: Double,
          phone: String,
          fax: String,
          borough: String,
          area: String) {
-
-        self.name = name
-        self.address = address
-        self.coordinates = coordinates
         self.phone = phone
         self.fax = fax
-        self.borough = borough
-        self.area = area
+        super.init(name: name,
+                   address: address,
+                   borough: borough,
+                   area: area,
+                   longitude: longitude,
+                   latitude: latitude)
     }
 
     init(dictionary: [String: Any]) {
-        self.name = dictionary["name"] as? String ?? ""
-        self.address = dictionary["address"] as? String ?? ""
-        self.coordinates = Location(name: dictionary["name"] as? String ?? "",
-                                    coordinates: dictionary["coordinate"] as? String ?? "")
         self.phone = dictionary["phone"] as? String ?? ""
         self.fax = dictionary["fax"] as? String ?? ""
-        self.borough = dictionary["borough"] as? String ?? ""
-        self.area = dictionary["area"] as? String ?? ""
+
+        let coordinates = dictionary["coordinate"] as? String ?? ""
+        let substrings = coordinates.split(separator: ",")
+        let latitude = Double(substrings.first?.replacingOccurrences(of: " ", with: "") ?? "")
+        let longitude = Double(substrings.last?.replacingOccurrences(of: " ", with: "") ?? "")
+        
+        super.init(name: dictionary["name"] as? String ?? "",
+                   address: dictionary["address"] as? String ?? "",
+                   borough: dictionary["borough"] as? String,
+                   area: dictionary["area"] as? String,
+                   longitude: longitude,
+                   latitude: latitude)
     }
 }

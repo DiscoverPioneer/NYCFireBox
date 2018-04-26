@@ -10,11 +10,11 @@ class FireBoxCell: UITableViewCell {
     @IBOutlet weak var mapView: MKMapView!
 
     func populate(withBox box: FireBox) {
-        addressLabel.text = box.address + "\n" + box.borough
+        addressLabel.text = box.address + "\n" + (box.borough ?? "")
         mapView.layer.borderColor = UIColor.gray.cgColor
         mapView.delegate = self
 
-        if let coordinates = box.coordinates?.toCoordinates() {
+        if let coordinates = box.toCoordinates() {
             let pin = MKPointAnnotation()
             pin.title = String(describing: box.boxNumber)
             pin.coordinate = coordinates

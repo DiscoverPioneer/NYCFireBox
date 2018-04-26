@@ -20,26 +20,22 @@ enum NYCBoroughs: String {
     }
 }
 
-class FireBox {
-    var coordinates: Location?
+class FireBox: Location {
     var boxNumber: String
-    var address: String
-    var borough: String
-
-    init(coordinates: Location?, boxNumber: String, address: String, borough: String) {
-        self.boxNumber = boxNumber
-        self.address = address
-        self.borough = borough
-        self.coordinates = coordinates
-    }
 
     init(string: String) {
         let columns = string.components(separatedBy: ",")
-        self.coordinates = Location(name: columns[safe: 4] ?? "",
-                                    longitude: Double(columns[safe: 0] ?? ""),
-                                    latitude: Double(columns[safe: 1] ?? ""))
-        self.address = columns[safe: 4] ?? ""
         self.boxNumber = columns[safe: 3] ?? ""
-        self.borough = columns[safe: 2] ?? ""
+        let address = columns[safe: 4] ?? ""
+        let borough = NYCBoroughs(rawValue: columns[safe: 2] ?? "")?.fullName ?? ""
+        let longitude = Double(columns[safe: 0] ?? "")
+        let latitude = Double(columns[safe: 1] ?? "")
+
+        super.init(name: boxNumber,
+                   address: address,
+                   borough: borough,
+                   area: nil,
+                   longitude: longitude,
+                   latitude: latitude)
     }
 }

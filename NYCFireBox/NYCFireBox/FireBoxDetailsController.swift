@@ -39,10 +39,13 @@ class FireBoxDetailsController: UIViewController {
         title = "Box \(firebox.boxNumber)"
         addressLabel.text = firebox.address + "\n" + (firebox.borough ?? "")
 
-        if let coordinates = firebox.toCoordinates() {
-            mapView.addMarker(toLocation: firebox, color: .blue)
-            mapView.setupMapRegion(startCoordinates: coordinates, radius: 1000)
+        firebox.toCoordinates { [weak self] (coordinates) in
+            if let coordinates = coordinates {
+                self?.mapView.addMarker(toLocation: firebox, color: .blue)
+                self?.mapView.setupMapRegion(startCoordinates: coordinates, radius: 1000)
+            }
         }
+
         updateMap(withLocations: locations)
     }
 
@@ -63,37 +66,29 @@ class FireBoxDetailsController: UIViewController {
     }
 
     private func calculateNearbyLocations() {
+
         guard  let firebox = firebox else { return }
-        var distances: [LocationDistance] = []
-        for location in locations {
-            if let fireboxLocation = firebox.toLocation(),
-                let destinationLocation = location.toLocation() {
-                let distance = fireboxLocation.distance(from: destinationLocation)
-                distances.append(LocationDistance(distance: distance, origin: firebox, destination: location))
-            }
+        firebox.nearbyLocations(fromLocations: locations, maxLocations: 10) { [weak self] (nearbyLocations) in
+            self?.nearbyLocations = nearbyLocations
         }
-
-        distances.sort { (location1, location2 ) -> Bool in
-            location1.distance < location2.distance
-        }
-
-        self.nearbyLocations = Array(distances.prefix(10))
     }
 
     //MARK: - Actions
     @IBAction func onDirections(_ sender: Any) {
-        guard let firebox = firebox, let coordinates = firebox.toCoordinates() else { return }
-        let regionDistance: CLLocationDistance = 500
-        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
+        firebox?.toCoordinates({ [weak self] (coordinates) in
+            guard let firebox = self?.firebox, let coordinates = coordinates else { return }
+            let regionDistance: CLLocationDistance = 500
+            let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+            let options = [
+                MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+                MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+            ]
 
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = firebox.address
-        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
+            let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+            let mapItem = MKMapItem(placemark: placemark)
+            mapItem.name = firebox.address
+            MKMapItem.openMaps(with: [mapItem], launchOptions: options)
+        })
     }
 
     @IBAction func onRundown(_ sender: Any) {

@@ -22,6 +22,7 @@ class FireBoxDetailsController: UIViewController {
         super.viewWillAppear(animated)
         setupNavigationBar()
         setupViews()
+        GoogleAnalyticsController.shared.trackScreen(name: "FireBoxDetailsController")
     }
 
     private func setupNavigationBar() {

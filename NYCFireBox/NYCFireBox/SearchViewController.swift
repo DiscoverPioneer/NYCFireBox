@@ -18,6 +18,11 @@ class SearchViewController: UIViewController {
         setupViews()
         getLocations()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        GoogleAnalyticsController.shared.trackScreen(name: "SearchViewController")
+    }
 
     override func resignFirstResponder() -> Bool {
         return searchController.searchBar.resignFirstResponder()

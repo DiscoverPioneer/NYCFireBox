@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         locationManager.requestWhenInUseAuthorization()
+        Fabric.with([Crashlytics.self])
+        GoogleAnalyticsController.shared.registerApp("UA-118289028-1")
         return true
     }
 

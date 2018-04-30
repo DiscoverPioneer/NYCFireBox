@@ -150,9 +150,9 @@
 		<key>name</key>
 		<string>Eng. 75 Lad. 33 Bat. 19 </string>
 		<key>address</key>
-		<string>2283 Jerome Ave.</string>
+		<string>2175 Walton Ave</string>
 		<key>coordinate</key>
-		<string>40.8587845,-73.9036527</string>
+		<string>40.856087, -73.904418</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -230,9 +230,9 @@
 		<key>name</key>
 		<string>Eng. 96 Lad. 54 Foam 96 </string>
 		<key>address</key>
-		<string>689 Story Ave.</string>
+		<string>1689 Story Ave.</string>
 		<key>coordinate</key>
-		<string>40.821079, -73.882205</string>
+		<string>40.822963, -73.869303</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -246,9 +246,9 @@
 		<key>name</key>
 		<string>Rescue 3, RAC.3, Collapse Rig 3</string>
 		<key>address</key>
-		<string> 453 E.176 St.</string>
+		<string>1655 Washington Ave</string>
 		<key>coordinate</key>
-		<string>40.8461892, -73.8992755</string>
+		<string>40.841227, -73.901625</string>
 	</dict>
 	<dict>
 		<key>name</key>

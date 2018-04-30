@@ -60,19 +60,19 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Eng. 265 Lad. 121 Bat. 47 </string>
+		<string>Eng. 265 Lad. 121, EMS Bat. 47 </string>
 		<key>address</key>
 		<string>303 Beach 49 St.</string>
 		<key>coordinate</key>
-		<string>40.5933774, -73.7796852</string>
+		<string>40.593539, -73.779130</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Eng. 266 Brush Fire 7 </string>
+		<string>Eng. 266 Batt. 47</string>
 		<key>address</key>
 		<string>92-20 Rockaway Beach Blvd.</string>
 		<key>coordinate</key>
-		<string>40.5721697, -73.8573324</string>
+		<string>40.586302, -73.816247</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -176,7 +176,7 @@
 		<key>address</key>
 		<string>12-49 149 St.</string>
 		<key>coordinate</key>
-		<string>40.7627394, -73.8161821</string>
+		<string>40.788926, -73.816094</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -240,7 +240,7 @@
 		<key>address</key>
 		<string>111-02 Queens Blvd.</string>
 		<key>coordinate</key>
-		<string>40.7443272, -73.9301865</string>
+		<string>40.718254, -73.837739</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -364,11 +364,11 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Eng. 329 Manfold Wagon </string>
+		<string>Eng. 329 </string>
 		<key>address</key>
 		<string>402 Beach 169 St.</string>
 		<key>coordinate</key>
-		<string>40.567422, -73.882676</string>
+		<string>40.566065, -73.881508</string>
 	</dict>
 	<dict>
 		<key>name</key>

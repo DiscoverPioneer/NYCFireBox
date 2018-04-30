@@ -39,4 +39,10 @@ public class GoogleAnalyticsController {
         guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
         tracker.send(builder.build() as [NSObject : AnyObject])
     }
+    
+    func trackEvent(category: String, action: String, label: String, value: NSNumber) {
+        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
+        guard let builder = GAIDictionaryBuilder.createEvent(withCategory: category, action: action, label: label, value: value) else {return}
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
 }

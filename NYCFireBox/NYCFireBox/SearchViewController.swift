@@ -80,6 +80,7 @@ class SearchViewController: UIViewController {
             DataProvider.getFirehouses(forBorough: borough, completionHandler: { [weak self] (firehouses) in
                 for firehouse in firehouses {
                     self?.locations.append(firehouse)
+                    print("\(firehouse.name),\(firehouse.address),\"\(firehouse.latitude!),\(firehouse.longitude!)\",\(borough.fullName)")
                 }
                 self?.updateMap(withLocations: firehouses)
             })
@@ -199,6 +200,13 @@ class SearchViewController: UIViewController {
             self?.open(url: NetworkConstants.InfoURL.fdNewYork)
         }
         
+        let shareAction = UIAlertAction(title: "SHARE APP", style: .default) { [weak self] (action) in
+            let activityViewController = UIActivityViewController(
+                activityItems: ["Check out the NYCFireBox App!", URL(string:NetworkConstants.InfoURL.share)!],
+                applicationActivities: nil)
+            self?.present(activityViewController, animated: true, completion: nil)
+        }
+        
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         actionSheet.addAction(contact)
@@ -206,6 +214,7 @@ class SearchViewController: UIViewController {
         actionSheet.addAction(liveIncidents)
         actionSheet.addAction(mobile)
         actionSheet.addAction(fdnewyork)
+        actionSheet.addAction(shareAction)
         actionSheet.addAction(cancel)
 
         _ = resignFirstResponder()
@@ -258,6 +267,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         if let detailsVC = storyboard.instantiateViewController(withIdentifier: "FireBoxDetailsController") as? FireBoxDetailsController {
             navigationController?.pushViewController(detailsVC, animated: true)
             detailsVC.update(withBox: filteredBoxes[indexPath.row], locations: locations)
+            GoogleAnalyticsController().trackEvent(category: "FireBoxLocation", action: "selected", label: filteredBoxes[indexPath.row].boxNumber, value: 1)
         }
     }
 }

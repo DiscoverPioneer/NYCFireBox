@@ -26,39 +26,28 @@ class DataProvider {
         case .statenIsland: path = NetworkConstants.Datasource.statenIsland
         }
 
-        let localURL = Bundle.main.path(forResource: borough.fullName, ofType: "plist") ?? ""
-        let modifiedDate = fileModificationDate(path: localURL) ?? Date()
-        getLastModifiedDate(urlString: path, currentVersionDate: modifiedDate) { (shouldDownload) in
-            if let fromURL = URL(string: path),
-                let toURL =  URL(string: localURL),
-                shouldDownload {
-                loadData(fromURL: fromURL, to: toURL, completionHandler: {
-                    DispatchQueue.main.async {
-                        completionHandler(getLocalFirehouses(forBorough: borough))
-                    }
-                })
-            } else {
+        if let fromURL = URL(string: path) {
+            FileUpdater().syncFileFrom(url: fromURL, andSaveAs: borough.fullName) {
+                let firehouses = DataProvider.retrieveFirehousesFromFile(filename: borough.fullName)
                 DispatchQueue.main.async {
-                    completionHandler(getLocalFirehouses(forBorough: borough))
+                    completionHandler(firehouses)
                 }
             }
+        } else {
+            completionHandler(getLocalFirehouses(forBorough: borough))
         }
     }
 
     class func getEMSStations(completionHandler: @escaping ([EMSStation]) -> Void) {
-        getLastModifiedDate(urlString: NetworkConstants.Datasource.emsStations, currentVersionDate: Date()) { (shouldDownload) in
-            if shouldDownload {
-                let path = Bundle.main.path(forResource: "EMS-Stations", ofType: "plist")
-                loadData(fromURL: URL(string: NetworkConstants.Datasource.emsStations)!, to: URL(string: path!)! , completionHandler: {
-                    DispatchQueue.main.async {
-                        completionHandler(getLocalEMSStations())
-                    }
-                })
-            } else {
+        if let fromURL = URL(string: NetworkConstants.Datasource.emsStations) {
+            FileUpdater().syncFileFrom(url: fromURL, andSaveAs: "EMS-Stations") {
+                let firehouses = DataProvider.retrieveEMSStationsFromFile(filename: "EMS-Stations")
                 DispatchQueue.main.async {
-                    completionHandler(getLocalEMSStations())
+                    completionHandler(firehouses)
                 }
             }
+        } else {
+            completionHandler(getLocalEMSStations())
         }
     }
 
@@ -144,5 +133,67 @@ class DataProvider {
         } catch {
             return nil
         }
+    }
+}
+
+extension DataProvider {
+    class func retrieveFirehousesFromFile(filename: String) -> [Firehouse] {
+        var firehouses = [Firehouse]()
+        var url: URL?
+        
+        //Check if file exists in documents, else pull from bundle
+        if let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileLocation = documentsUrl.appendingPathComponent("/files/\(filename).plist", isDirectory: false)
+            if FileManager.default.fileExists(atPath: fileLocation.path) {
+                url = fileLocation
+                print("Using Remote File URL")
+            }
+        }
+        
+        if url == nil {
+            url = Bundle.main.url(forResource: filename, withExtension: "plist")
+        }
+        if let URL = url {
+            if let plist = NSArray(contentsOf: URL) as? [[String:String]] {
+                for dict in plist {
+                    firehouses.append(Firehouse(dictionary: dict))
+                }
+            } else {
+                print("Not a valid plist type")
+            }
+        } else {
+            print("NOt a valid URL")
+        }
+        return firehouses
+    }
+    
+    class func retrieveEMSStationsFromFile(filename: String) -> [EMSStation] {
+        var firehouses = [EMSStation]()
+        var url: URL?
+        
+        //Check if file exists in documents, else pull from bundle
+        if let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileLocation = documentsUrl.appendingPathComponent("/files/\(filename).plist", isDirectory: false)
+            if FileManager.default.fileExists(atPath: fileLocation.path) {
+                url = fileLocation
+                print("Using Remote File URL")
+            }
+        }
+        
+        if url == nil {
+            url = Bundle.main.url(forResource: filename, withExtension: "plist")
+        }
+        if let URL = url {
+            if let plist = NSArray(contentsOf: URL) as? [[String:String]] {
+                for dict in plist {
+                    firehouses.append(EMSStation(dictionary: dict))
+                }
+            } else {
+                print("Not a valid plist type")
+            }
+        } else {
+            print("NOt a valid URL")
+        }
+        return firehouses
     }
 }

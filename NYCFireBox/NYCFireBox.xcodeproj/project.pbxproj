@@ -74,6 +74,7 @@
 		E3079D3C2093783B00CC46E4 /* NYCFireBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3079D402093797700CC46E4 /* GoogleAnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsController.swift; sourceTree = "<group>"; };
 		E3C261E82095023A00F4B1B9 /* FileUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUpdater.swift; sourceTree = "<group>"; };
+		E3D3A79A20C9AE880025EA05 /* NYCFireBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NYCFireBox.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +148,7 @@
 		B9E7C3E12084B902005C4BC8 /* NYCFireBox */ = {
 			isa = PBXGroup;
 			children = (
+				E3D3A79A20C9AE880025EA05 /* NYCFireBox.entitlements */,
 				E3079D39209376F400CC46E4 /* Crashlytics.framework */,
 				E3079D38209376F400CC46E4 /* Fabric.framework */,
 				B92B145620889EAD0060145F /* DataProviders */,
@@ -215,8 +217,6 @@
 				B9E7C3DC2084B902005C4BC8 /* Frameworks */,
 				B9E7C3DD2084B902005C4BC8 /* Resources */,
 				E3079D37209376D800CC46E4 /* ShellScript */,
-				AA0D9F99CF7D91A8267E9817 /* [CP] Embed Pods Frameworks */,
-				6B809A2B895501EE131D8553 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +241,14 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -284,36 +292,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6B809A2B895501EE131D8553 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA0D9F99CF7D91A8267E9817 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E3079D37209376D800CC46E4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XD358AHBH;
@@ -536,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XD358AHBH;

@@ -29,7 +29,7 @@ class FireBoxCell: UITableViewCell {
                 self?.mapView.setRegion(coordinateRegion, animated: true)
             } else {
                 self?.locationUnavailableLabel.isHidden = false
-                self?.isUserInteractionEnabled = false
+//                self?.isUserInteractionEnabled = false
             }
         }
     }

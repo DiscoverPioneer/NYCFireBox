@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import Fabric
 import Crashlytics
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         locationManager.requestWhenInUseAuthorization()
         Fabric.with([Crashlytics.self])
         GoogleAnalyticsController.shared.registerApp("UA-118289028-1")
+        
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: "ab30806b-ca26-4abb-908c-3a9b93c7ef2a",
+                                        handleNotificationAction: nil,
+                                        settings: onesignalInitSettings)
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+        
         return true
     }
 

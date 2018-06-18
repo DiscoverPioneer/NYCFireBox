@@ -3,40 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7DDAA1E6597BB53E736B6A3F28FBBF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B953D8763C153695E6168408F1569F89 /* Pods-NYCFireBox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9865B5203ACFA1EA131ECD64FC521C17 /* Pods-NYCFireBox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D83F5BF6E9B440D394D93B0EB597E63E /* Pods-NYCFireBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5039D5F8FEEF6D2FFC569673E5292B /* Pods-NYCFireBox-dummy.m */; };
+		99997A779297607CCFBDD06E2711ACE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		B953D8763C153695E6168408F1569F89 /* Pods-NYCFireBox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1D3C37DFD3EB3E3CB183CFD724FE04 /* Pods-NYCFireBox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D83F5BF6E9B440D394D93B0EB597E63E /* Pods-NYCFireBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0070752BFAA42B860992C050F53C6AA /* Pods-NYCFireBox-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0ADC3F9D80636A91C95F6F37FBEC3697 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Sources/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		154EECE3A9D7CB647E7252C46D1ACD0C /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = Sources/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
-		1B92B662088F80FE2BEE7AC57F5AB753 /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Sources/GAITracker.h; sourceTree = "<group>"; };
-		1FDC7C2EEE02446F030D19884996BEF3 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = Sources/GAIEcommerceFields.h; sourceTree = "<group>"; };
-		4142E0DE6F63B8A1D4F55F3E77E32C1D /* Pods-NYCFireBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NYCFireBox.modulemap"; sourceTree = "<group>"; };
-		49830C24F2973517FE8F34E064DA2290 /* Pods-NYCFireBox-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYCFireBox-resources.sh"; sourceTree = "<group>"; };
-		60CF2782C110727343286A528572CF45 /* Pods-NYCFireBox-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYCFireBox-acknowledgements.plist"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6769703F52D1CD55DE27EC32C181FB80 /* Pods-NYCFireBox-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYCFireBox-frameworks.sh"; sourceTree = "<group>"; };
-		7B0380B2597A76E68A00A9AF88C04879 /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Sources/GAITrackedViewController.h; sourceTree = "<group>"; };
-		7C0A8487E2FDF1FF70AC1FF53EC81645 /* Pods-NYCFireBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCFireBox.debug.xcconfig"; sourceTree = "<group>"; };
-		916CE53871962CE85C0DDED689DAFF62 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = Sources/GAIEcommerceProduct.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9865B5203ACFA1EA131ECD64FC521C17 /* Pods-NYCFireBox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYCFireBox-umbrella.h"; sourceTree = "<group>"; };
-		9E2BE83ED2C55101B0F8E3BD09B13D60 /* Pods-NYCFireBox-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYCFireBox-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A645ED8AB66D66BC567C2643D7285D9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADCF9E879D9E17D780D41A8631EB3D4C /* libGoogleAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
-		B813903B919E332238CDF6E71251EB9C /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = Sources/GAIEcommercePromotion.h; sourceTree = "<group>"; };
-		C10F525BE91F57381A3943209F3B6C65 /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Sources/GAI.h; sourceTree = "<group>"; };
-		D4F20260CB052F7C083E2E8426D89DF9 /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Sources/GAILogger.h; sourceTree = "<group>"; };
-		DA5039D5F8FEEF6D2FFC569673E5292B /* Pods-NYCFireBox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYCFireBox-dummy.m"; sourceTree = "<group>"; };
-		E3FD4E3C388DF268BDB5D42CB4078E7B /* Pods_NYCFireBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2DBF442AD658A84E14943576A8A7857 /* Pods-NYCFireBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCFireBox.release.xcconfig"; sourceTree = "<group>"; };
-		FD9FD72EEC250A4443224E62D31786FE /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Sources/GAIFields.h; sourceTree = "<group>"; };
+		1200DF19020FE680F741629C82DB53CC /* Pods-NYCFireBox-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYCFireBox-acknowledgements.plist"; sourceTree = "<group>"; };
+		25D546ED5D3F5DBAC74C5FBAF3F1D0B7 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = Sources/GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		38606BEB0F3ADBB628D65BBC1F0A89AD /* Pods-NYCFireBox-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYCFireBox-resources.sh"; sourceTree = "<group>"; };
+		3AB12B825B4E8A9B53C0F65A76FDF4EE /* Pods-NYCFireBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCFireBox.debug.xcconfig"; sourceTree = "<group>"; };
+		47D001DA81A539195AFB515D260A0102 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		481C269D5E6021635B2C7D1DFBB0C739 /* Pods-NYCFireBox-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYCFireBox-frameworks.sh"; sourceTree = "<group>"; };
+		51FDB740F7DFC0E1386382D827178033 /* Pods-NYCFireBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCFireBox.release.xcconfig"; sourceTree = "<group>"; };
+		536789F3F29C25B80782409F3042A766 /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Sources/GAITrackedViewController.h; sourceTree = "<group>"; };
+		59605CD78DB32EC274C881D611EED942 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Sources/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6B9C10871F177EEAACB21C3FEEE8313D /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Sources/GAIFields.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96EC6468BC714FA2F41879F4E8F43FB5 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = Sources/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		A09BDCADACFE488061436FE174742723 /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Sources/GAITracker.h; sourceTree = "<group>"; };
+		D1DA124C8D80F8D5C141A6FF85C5AC77 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
+		DD1D3C37DFD3EB3E3CB183CFD724FE04 /* Pods-NYCFireBox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYCFireBox-umbrella.h"; sourceTree = "<group>"; };
+		DDDFAADA5D9D2BDDCD25B08B39E14B23 /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Sources/GAILogger.h; sourceTree = "<group>"; };
+		E0070752BFAA42B860992C050F53C6AA /* Pods-NYCFireBox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYCFireBox-dummy.m"; sourceTree = "<group>"; };
+		E3FD4E3C388DF268BDB5D42CB4078E7B /* Pods_NYCFireBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NYCFireBox.framework; path = "Pods-NYCFireBox.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E7FDF8EC1BD5764FB0131D8DAF0E8F /* Pods-NYCFireBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NYCFireBox.modulemap"; sourceTree = "<group>"; };
+		E820DE85894608D150E205C458EC43EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7AD217B543BB41786766A306C814E4 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = Sources/GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		EF153172DCC1DE611826B4C2F2AA76E7 /* Pods-NYCFireBox-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYCFireBox-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F9D88368496A230B65B5001F2CF28E9F /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = Sources/GAIEcommerceFields.h; sourceTree = "<group>"; };
+		FE280D3E1BB1D7D70AF68C7E6A8BF396 /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Sources/GAI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,13 +45,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DDAA1E6597BB53E736B6A3F28FBBF65 /* Foundation.framework in Frameworks */,
+				99997A779297607CCFBDD06E2711ACE6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064CC64295692DCFB920A5D31D5DCA5B /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				FE280D3E1BB1D7D70AF68C7E6A8BF396 /* GAI.h */,
+				59605CD78DB32EC274C881D611EED942 /* GAIDictionaryBuilder.h */,
+				F9D88368496A230B65B5001F2CF28E9F /* GAIEcommerceFields.h */,
+				25D546ED5D3F5DBAC74C5FBAF3F1D0B7 /* GAIEcommerceProduct.h */,
+				96EC6468BC714FA2F41879F4E8F43FB5 /* GAIEcommerceProductAction.h */,
+				ED7AD217B543BB41786766A306C814E4 /* GAIEcommercePromotion.h */,
+				6B9C10871F177EEAACB21C3FEEE8313D /* GAIFields.h */,
+				DDDFAADA5D9D2BDDCD25B08B39E14B23 /* GAILogger.h */,
+				536789F3F29C25B80782409F3042A766 /* GAITrackedViewController.h */,
+				A09BDCADACFE488061436FE174742723 /* GAITracker.h */,
+				BDB3EB7ABE7C5B89FC572F73BF283164 /* Frameworks */,
+			);
+			name = GoogleAnalytics;
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		0F8A0FB84A7FB69E19B59AB6C8DF2286 /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				FF8CD79D6C8935E2C70BE6EE26C4F43F /* Frameworks */,
+			);
+			name = OneSignal;
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
 		137AE481140A343236AFD3A5163F8AC1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,46 +88,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1578FD83B6495F615C6DF9D3E2298FC8 /* Frameworks */ = {
+		1C3F261854F1EAE0A63A8CFFD8FEE754 /* Pods-NYCFireBox */ = {
 			isa = PBXGroup;
 			children = (
-				ADCF9E879D9E17D780D41A8631EB3D4C /* libGoogleAnalytics.a */,
+				E820DE85894608D150E205C458EC43EA /* Info.plist */,
+				E7E7FDF8EC1BD5764FB0131D8DAF0E8F /* Pods-NYCFireBox.modulemap */,
+				EF153172DCC1DE611826B4C2F2AA76E7 /* Pods-NYCFireBox-acknowledgements.markdown */,
+				1200DF19020FE680F741629C82DB53CC /* Pods-NYCFireBox-acknowledgements.plist */,
+				E0070752BFAA42B860992C050F53C6AA /* Pods-NYCFireBox-dummy.m */,
+				481C269D5E6021635B2C7D1DFBB0C739 /* Pods-NYCFireBox-frameworks.sh */,
+				38606BEB0F3ADBB628D65BBC1F0A89AD /* Pods-NYCFireBox-resources.sh */,
+				DD1D3C37DFD3EB3E3CB183CFD724FE04 /* Pods-NYCFireBox-umbrella.h */,
+				3AB12B825B4E8A9B53C0F65A76FDF4EE /* Pods-NYCFireBox.debug.xcconfig */,
+				51FDB740F7DFC0E1386382D827178033 /* Pods-NYCFireBox.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-NYCFireBox";
+			path = "Target Support Files/Pods-NYCFireBox";
+			sourceTree = "<group>";
+		};
+		53A160E9D126F3F5459DDD0465AA1003 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				064CC64295692DCFB920A5D31D5DCA5B /* GoogleAnalytics */,
+				0F8A0FB84A7FB69E19B59AB6C8DF2286 /* OneSignal */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		66AF16E9CD66AD04BA5EF2D20ECB07B4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B96EB1600AF6FCB044D795162CA5F431 /* Pods-NYCFireBox */,
+				1C3F261854F1EAE0A63A8CFFD8FEE754 /* Pods-NYCFireBox */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6762930ABD4054620C50A24A2FEF0E43 /* GoogleAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				C10F525BE91F57381A3943209F3B6C65 /* GAI.h */,
-				0ADC3F9D80636A91C95F6F37FBEC3697 /* GAIDictionaryBuilder.h */,
-				1FDC7C2EEE02446F030D19884996BEF3 /* GAIEcommerceFields.h */,
-				916CE53871962CE85C0DDED689DAFF62 /* GAIEcommerceProduct.h */,
-				154EECE3A9D7CB647E7252C46D1ACD0C /* GAIEcommerceProductAction.h */,
-				B813903B919E332238CDF6E71251EB9C /* GAIEcommercePromotion.h */,
-				FD9FD72EEC250A4443224E62D31786FE /* GAIFields.h */,
-				D4F20260CB052F7C083E2E8426D89DF9 /* GAILogger.h */,
-				7B0380B2597A76E68A00A9AF88C04879 /* GAITrackedViewController.h */,
-				1B92B662088F80FE2BEE7AC57F5AB753 /* GAITracker.h */,
-				1578FD83B6495F615C6DF9D3E2298FC8 /* Frameworks */,
-			);
-			path = GoogleAnalytics;
-			sourceTree = "<group>";
-		};
-		79563ED472210C9A8A1C72C1251BEFE8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6762930ABD4054620C50A24A2FEF0E43 /* GoogleAnalytics */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -106,44 +136,34 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				79563ED472210C9A8A1C72C1251BEFE8 /* Pods */,
+				53A160E9D126F3F5459DDD0465AA1003 /* Pods */,
 				137AE481140A343236AFD3A5163F8AC1 /* Products */,
 				66AF16E9CD66AD04BA5EF2D20ECB07B4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B96EB1600AF6FCB044D795162CA5F431 /* Pods-NYCFireBox */ = {
-			isa = PBXGroup;
-			children = (
-				A645ED8AB66D66BC567C2643D7285D9B /* Info.plist */,
-				4142E0DE6F63B8A1D4F55F3E77E32C1D /* Pods-NYCFireBox.modulemap */,
-				9E2BE83ED2C55101B0F8E3BD09B13D60 /* Pods-NYCFireBox-acknowledgements.markdown */,
-				60CF2782C110727343286A528572CF45 /* Pods-NYCFireBox-acknowledgements.plist */,
-				DA5039D5F8FEEF6D2FFC569673E5292B /* Pods-NYCFireBox-dummy.m */,
-				6769703F52D1CD55DE27EC32C181FB80 /* Pods-NYCFireBox-frameworks.sh */,
-				49830C24F2973517FE8F34E064DA2290 /* Pods-NYCFireBox-resources.sh */,
-				9865B5203ACFA1EA131ECD64FC521C17 /* Pods-NYCFireBox-umbrella.h */,
-				7C0A8487E2FDF1FF70AC1FF53EC81645 /* Pods-NYCFireBox.debug.xcconfig */,
-				F2DBF442AD658A84E14943576A8A7857 /* Pods-NYCFireBox.release.xcconfig */,
-			);
-			name = "Pods-NYCFireBox";
-			path = "Target Support Files/Pods-NYCFireBox";
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		BDB3EB7ABE7C5B89FC572F73BF283164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				D1DA124C8D80F8D5C141A6FF85C5AC77 /* libGoogleAnalytics.a */,
 			);
-			name = iOS;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF8CD79D6C8935E2C70BE6EE26C4F43F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47D001DA81A539195AFB515D260A0102 /* OneSignal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +203,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -215,7 +235,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		12C4B864767C59600DBFA238F1E2F8BC /* Release */ = {
+		08638A96A528B1EC32DE62F8A728389D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -225,6 +245,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -246,6 +267,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -266,16 +288,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		3F6AFEEF30A8669532217EEF4CFD80D9 /* Debug */ = {
+		66D6765FA0B66978E78F7AA274E889FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C0A8487E2FDF1FF70AC1FF53EC81645 /* Pods-NYCFireBox.debug.xcconfig */;
+			baseConfigurationReference = 3AB12B825B4E8A9B53C0F65A76FDF4EE /* Pods-NYCFireBox.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -295,7 +318,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NYCFireBox;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,10 +327,12 @@
 			};
 			name = Debug;
 		};
-		537ADF652A6FFBC821E202255A73EF2D /* Release */ = {
+		73559B01B4D932362B818EE62EB9A340 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2DBF442AD658A84E14943576A8A7857 /* Pods-NYCFireBox.release.xcconfig */;
+			baseConfigurationReference = 51FDB740F7DFC0E1386382D827178033 /* Pods-NYCFireBox.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -327,7 +352,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NYCFireBox;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -337,7 +362,7 @@
 			};
 			name = Release;
 		};
-		59F0302F2371FCC6B73EF0A418D40734 /* Debug */ = {
+		9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -347,6 +372,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -368,6 +394,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -392,7 +419,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
@@ -405,8 +431,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59F0302F2371FCC6B73EF0A418D40734 /* Debug */,
-				12C4B864767C59600DBFA238F1E2F8BC /* Release */,
+				9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */,
+				08638A96A528B1EC32DE62F8A728389D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -414,8 +440,8 @@
 		7585E42F4220FDDC654138CCE9178634 /* Build configuration list for PBXNativeTarget "Pods-NYCFireBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F6AFEEF30A8669532217EEF4CFD80D9 /* Debug */,
-				537ADF652A6FFBC821E202255A73EF2D /* Release */,
+				66D6765FA0B66978E78F7AA274E889FB /* Debug */,
+				73559B01B4D932362B818EE62EB9A340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

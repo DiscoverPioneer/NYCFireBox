@@ -36,6 +36,7 @@ class Map: UIView {
 
     private func setupViews() {
         mapView.delegate = self
+        mapView.showsUserLocation = true
         mapTypeSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16),
                                                         NSAttributedStringKey.foregroundColor: UIColor.lightGray],
                                                        for: .normal)

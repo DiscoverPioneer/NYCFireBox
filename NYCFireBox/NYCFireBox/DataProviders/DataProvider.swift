@@ -11,7 +11,11 @@ class DataProvider {
         let contents = try? String(contentsOfFile: filePath, encoding: .utf8)
         let rows = contents?.components(separatedBy: "\n")
         for row in rows ?? [] {
-            fireBoxes.append(FireBox(string: row))
+            let firebox = FireBox(string: row)
+            if firebox.name.contains("LGA - AIRPORT EMERGENCY RESPONSE") || firebox.boxNumber == "0037" || firebox.boxNumber == "37" {
+                print("Found box: \(row)")
+            }
+            fireBoxes.append(firebox)
         }
         callback(fireBoxes)
     }
@@ -146,7 +150,7 @@ extension DataProvider {
             let fileLocation = documentsUrl.appendingPathComponent("/files/\(filename).plist", isDirectory: false)
             if FileManager.default.fileExists(atPath: fileLocation.path) {
                 url = fileLocation
-                print("Using Remote File URL")
+                print("Using File URL, not bundle")
             }
         }
         
@@ -176,7 +180,8 @@ extension DataProvider {
             let fileLocation = documentsUrl.appendingPathComponent("/files/\(filename).plist", isDirectory: false)
             if FileManager.default.fileExists(atPath: fileLocation.path) {
                 url = fileLocation
-                print("Using Remote File URL")
+                print("Using File URL, not bundle")
+                
             }
         }
         

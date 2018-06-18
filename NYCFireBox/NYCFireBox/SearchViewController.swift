@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import OneSignal
 
 class SearchViewController: UIViewController {
     private var fireBoxes: [FireBox] = []
@@ -80,7 +81,7 @@ class SearchViewController: UIViewController {
             DataProvider.getFirehouses(forBorough: borough, completionHandler: { [weak self] (firehouses) in
                 for firehouse in firehouses {
                     self?.locations.append(firehouse)
-                    print("\(firehouse.name),\(firehouse.address),\"\(firehouse.latitude!),\(firehouse.longitude!)\",\(borough.fullName)")
+                    print("\(firehouse.name.replacingOccurrences(of: ",", with: "")),\(firehouse.address.replacingOccurrences(of: ",", with: "")),\"\(firehouse.latitude!),\(firehouse.longitude!)\",\(borough.fullName.replacingOccurrences(of: ",", with: ""))")
                 }
                 self?.updateMap(withLocations: firehouses)
             })
@@ -98,15 +99,13 @@ class SearchViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
 
-        let infoButton = UIBarButtonItem(title: "Info",
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(onInfoButton(_:)))
+       
+        let infoButton = UIBarButtonItem(image: UIImage(named:"Info"), style: .plain, target: self, action: #selector(onInfoButton(_:)))
         mapNavButton = UIBarButtonItem(title: "Map",
                                         style: .plain,
                                         target: self,
                                         action: #selector(onMapButton(_:)))
-        self.navigationItem.leftBarButtonItem = infoButton
+        self.navigationItem.leftBarButtonItems = [infoButton]
         self.navigationItem.rightBarButtonItem = mapNavButton
     }
 
@@ -131,6 +130,9 @@ class SearchViewController: UIViewController {
         }
 
         let filteredBoxes = fireBoxes.filter { (box) -> Bool in
+            if box.boxNumber == searchQuery && box.address.contains("LGA") {
+                print("here: \(box.address),\(box.longitude)")
+            }
             return box.boxNumber == searchQuery
         }
 
@@ -180,6 +182,10 @@ class SearchViewController: UIViewController {
     // MARK: Actions
     @objc private func onInfoButton(_ sender: UIBarButtonItem) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let settings = UIAlertAction(title: "Settings", style: .default) { [weak self] (action) in
+            self?.onSettingsButton()
+        }
+        
         let contact = UIAlertAction(title: "Contact Us", style: .default) { [weak self] (action) in
             self?.open(email: NetworkConstants.InfoURL.contact)
         }
@@ -208,7 +214,7 @@ class SearchViewController: UIViewController {
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
+        actionSheet.addAction(settings)
         actionSheet.addAction(contact)
         actionSheet.addAction(website)
         actionSheet.addAction(liveIncidents)
@@ -217,6 +223,30 @@ class SearchViewController: UIViewController {
         actionSheet.addAction(shareAction)
         actionSheet.addAction(cancel)
 
+        _ = resignFirstResponder()
+        searchController.isActive = false
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func onSettingsButton() {
+        let actionSheet = UIAlertController(title: "Push Notifications", message: nil, preferredStyle: .actionSheet)
+        let defaults = UserDefaults.standard
+        let disablePushNotificationsKey = "disablePushNotifications"
+        if defaults.bool(forKey: disablePushNotificationsKey) {
+            actionSheet.addAction(UIAlertAction(title: "Enable Push Notifications", style: .default, handler: { (action) in
+                defaults.set(false, forKey: disablePushNotificationsKey)
+                OneSignal.setSubscription(true)
+            }))
+        } else {
+            actionSheet.view.tintColor = UIColor.red
+            actionSheet.addAction(UIAlertAction(title: "Disable Push Notifications", style: .default, handler: { (action) in
+                defaults.set(true, forKey: disablePushNotificationsKey)
+                OneSignal.setSubscription(false)
+            }))
+        }
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+        }))
         _ = resignFirstResponder()
         searchController.isActive = false
         present(actionSheet, animated: true, completion: nil)

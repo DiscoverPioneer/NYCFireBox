@@ -15,9 +15,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.2.0</string>
 	<key>CFBundleVersion</key>
-	<string>010002</string>
+	<string>010200</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -41,6 +41,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location to show where you are in respect to different fire box locations</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

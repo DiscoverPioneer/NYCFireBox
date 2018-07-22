@@ -225,6 +225,8 @@ class SearchViewController: UIViewController {
 
         _ = resignFirstResponder()
         searchController.isActive = false
+        setActionSheet(actionSheet: actionSheet)
+
         present(actionSheet, animated: true, completion: nil)
     }
     
@@ -247,11 +249,22 @@ class SearchViewController: UIViewController {
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
         }))
+        
+        setActionSheet(actionSheet: actionSheet)
+        
         _ = resignFirstResponder()
         searchController.isActive = false
         present(actionSheet, animated: true, completion: nil)
     }
 
+    func setActionSheet(actionSheet: UIAlertController) {
+        if let popoverController = actionSheet.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+    }
+    
     @objc private func onMapButton(_ sender: UIBarButtonItem) {
         searchController.searchBar.text?.removeAll()
         searchController.isActive = false

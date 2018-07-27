@@ -306,7 +306,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _ = resignFirstResponder()
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "BostonMain", bundle: Bundle.main)
+
         if let detailsVC = storyboard.instantiateViewController(withIdentifier: "FireBoxDetailsController") as? FireBoxDetailsController {
             navigationController?.pushViewController(detailsVC, animated: true)
             detailsVC.update(withBox: filteredBoxes[indexPath.row], locations: locations)

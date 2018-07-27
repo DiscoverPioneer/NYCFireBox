@@ -11,9 +11,40 @@
 		B92B145820889ECF0060145F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B92B145C2089F6BA0060145F /* FireBoxDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */; };
 		B9533443208F5AAB001BCCD5 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
-		B95456DC2091D98C0050080A /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B95456DB2091D98C0050080A /* Fire Boxes.csv */; };
 		B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
 		B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96192812084D7E1001F54BD /* FireBoxCell.swift */; };
+		B98ED15A210B3C3000091E31 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
+		B98ED15B210B3C3000091E31 /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
+		B98ED15C210B3C3000091E31 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
+		B98ED15D210B3C3000091E31 /* EMSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF80742087735500C74225 /* EMSStation.swift */; };
+		B98ED15E210B3C3000091E31 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E42084B902005C4BC8 /* SearchViewController.swift */; };
+		B98ED15F210B3C3000091E31 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF80722087723D00C74225 /* Location.swift */; };
+		B98ED160210B3C3000091E31 /* FireBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96192812084D7E1001F54BD /* FireBoxCell.swift */; };
+		B98ED161210B3C3000091E31 /* GoogleAnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3079D402093797700CC46E4 /* GoogleAnalyticsController.swift */; };
+		B98ED162210B3C3000091E31 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99E0419208E0C0A00B7AE60 /* Map.swift */; };
+		B98ED163210B3C3000091E31 /* FireBoxDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */; };
+		B98ED164210B3C3000091E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */; };
+		B98ED165210B3C3000091E31 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8070208771F200C74225 /* Firehouse.swift */; };
+		B98ED166210B3C3000091E31 /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
+		B98ED167210B3C3000091E31 /* FileUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C261E82095023A00F4B1B9 /* FileUpdater.swift */; };
+		B98ED168210B3C3000091E31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF806E208768AE00C74225 /* Constants.swift */; };
+		B98ED16A210B3C3000091E31 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D39209376F400CC46E4 /* Crashlytics.framework */; };
+		B98ED16B210B3C3000091E31 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D38209376F400CC46E4 /* Fabric.framework */; };
+		B98ED16C210B3C3000091E31 /* Pods_NYCFireBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8F97BEBA4607436E4173A5 /* Pods_NYCFireBox.framework */; };
+		B98ED171210B3C3000091E31 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
+		B98ED172210B3C3000091E31 /* Manhattan.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807E2087826800C74225 /* Manhattan.plist */; };
+		B98ED173210B3C3000091E31 /* Bronx.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80762087825900C74225 /* Bronx.plist */; };
+		B98ED174210B3C3000091E31 /* EMS-Stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80782087825F00C74225 /* EMS-Stations.plist */; };
+		B98ED175210B3C3000091E31 /* Staten Island.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807A2087826200C74225 /* Staten Island.plist */; };
+		B98ED176210B3C3000091E31 /* Brooklyn.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80802087826E00C74225 /* Brooklyn.plist */; };
+		B98ED177210B3C3000091E31 /* Queens.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807C2087826500C74225 /* Queens.plist */; };
+		B98ED181210B3DDD00091E31 /* BostonMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98ED180210B3DDD00091E31 /* BostonMain.storyboard */; };
+		B98ED184210B3DF500091E31 /* BostonLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */; };
+		B98ED186210B3EA700091E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
+		B98ED187210B3EC200091E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
+		B98ED18F210B48D400091E31 /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B95456DB2091D98C0050080A /* Fire Boxes.csv */; };
+		B98ED192210B4CC500091E31 /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B98ED190210B4CC200091E31 /* Fire Boxes.csv */; };
+		B98ED194210B4E6200091E31 /* BostonFirehouseLocations.csv in Resources */ = {isa = PBXBuildFile; fileRef = B98ED193210B4E6200091E31 /* BostonFirehouseLocations.csv */; };
 		B99E041A208E0C0A00B7AE60 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99E0419208E0C0A00B7AE60 /* Map.swift */; };
 		B9AF806F208768AE00C74225 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF806E208768AE00C74225 /* Constants.swift */; };
 		B9AF8071208771F200C74225 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8070208771F200C74225 /* Firehouse.swift */; };
@@ -28,7 +59,6 @@
 		B9E7C3E32084B902005C4BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E22084B902005C4BC8 /* AppDelegate.swift */; };
 		B9E7C3E52084B902005C4BC8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3E42084B902005C4BC8 /* SearchViewController.swift */; };
 		B9E7C3E82084B902005C4BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E62084B902005C4BC8 /* Main.storyboard */; };
-		B9E7C3EA2084B902005C4BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
 		B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */; };
 		B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
 		B9F1A888208A3F1A002DCD1D /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
@@ -49,6 +79,12 @@
 		B95456DB2091D98C0050080A /* Fire Boxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Fire Boxes.csv"; sourceTree = "<group>"; };
 		B961927E2084CCAC001F54BD /* CollectionsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsExt.swift; sourceTree = "<group>"; };
 		B96192812084D7E1001F54BD /* FireBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxCell.swift; sourceTree = "<group>"; };
+		B98ED17D210B3C3000091E31 /* BostonFireBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonFireBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98ED17E210B3C3000091E31 /* NYCFireBox copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NYCFireBox copy-Info.plist"; path = "/Users/wf-gordanabadarovska/Desktop/Projects/NYCFireBox/NYCFireBox/NYCFireBox copy-Info.plist"; sourceTree = "<absolute>"; };
+		B98ED180210B3DDD00091E31 /* BostonMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BostonMain.storyboard; sourceTree = "<group>"; };
+		B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BostonLaunchScreen.storyboard; sourceTree = "<group>"; };
+		B98ED190210B4CC200091E31 /* Fire Boxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Fire Boxes.csv"; path = "../../../../../../Downloads/Fire Boxes.csv"; sourceTree = "<group>"; };
+		B98ED193210B4E6200091E31 /* BostonFirehouseLocations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BostonFirehouseLocations.csv; sourceTree = "<group>"; };
 		B99E0419208E0C0A00B7AE60 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		B9AF806E208768AE00C74225 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9AF8070208771F200C74225 /* Firehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firehouse.swift; sourceTree = "<group>"; };
@@ -78,6 +114,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B98ED169210B3C3000091E31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98ED16A210B3C3000091E31 /* Crashlytics.framework in Frameworks */,
+				B98ED16B210B3C3000091E31 /* Fabric.framework in Frameworks */,
+				B98ED16C210B3C3000091E31 /* Pods_NYCFireBox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9E7C3DC2084B902005C4BC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +173,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B98ED17F210B3DAA00091E31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B9E7C3E62084B902005C4BC8 /* Main.storyboard */,
+				B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */,
+				B98ED180210B3DDD00091E31 /* BostonMain.storyboard */,
+				B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		B9E7C3D62084B902005C4BC8 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +191,7 @@
 				B9E7C3E02084B902005C4BC8 /* Products */,
 				B9533444208F6A3B001BCCD5 /* Frameworks */,
 				D93467484F070381724F970A /* Pods */,
+				B98ED17E210B3C3000091E31 /* NYCFireBox copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E7C3DF2084B902005C4BC8 /* NYCFireBox.app */,
+				B98ED17D210B3C3000091E31 /* BostonFireBox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +210,7 @@
 				E3D3A79A20C9AE880025EA05 /* NYCFireBox.entitlements */,
 				E3079D39209376F400CC46E4 /* Crashlytics.framework */,
 				E3079D38209376F400CC46E4 /* Fabric.framework */,
+				B98ED17F210B3DAA00091E31 /* Storyboards */,
 				B92B145620889EAD0060145F /* DataProviders */,
 				B96192802084D7C3001F54BD /* Views */,
 				B961927D2084CC97001F54BD /* Extensions */,
@@ -159,8 +219,6 @@
 				B9E7C3E42084B902005C4BC8 /* SearchViewController.swift */,
 				B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */,
 				E3079D402093797700CC46E4 /* GoogleAnalyticsController.swift */,
-				B9E7C3E62084B902005C4BC8 /* Main.storyboard */,
-				B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */,
 				B9E7C3EE2084B902005C4BC8 /* Info.plist */,
 				B9E7C3E92084B902005C4BC8 /* Assets.xcassets */,
 				B9E7C3F42084BB6E005C4BC8 /* Resources */,
@@ -172,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				B95456DB2091D98C0050080A /* Fire Boxes.csv */,
+				B98ED190210B4CC200091E31 /* Fire Boxes.csv */,
+				B98ED193210B4E6200091E31 /* BostonFirehouseLocations.csv */,
 				B9AF807A2087826200C74225 /* Staten Island.plist */,
 				B9AF807C2087826500C74225 /* Queens.plist */,
 				B9AF807E2087826800C74225 /* Manhattan.plist */,
@@ -208,6 +268,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B98ED157210B3C3000091E31 /* BostonFireBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B98ED17A210B3C3000091E31 /* Build configuration list for PBXNativeTarget "BostonFireBox" */;
+			buildPhases = (
+				B98ED158210B3C3000091E31 /* [CP] Check Pods Manifest.lock */,
+				B98ED159210B3C3000091E31 /* Sources */,
+				B98ED169210B3C3000091E31 /* Frameworks */,
+				B98ED16D210B3C3000091E31 /* Resources */,
+				B98ED179210B3C3000091E31 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BostonFireBox;
+			productName = NYCFireBox;
+			productReference = B98ED17D210B3C3000091E31 /* BostonFireBox.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B9E7C3DE2084B902005C4BC8 /* NYCFireBox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9E7C3F12084B902005C4BC8 /* Build configuration list for PBXNativeTarget "NYCFireBox" */;
@@ -237,6 +316,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Pioneer Mobile Applications";
 				TargetAttributes = {
+					B98ED157210B3C3000091E31 = {
+						ProvisioningStyle = Automatic;
+					};
 					B9E7C3DE2084B902005C4BC8 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0930;
@@ -266,18 +348,39 @@
 			projectRoot = "";
 			targets = (
 				B9E7C3DE2084B902005C4BC8 /* NYCFireBox */,
+				B98ED157210B3C3000091E31 /* BostonFireBox */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B98ED16D210B3C3000091E31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98ED192210B4CC500091E31 /* Fire Boxes.csv in Resources */,
+				B98ED181210B3DDD00091E31 /* BostonMain.storyboard in Resources */,
+				B98ED171210B3C3000091E31 /* Map.xib in Resources */,
+				B98ED186210B3EA700091E31 /* Assets.xcassets in Resources */,
+				B98ED172210B3C3000091E31 /* Manhattan.plist in Resources */,
+				B98ED173210B3C3000091E31 /* Bronx.plist in Resources */,
+				B98ED174210B3C3000091E31 /* EMS-Stations.plist in Resources */,
+				B98ED175210B3C3000091E31 /* Staten Island.plist in Resources */,
+				B98ED176210B3C3000091E31 /* Brooklyn.plist in Resources */,
+				B98ED194210B4E6200091E31 /* BostonFirehouseLocations.csv in Resources */,
+				B98ED184210B3DF500091E31 /* BostonLaunchScreen.storyboard in Resources */,
+				B98ED177210B3C3000091E31 /* Queens.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9E7C3DD2084B902005C4BC8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B98ED18F210B48D400091E31 /* Fire Boxes.csv in Resources */,
 				B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */,
-				B9E7C3EA2084B902005C4BC8 /* Assets.xcassets in Resources */,
 				B9E7C3E82084B902005C4BC8 /* Main.storyboard in Resources */,
+				B98ED187210B3EC200091E31 /* Assets.xcassets in Resources */,
 				B9533443208F5AAB001BCCD5 /* Map.xib in Resources */,
 				B9AF807F2087826800C74225 /* Manhattan.plist in Resources */,
 				B9AF80772087825900C74225 /* Bronx.plist in Resources */,
@@ -285,13 +388,43 @@
 				B9AF807B2087826200C74225 /* Staten Island.plist in Resources */,
 				B9AF80812087826E00C74225 /* Brooklyn.plist in Resources */,
 				B9AF807D2087826500C74225 /* Queens.plist in Resources */,
-				B95456DC2091D98C0050080A /* Fire Boxes.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B98ED158210B3C3000091E31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYCFireBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B98ED179210B3C3000091E31 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 2af9bd1ca0b9052b7e50085eec2ac32b7a87ba9b 608c2a652546802f51b6965129a9e62cd5bbba75a54216d5be57d81430fba1d8";
+		};
 		E3079D37209376D800CC46E4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +459,28 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B98ED159210B3C3000091E31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98ED15A210B3C3000091E31 /* DataProvider.swift in Sources */,
+				B98ED15B210B3C3000091E31 /* LocationDistance.swift in Sources */,
+				B98ED15C210B3C3000091E31 /* FireBox.swift in Sources */,
+				B98ED15D210B3C3000091E31 /* EMSStation.swift in Sources */,
+				B98ED15E210B3C3000091E31 /* SearchViewController.swift in Sources */,
+				B98ED15F210B3C3000091E31 /* Location.swift in Sources */,
+				B98ED160210B3C3000091E31 /* FireBoxCell.swift in Sources */,
+				B98ED161210B3C3000091E31 /* GoogleAnalyticsController.swift in Sources */,
+				B98ED162210B3C3000091E31 /* Map.swift in Sources */,
+				B98ED163210B3C3000091E31 /* FireBoxDetailsController.swift in Sources */,
+				B98ED164210B3C3000091E31 /* AppDelegate.swift in Sources */,
+				B98ED165210B3C3000091E31 /* Firehouse.swift in Sources */,
+				B98ED166210B3C3000091E31 /* CollectionsExt.swift in Sources */,
+				B98ED167210B3C3000091E31 /* FileUpdater.swift in Sources */,
+				B98ED168210B3C3000091E31 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9E7C3DB2084B902005C4BC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +525,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B98ED17B210B3C3000091E31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998D2EAC3D4FCAA6EADEAD69 /* Pods-NYCFireBox.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = BostonAppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XD358AHBH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "NYCFireBox copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pioneer.BostonFireBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireBox/Resources/NYCFireBox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B98ED17C210B3C3000091E31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17211DA8B0350251AEA11C45 /* Pods-NYCFireBox.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = BostonAppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XD358AHBH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "NYCFireBox copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pioneer.BostonFireBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireBox/Resources/NYCFireBox-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B9E7C3EF2084B902005C4BC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -538,6 +747,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B98ED17A210B3C3000091E31 /* Build configuration list for PBXNativeTarget "BostonFireBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98ED17B210B3C3000091E31 /* Debug */,
+				B98ED17C210B3C3000091E31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B9E7C3DA2084B902005C4BC8 /* Build configuration list for PBXProject "NYCFireBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -19,7 +19,8 @@ class EMSStation: Location {
                    borough: borough,
                    area: area,
                    longitude: longitude,
-                   latitude: latitude)
+                   latitude: latitude,
+                   note: nil)
     }
 
     init(dictionary: [String: Any]) {
@@ -36,6 +37,7 @@ class EMSStation: Location {
                    borough: dictionary["borough"] as? String,
                    area: dictionary["area"] as? String,
                    longitude: longitude,
-                   latitude: latitude)
+                   latitude: latitude,
+                   note: nil)
     }
 }

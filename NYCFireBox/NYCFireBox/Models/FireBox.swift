@@ -30,12 +30,14 @@ class FireBox: Location {
         let borough = NYCBoroughs(rawValue: columns[safe: 2] ?? "")?.fullName ?? ""
         let longitude = Double(columns[safe: 0] ?? "")
         let latitude = Double(columns[safe: 1] ?? "")
+        let note = columns[safe: 5]
 
         super.init(name: boxNumber,
                    address: address,
                    borough: borough,
                    area: nil,
                    longitude: longitude,
-                   latitude: latitude)
+                   latitude: latitude,
+                   note: note)
     }
 }

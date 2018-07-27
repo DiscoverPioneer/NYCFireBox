@@ -12,14 +12,16 @@ class Location {
     var area: String?
     var longitude: Double?
     var latitude: Double?
+    var note: String?
 
-    init(name: String, address: String, borough: String?, area: String?, longitude: Double?, latitude: Double?) {
+    init(name: String, address: String, borough: String?, area: String?, longitude: Double?, latitude: Double?, note: String?) {
         self.name = name
         self.longitude = longitude
         self.latitude = latitude
         self.address = address
         self.borough = borough
         self.area = area
+        self.note = note
     }
 
     func fullAddress() -> String {

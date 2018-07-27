@@ -12,6 +12,25 @@ class Firehouse: Location {
                    borough: nil,
                    area: nil,
                    longitude: longitude,
-                   latitude: latitude)
+                   latitude: latitude,
+                   note: nil)
+    }
+
+    init(string: String) {
+        let str = string.replacingOccurrences(of: "\"", with: "")
+        let columns = str.components(separatedBy: ",")
+
+        let name = columns[safe: 0] ?? ""
+        let address = columns[safe: 1] ?? ""
+        let latitude = Double(columns[safe: 2] ?? "")
+        let longitude = Double(columns[safe: 3] ?? "")
+
+        super.init(name: name,
+                   address: address,
+                   borough: nil,
+                   area: nil,
+                   longitude: longitude,
+                   latitude: latitude,
+                   note: nil)
     }
 }

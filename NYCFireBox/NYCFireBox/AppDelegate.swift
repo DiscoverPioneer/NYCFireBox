@@ -17,24 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var locationManager = CLLocationManager()
+    private let constants = Constants()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         locationManager.requestWhenInUseAuthorization()
-        Fabric.with([Crashlytics.self])
-        GoogleAnalyticsController.shared.registerApp("UA-118289028-1")
-        
-        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
-        OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: "ab30806b-ca26-4abb-908c-3a9b93c7ef2a",
-                                        handleNotificationAction: nil,
-                                        settings: onesignalInitSettings)
-        
-        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        setupAnalytics()
+        setupPushNotifications(launchOptions: launchOptions)
 
-        OneSignal.promptForPushNotifications(userResponse: { accepted in
-            print("User accepted notifications: \(accepted)")
-        })
-        
         return true
     }
 
@@ -58,6 +47,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    private func setupAnalytics() {
+        guard let key = constants.googleAnalyticsKey, !key.isEmpty else { return }
+        Fabric.with([Crashlytics.self])
+        GoogleAnalyticsController.shared.registerApp(key)
+    }
+
+    private func setupPushNotifications(launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+        guard let key = constants.oneSignalKey, !key.isEmpty else { return }
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: key,
+                                        handleNotificationAction: nil,
+                                        settings: onesignalInitSettings)
+
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
     }
 }
 

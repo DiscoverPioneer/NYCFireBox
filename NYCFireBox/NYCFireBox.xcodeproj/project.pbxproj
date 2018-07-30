@@ -18,6 +18,10 @@
 		B9650DE3210F37BD00966D39 /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = B961E9B1210B73690059987F /* Constants.plist */; };
 		B9650DE4210F428A00966D39 /* NYCFireBoxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B95456DB2091D98C0050080A /* NYCFireBoxes.csv */; };
 		B9650DE5210F428D00966D39 /* BostonFireBoxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B98ED190210B4CC200091E31 /* BostonFireBoxes.csv */; };
+		B9650DE7210F48FA00966D39 /* InfoActionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9650DE6210F48FA00966D39 /* InfoActionsProvider.swift */; };
+		B9650DE8210F48FA00966D39 /* InfoActionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9650DE6210F48FA00966D39 /* InfoActionsProvider.swift */; };
+		B9650DEA210F4DEC00966D39 /* ApplicationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9650DE9210F4DEC00966D39 /* ApplicationExt.swift */; };
+		B9650DEB210F4DEC00966D39 /* ApplicationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9650DE9210F4DEC00966D39 /* ApplicationExt.swift */; };
 		B98ED15A210B3C3000091E31 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B98ED15B210B3C3000091E31 /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
 		B98ED15C210B3C3000091E31 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
@@ -76,6 +80,8 @@
 		B961927E2084CCAC001F54BD /* CollectionsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsExt.swift; sourceTree = "<group>"; };
 		B96192812084D7E1001F54BD /* FireBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxCell.swift; sourceTree = "<group>"; };
 		B961E9B1210B73690059987F /* Constants.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Constants.plist; sourceTree = "<group>"; };
+		B9650DE6210F48FA00966D39 /* InfoActionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoActionsProvider.swift; sourceTree = "<group>"; };
+		B9650DE9210F4DEC00966D39 /* ApplicationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationExt.swift; sourceTree = "<group>"; };
 		B98ED17D210B3C3000091E31 /* BostonFireBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonFireBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98ED17E210B3C3000091E31 /* NYCFireBox copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NYCFireBox copy-Info.plist"; path = "/Users/wf-gordanabadarovska/Desktop/Projects/NYCFireBox/NYCFireBox/NYCFireBox copy-Info.plist"; sourceTree = "<absolute>"; };
 		B98ED180210B3DDD00091E31 /* BostonMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BostonMain.storyboard; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 			children = (
 				B92B145720889ECF0060145F /* DataProvider.swift */,
 				E3C261E82095023A00F4B1B9 /* FileUpdater.swift */,
+				B9650DE6210F48FA00966D39 /* InfoActionsProvider.swift */,
 			);
 			path = DataProviders;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				B961927E2084CCAC001F54BD /* CollectionsExt.swift */,
+				B9650DE9210F4DEC00966D39 /* ApplicationExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -464,11 +472,13 @@
 				B98ED15D210B3C3000091E31 /* EMSStation.swift in Sources */,
 				B98ED15E210B3C3000091E31 /* SearchViewController.swift in Sources */,
 				B98ED15F210B3C3000091E31 /* Location.swift in Sources */,
+				B9650DEB210F4DEC00966D39 /* ApplicationExt.swift in Sources */,
 				B98ED160210B3C3000091E31 /* FireBoxCell.swift in Sources */,
 				B98ED161210B3C3000091E31 /* GoogleAnalyticsController.swift in Sources */,
 				B98ED162210B3C3000091E31 /* Map.swift in Sources */,
 				B98ED163210B3C3000091E31 /* FireBoxDetailsController.swift in Sources */,
 				B98ED164210B3C3000091E31 /* AppDelegate.swift in Sources */,
+				B9650DE8210F48FA00966D39 /* InfoActionsProvider.swift in Sources */,
 				B98ED165210B3C3000091E31 /* Firehouse.swift in Sources */,
 				B98ED166210B3C3000091E31 /* CollectionsExt.swift in Sources */,
 				B98ED167210B3C3000091E31 /* FileUpdater.swift in Sources */,
@@ -486,11 +496,13 @@
 				B9E7C3E52084B902005C4BC8 /* SearchViewController.swift in Sources */,
 				B9AF80732087723D00C74225 /* Location.swift in Sources */,
 				B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */,
+				B9650DEA210F4DEC00966D39 /* ApplicationExt.swift in Sources */,
 				E3079D412093797700CC46E4 /* GoogleAnalyticsController.swift in Sources */,
 				B99E041A208E0C0A00B7AE60 /* Map.swift in Sources */,
 				B92B145C2089F6BA0060145F /* FireBoxDetailsController.swift in Sources */,
 				B9E7C3E32084B902005C4BC8 /* AppDelegate.swift in Sources */,
 				B9AF8071208771F200C74225 /* Firehouse.swift in Sources */,
+				B9650DE7210F48FA00966D39 /* InfoActionsProvider.swift in Sources */,
 				B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */,
 				E3C261E92095023A00F4B1B9 /* FileUpdater.swift in Sources */,
 				B9AF806F208768AE00C74225 /* Constants.swift in Sources */,

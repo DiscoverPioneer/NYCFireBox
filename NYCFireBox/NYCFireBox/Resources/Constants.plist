@@ -4,6 +4,18 @@
 <dict>
 	<key>com.Pioneer.BostonFireBox</key>
 	<dict>
+		<key>oneSingle</key>
+		<string></string>
+		<key>googleAnalytics</key>
+		<string></string>
+		<key>shareURL</key>
+		<string></string>
+		<key>websiteURL</key>
+		<string></string>
+		<key>linkedAppURL</key>
+		<string>https://itunes.apple.com/us/app/nycfirebox/id1377737408?mt=8&amp;ign-mpt=uo%3D2</string>
+		<key>contactURL</key>
+		<string>contact@pioneerapplications.com</string>
 		<key>fireboxFilename</key>
 		<string>BostonFireBoxes</string>
 		<key>baseCoordinates</key>
@@ -27,6 +39,22 @@
 	</dict>
 	<key>com.Pioneer.NYCFireBox</key>
 	<dict>
+		<key>oneSignal</key>
+		<string>ab30806b-ca26-4abb-908c-3a9b93c7ef2a</string>
+		<key>googleAnalytics</key>
+		<string>UA-118289028-1</string>
+		<key>firedepURL</key>
+		<string>http://www.fdnewyork.com/</string>
+		<key>linkedAppURL</key>
+		<string>https://itunes.apple.com/us/app/mobile-mdt/id1251028336?mt=8</string>
+		<key>liveIncidents</key>
+		<string>https://itunes.apple.com/us/app/fire-buff/id592485608?mt=8</string>
+		<key>shareURL</key>
+		<string>https://itunes.apple.com/us/app/nycfirebox/id1377737408?mt=8&amp;ign-mpt=uo%3D2</string>
+		<key>websiteURL</key>
+		<string>http://pioneerapplications.com?ref=fireboxapp</string>
+		<key>contactURL</key>
+		<string>contact@pioneerapplications.com</string>
 		<key>emsStations</key>
 		<dict>
 			<key>url</key>

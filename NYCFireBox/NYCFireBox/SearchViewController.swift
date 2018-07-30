@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     private var noResultsLabel = UILabel()
     private var mapNavButton: UIBarButtonItem?
     private var kStartQuery = "0000"
+    private let infoProvider = InfoActionsProvider()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -179,79 +180,18 @@ class SearchViewController: UIViewController {
 
     // MARK: Actions
     @objc private func onInfoButton(_ sender: UIBarButtonItem) {
-//        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//        let settings = UIAlertAction(title: "Settings", style: .default) { [weak self] (action) in
-//            self?.onSettingsButton()
-//        }
-//
-//        let contact = UIAlertAction(title: "Contact Us", style: .default) { [weak self] (action) in
-//            self?.open(email: NetworkConstants.InfoURL.contact)
-//        }
-//
-//        let website = UIAlertAction(title: "Website", style: .default) { [weak self] (action) in
-//            self?.open(url: NetworkConstants.InfoURL.website)
-//        }
-//
-//        let liveIncidents = UIAlertAction(title: "Live Incidents", style: .default) { [weak self] (action) in
-//            self?.open(url: NetworkConstants.InfoURL.liveIncidents)
-//        }
-//
-//        let mobile = UIAlertAction(title: "Mobile MDT", style: .default) { [weak self] (action) in
-//            self?.open(url: NetworkConstants.InfoURL.mobileMDT)
-//        }
-//
-//        let fdnewyork = UIAlertAction(title: "FDNewYork", style: .default) { [weak self] (action) in
-//            self?.open(url: NetworkConstants.InfoURL.fdNewYork)
-//        }
-//
-//        let shareAction = UIAlertAction(title: "SHARE APP", style: .default) { [weak self] (action) in
-//            let activityViewController = UIActivityViewController(
-//                activityItems: ["Check out the NYCFireBox App!", URL(string:NetworkConstants.InfoURL.share)!],
-//                applicationActivities: nil)
-//            self?.present(activityViewController, animated: true, completion: nil)
-//        }
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let actions = infoProvider.getAlertActions()
 
-//        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        actionSheet.addAction(settings)
-//        actionSheet.addAction(contact)
-//        actionSheet.addAction(website)
-//        actionSheet.addAction(liveIncidents)
-//        actionSheet.addAction(mobile)
-//        actionSheet.addAction(fdnewyork)
-//        actionSheet.addAction(shareAction)
-//        actionSheet.addAction(cancel)
-
-        _ = resignFirstResponder()
-        searchController.isActive = false
-//        setActionSheet(actionSheet: actionSheet)
-
-//        present(actionSheet, animated: true, completion: nil)
-    }
-    
-    func onSettingsButton() {
-        let actionSheet = UIAlertController(title: "Push Notifications", message: nil, preferredStyle: .actionSheet)
-        let defaults = UserDefaults.standard
-        let disablePushNotificationsKey = "disablePushNotifications"
-        if defaults.bool(forKey: disablePushNotificationsKey) {
-            actionSheet.addAction(UIAlertAction(title: "Enable Push Notifications", style: .default, handler: { (action) in
-                defaults.set(false, forKey: disablePushNotificationsKey)
-                OneSignal.setSubscription(true)
-            }))
-        } else {
-            actionSheet.view.tintColor = UIColor.red
-            actionSheet.addAction(UIAlertAction(title: "Disable Push Notifications", style: .default, handler: { (action) in
-                defaults.set(true, forKey: disablePushNotificationsKey)
-                OneSignal.setSubscription(false)
-            }))
+        for action in actions {
+            actionSheet.addAction(action)
+            print("action \(action)")
         }
-        
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-        }))
-        
-        setActionSheet(actionSheet: actionSheet)
-        
+
         _ = resignFirstResponder()
         searchController.isActive = false
+        setActionSheet(actionSheet: actionSheet)
+
         present(actionSheet, animated: true, completion: nil)
     }
 
@@ -262,22 +202,11 @@ class SearchViewController: UIViewController {
             popoverController.permittedArrowDirections = []
         }
     }
-    
+
     @objc private func onMapButton(_ sender: UIBarButtonItem) {
         searchController.searchBar.text?.removeAll()
         searchController.isActive = false
         clearSearch()
-    }
-
-    private func open(url: String) {
-        guard let url = URL(string: url) else { return }
-        UIApplication.shared.open(url)
-    }
-
-    private func open(email: String) {
-        if let url = URL(string: "mailto:\(email)") {
-            UIApplication.shared.open(url)
-        }
     }
 }
 

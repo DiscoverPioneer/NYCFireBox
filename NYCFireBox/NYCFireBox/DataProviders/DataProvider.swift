@@ -1,10 +1,18 @@
 import Foundation
+import CoreLocation
 
 class DataProvider {
+    //BaseCoordinates
+    class func getDefaultCoordinates() -> CLLocationCoordinate2D {
+        let constants = Constants()
+        return CLLocationCoordinate2D(latitude: constants.latitude, longitude: constants.longitude)
+    }
 
+    // Firehouses
     class func getFireBoxes(_ callback: (_ fireboxes: [FireBox]) -> ()) {
         var fireBoxes: [FireBox] = []
-        guard let filePath = Bundle.main.path(forResource: "Fire Boxes", ofType: "csv") else {
+        let filename: String = Constants().fireboxFilename
+        guard let filePath = Bundle.main.path(forResource: filename, ofType: "csv") else {
             callback([])
             return
         }
@@ -12,48 +20,43 @@ class DataProvider {
         let rows = contents?.components(separatedBy: "\n")
         for row in rows ?? [] {
             let firebox = FireBox(string: row)
-            if firebox.name.contains("LGA - AIRPORT EMERGENCY RESPONSE") || firebox.boxNumber == "0037" || firebox.boxNumber == "37" {
-                print("Found box: \(row)")
-            }
             fireBoxes.append(firebox)
         }
         callback(fireBoxes)
     }
 
-    class func getFirehouses(forBorough borough: NYCBoroughs, completionHandler:  @escaping ([Firehouse]) -> Void) {
-        var path = ""
-        switch borough {
-        case .bronx: path = NetworkConstants.Datasource.bronx
-        case .brooklyn: path = NetworkConstants.Datasource.brooklyn
-        case .manhattan: path = NetworkConstants.Datasource.manhattan
-        case .queens: path = NetworkConstants.Datasource.queens
-        case .statenIsland: path = NetworkConstants.Datasource.statenIsland
-        }
+    class func getFirehouses(completionHandler: @escaping ([Firehouse]) -> Void) {
+        let locations = Constants().locationsURL
 
-        if let fromURL = URL(string: path) {
-            FileUpdater().syncFileFrom(url: fromURL, andSaveAs: borough.fullName) {
-                let firehouses = DataProvider.retrieveFirehousesFromFile(filename: borough.fullName)
-                DispatchQueue.main.async {
-                    completionHandler(firehouses)
+        for location in locations {
+            if let fromURL = URL(string: location.url) {
+                FileUpdater().syncFileFrom(url: fromURL, andSaveAs: location.name) {
+                    let firehouses = DataProvider.retrieveFirehousesFromFile(filename: location.name)
+                    DispatchQueue.main.async {
+                        completionHandler(firehouses)
+                    }
                 }
+            } else {
+                completionHandler(getLocalFirehouses())
             }
-        } else {
-            completionHandler(getLocalFirehouses(forBorough: borough))
         }
     }
 
-    class func getEMSStations(completionHandler: @escaping ([EMSStation]) -> Void) {
-        if let fromURL = URL(string: NetworkConstants.Datasource.emsStations) {
-            FileUpdater().syncFileFrom(url: fromURL, andSaveAs: "EMS-Stations") {
-                let firehouses = DataProvider.retrieveEMSStationsFromFile(filename: "EMS-Stations")
-                DispatchQueue.main.async {
-                    completionHandler(firehouses)
+    private class func getLocalFirehouses() -> [Firehouse] {
+        let locations = Constants().locationsURL
+        var firehouses: [Firehouse] = []
+
+        for location in locations {
+            if let path = Bundle.main.path(forResource: location.name, ofType: "plist") {
+                let firestations = NSArray(contentsOfFile: path) as? [[String: Any]] ?? []
+                for station in firestations {
+                    firehouses.append(Firehouse(dictionary: station))
                 }
             }
-        } else {
-            completionHandler(getLocalEMSStations())
         }
+        return firehouses
     }
+
 
     private class func getLocalFirehouses(forBorough borough: NYCBoroughs) -> [Firehouse] {
         var firehouses: [Firehouse] = []
@@ -64,6 +67,25 @@ class DataProvider {
             }
         }
         return firehouses
+    }
+
+    // EMSStations
+    class func getEMSStations(completionHandler: @escaping ([EMSStation]) -> Void) {
+        guard let emsStation = Constants().emsStations else {
+            completionHandler([])
+            return
+        }
+
+        if let fromURL = URL(string: emsStation.url) {
+            FileUpdater().syncFileFrom(url: fromURL, andSaveAs: emsStation.name) {
+                let firehouses = DataProvider.retrieveEMSStationsFromFile(filename: emsStation.name)
+                DispatchQueue.main.async {
+                    completionHandler(firehouses)
+                }
+            }
+        } else {
+            completionHandler(getLocalEMSStations())
+        }
     }
 
     private class func getLocalEMSStations() -> [EMSStation] {
@@ -151,19 +173,35 @@ extension DataProvider {
             if FileManager.default.fileExists(atPath: fileLocation.path) {
                 url = fileLocation
                 print("Using File URL, not bundle")
+            } else {
+                let fileLocation = documentsUrl.appendingPathComponent("/files/\(filename).csv", isDirectory: false)
+                if FileManager.default.fileExists(atPath: fileLocation.path) {
+                    url = fileLocation
+                    print("Using File URL, not bundle")
+                }
             }
         }
         
         if url == nil {
-            url = Bundle.main.url(forResource: filename, withExtension: "plist")
+            if let plistURL = Bundle.main.url(forResource: filename, withExtension: "plist") {
+                url = plistURL
+            } else {
+                url = Bundle.main.url(forResource: filename, withExtension: "csv")
+            }
         }
+
         if let URL = url {
             if let plist = NSArray(contentsOf: URL) as? [[String:String]] {
                 for dict in plist {
                     firehouses.append(Firehouse(dictionary: dict))
                 }
+            } else if let csv = try? String(contentsOf: URL) {
+                let rows = csv.components(separatedBy: "\n")
+                for row in rows {
+                    firehouses.append(Firehouse(string: row))
+                }
             } else {
-                print("Not a valid plist type")
+                print("Not a valid file type")
             }
         } else {
             print("NOt a valid URL")

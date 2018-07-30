@@ -1,5 +1,48 @@
 import Foundation
 
+struct LocationURL {
+    var name: String
+    var url: String
+
+    init(name: String, url: String) {
+        self.name = name
+        self.url = url
+    }
+}
+
+struct Constants {
+    let baseURL: String
+    let longitude: Double
+    let latitude: Double
+    let fireboxFilename: String
+
+    var locationsURL: [LocationURL]
+    var emsStations: LocationURL?
+
+    init() {
+        let buindleID = Bundle.main.bundleIdentifier
+        let path = Bundle.main.path(forResource: "Constants", ofType: "plist")
+        let constants = NSDictionary(contentsOfFile: path!)
+        let values = constants?.value(forKey: buindleID!) as! [String: AnyObject]
+
+        baseURL = values["baseURL"] as! String
+        longitude = values["baseCoordinates"]!["longitude"] as! Double
+        latitude = values["baseCoordinates"]!["latitude"] as! Double
+        fireboxFilename = values["fireboxFilename"] as! String
+        
+        locationsURL = []
+        let locationsArray = values["locations"] as! [[String: Any]]
+        for location in locationsArray {
+            let newLocation = LocationURL(name: location["name"] as! String, url: baseURL+(location["url"] as! String))
+            locationsURL.append(newLocation)
+        }
+
+        if let stations = values["emsStations"] as? [String: Any] {
+            emsStations = LocationURL(name: stations["name"] as! String, url: stations["url"] as! String)
+        }
+    }
+}
+
 struct NetworkConstants {
     struct InfoURL {
         static let contact = "contact@pioneerapplications.com"
@@ -10,28 +53,5 @@ struct NetworkConstants {
         static let share = "https://itunes.apple.com/us/app/nycfirebox/id1377737408?mt=8&ign-mpt=uo%3D2"
 
     }
-
-    struct Datasource {
-        private static let baseURL = "http://pioneerapplications.com/AppResources/firebuff/"
-        static let emsStations = baseURL + "EMS-Stations.plist"
-        static let bronx = baseURL + "Bronx.plist"
-        static let brooklyn = baseURL + "Brooklyn.plist"
-        static let manhattan = baseURL + "Manhattan.plist"
-        static let queens = baseURL + "Queens.plist"
-        static let statenIsland = baseURL + "StatenIsland.plist"
-    }
-
-    struct UserDefaultsKeys {
-        static let lastModifiedEMS = "lastModifiedEMS"
-        static let lastModifiedBronx = "lastModifiedBronx"
-        static let lastModifiedBrooklyn = "lastModifiedBrooklyn"
-        static let lastModifiedManhattan = "lastModifiedManhattan"
-        static let lastModifiedQueens = "lastModifiedQueens"
-        static let lastModifiedStatenIsland = "lastModifiedStatenIsland"
-    }
 }
 
-struct NYCCoordinates {
-    static let longitude = -74.0060
-    static let latitude = 40.7128
-}

@@ -13,6 +13,11 @@
 		B9533443208F5AAB001BCCD5 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
 		B961927F2084CCAC001F54BD /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
 		B96192822084D7E1001F54BD /* FireBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96192812084D7E1001F54BD /* FireBoxCell.swift */; };
+		B961E9AB210B5F4A0059987F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF806E208768AE00C74225 /* Constants.swift */; };
+		B961E9B2210B73690059987F /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = B961E9B1210B73690059987F /* Constants.plist */; };
+		B9650DE3210F37BD00966D39 /* Constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = B961E9B1210B73690059987F /* Constants.plist */; };
+		B9650DE4210F428A00966D39 /* NYCFireBoxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B95456DB2091D98C0050080A /* NYCFireBoxes.csv */; };
+		B9650DE5210F428D00966D39 /* BostonFireBoxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B98ED190210B4CC200091E31 /* BostonFireBoxes.csv */; };
 		B98ED15A210B3C3000091E31 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B98ED15B210B3C3000091E31 /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
 		B98ED15C210B3C3000091E31 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
@@ -27,24 +32,16 @@
 		B98ED165210B3C3000091E31 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8070208771F200C74225 /* Firehouse.swift */; };
 		B98ED166210B3C3000091E31 /* CollectionsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961927E2084CCAC001F54BD /* CollectionsExt.swift */; };
 		B98ED167210B3C3000091E31 /* FileUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C261E82095023A00F4B1B9 /* FileUpdater.swift */; };
-		B98ED168210B3C3000091E31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF806E208768AE00C74225 /* Constants.swift */; };
 		B98ED16A210B3C3000091E31 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D39209376F400CC46E4 /* Crashlytics.framework */; };
 		B98ED16B210B3C3000091E31 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D38209376F400CC46E4 /* Fabric.framework */; };
 		B98ED16C210B3C3000091E31 /* Pods_NYCFireBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8F97BEBA4607436E4173A5 /* Pods_NYCFireBox.framework */; };
 		B98ED171210B3C3000091E31 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
-		B98ED172210B3C3000091E31 /* Manhattan.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807E2087826800C74225 /* Manhattan.plist */; };
-		B98ED173210B3C3000091E31 /* Bronx.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80762087825900C74225 /* Bronx.plist */; };
-		B98ED174210B3C3000091E31 /* EMS-Stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80782087825F00C74225 /* EMS-Stations.plist */; };
-		B98ED175210B3C3000091E31 /* Staten Island.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807A2087826200C74225 /* Staten Island.plist */; };
-		B98ED176210B3C3000091E31 /* Brooklyn.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80802087826E00C74225 /* Brooklyn.plist */; };
-		B98ED177210B3C3000091E31 /* Queens.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807C2087826500C74225 /* Queens.plist */; };
 		B98ED181210B3DDD00091E31 /* BostonMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98ED180210B3DDD00091E31 /* BostonMain.storyboard */; };
 		B98ED184210B3DF500091E31 /* BostonLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */; };
 		B98ED186210B3EA700091E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
 		B98ED187210B3EC200091E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
-		B98ED18F210B48D400091E31 /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B95456DB2091D98C0050080A /* Fire Boxes.csv */; };
-		B98ED192210B4CC500091E31 /* Fire Boxes.csv in Resources */ = {isa = PBXBuildFile; fileRef = B98ED190210B4CC200091E31 /* Fire Boxes.csv */; };
-		B98ED194210B4E6200091E31 /* BostonFirehouseLocations.csv in Resources */ = {isa = PBXBuildFile; fileRef = B98ED193210B4E6200091E31 /* BostonFirehouseLocations.csv */; };
+		B98ED194210B4E6200091E31 /* Boston.csv in Resources */ = {isa = PBXBuildFile; fileRef = B98ED193210B4E6200091E31 /* Boston.csv */; };
+		B98ED195210B55BB00091E31 /* Staten Island.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807A2087826200C74225 /* Staten Island.plist */; };
 		B99E041A208E0C0A00B7AE60 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99E0419208E0C0A00B7AE60 /* Map.swift */; };
 		B9AF806F208768AE00C74225 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF806E208768AE00C74225 /* Constants.swift */; };
 		B9AF8071208771F200C74225 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8070208771F200C74225 /* Firehouse.swift */; };
@@ -52,7 +49,6 @@
 		B9AF80752087735500C74225 /* EMSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF80742087735500C74225 /* EMSStation.swift */; };
 		B9AF80772087825900C74225 /* Bronx.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80762087825900C74225 /* Bronx.plist */; };
 		B9AF80792087825F00C74225 /* EMS-Stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80782087825F00C74225 /* EMS-Stations.plist */; };
-		B9AF807B2087826200C74225 /* Staten Island.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807A2087826200C74225 /* Staten Island.plist */; };
 		B9AF807D2087826500C74225 /* Queens.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807C2087826500C74225 /* Queens.plist */; };
 		B9AF807F2087826800C74225 /* Manhattan.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF807E2087826800C74225 /* Manhattan.plist */; };
 		B9AF80812087826E00C74225 /* Brooklyn.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AF80802087826E00C74225 /* Brooklyn.plist */; };
@@ -76,15 +72,16 @@
 		B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxDetailsController.swift; sourceTree = "<group>"; };
 		B9533442208F5AAB001BCCD5 /* Map.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Map.xib; sourceTree = "<group>"; };
 		B9533445208F6A3C001BCCD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		B95456DB2091D98C0050080A /* Fire Boxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Fire Boxes.csv"; sourceTree = "<group>"; };
+		B95456DB2091D98C0050080A /* NYCFireBoxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NYCFireBoxes.csv; sourceTree = "<group>"; };
 		B961927E2084CCAC001F54BD /* CollectionsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsExt.swift; sourceTree = "<group>"; };
 		B96192812084D7E1001F54BD /* FireBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxCell.swift; sourceTree = "<group>"; };
+		B961E9B1210B73690059987F /* Constants.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Constants.plist; sourceTree = "<group>"; };
 		B98ED17D210B3C3000091E31 /* BostonFireBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonFireBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98ED17E210B3C3000091E31 /* NYCFireBox copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NYCFireBox copy-Info.plist"; path = "/Users/wf-gordanabadarovska/Desktop/Projects/NYCFireBox/NYCFireBox/NYCFireBox copy-Info.plist"; sourceTree = "<absolute>"; };
 		B98ED180210B3DDD00091E31 /* BostonMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BostonMain.storyboard; sourceTree = "<group>"; };
 		B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BostonLaunchScreen.storyboard; sourceTree = "<group>"; };
-		B98ED190210B4CC200091E31 /* Fire Boxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Fire Boxes.csv"; path = "../../../../../../Downloads/Fire Boxes.csv"; sourceTree = "<group>"; };
-		B98ED193210B4E6200091E31 /* BostonFirehouseLocations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BostonFirehouseLocations.csv; sourceTree = "<group>"; };
+		B98ED190210B4CC200091E31 /* BostonFireBoxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BostonFireBoxes.csv; path = ../../../../../../Downloads/BostonFireBoxes.csv; sourceTree = "<group>"; };
+		B98ED193210B4E6200091E31 /* Boston.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Boston.csv; sourceTree = "<group>"; };
 		B99E0419208E0C0A00B7AE60 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		B9AF806E208768AE00C74225 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9AF8070208771F200C74225 /* Firehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firehouse.swift; sourceTree = "<group>"; };
@@ -229,9 +226,9 @@
 		B9E7C3F42084BB6E005C4BC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B95456DB2091D98C0050080A /* Fire Boxes.csv */,
-				B98ED190210B4CC200091E31 /* Fire Boxes.csv */,
-				B98ED193210B4E6200091E31 /* BostonFirehouseLocations.csv */,
+				B95456DB2091D98C0050080A /* NYCFireBoxes.csv */,
+				B98ED190210B4CC200091E31 /* BostonFireBoxes.csv */,
+				B98ED193210B4E6200091E31 /* Boston.csv */,
 				B9AF807A2087826200C74225 /* Staten Island.plist */,
 				B9AF807C2087826500C74225 /* Queens.plist */,
 				B9AF807E2087826800C74225 /* Manhattan.plist */,
@@ -239,6 +236,7 @@
 				B9AF80802087826E00C74225 /* Brooklyn.plist */,
 				B9AF80762087825900C74225 /* Bronx.plist */,
 				B9AF806E208768AE00C74225 /* Constants.swift */,
+				B961E9B1210B73690059987F /* Constants.plist */,
 				E3079D3C2093783B00CC46E4 /* NYCFireBox-Bridging-Header.h */,
 			);
 			path = Resources;
@@ -358,18 +356,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98ED192210B4CC500091E31 /* Fire Boxes.csv in Resources */,
 				B98ED181210B3DDD00091E31 /* BostonMain.storyboard in Resources */,
+				B9650DE5210F428D00966D39 /* BostonFireBoxes.csv in Resources */,
 				B98ED171210B3C3000091E31 /* Map.xib in Resources */,
 				B98ED186210B3EA700091E31 /* Assets.xcassets in Resources */,
-				B98ED172210B3C3000091E31 /* Manhattan.plist in Resources */,
-				B98ED173210B3C3000091E31 /* Bronx.plist in Resources */,
-				B98ED174210B3C3000091E31 /* EMS-Stations.plist in Resources */,
-				B98ED175210B3C3000091E31 /* Staten Island.plist in Resources */,
-				B98ED176210B3C3000091E31 /* Brooklyn.plist in Resources */,
-				B98ED194210B4E6200091E31 /* BostonFirehouseLocations.csv in Resources */,
+				B9650DE3210F37BD00966D39 /* Constants.plist in Resources */,
+				B98ED194210B4E6200091E31 /* Boston.csv in Resources */,
 				B98ED184210B3DF500091E31 /* BostonLaunchScreen.storyboard in Resources */,
-				B98ED177210B3C3000091E31 /* Queens.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,17 +370,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98ED18F210B48D400091E31 /* Fire Boxes.csv in Resources */,
 				B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */,
 				B9E7C3E82084B902005C4BC8 /* Main.storyboard in Resources */,
 				B98ED187210B3EC200091E31 /* Assets.xcassets in Resources */,
 				B9533443208F5AAB001BCCD5 /* Map.xib in Resources */,
 				B9AF807F2087826800C74225 /* Manhattan.plist in Resources */,
 				B9AF80772087825900C74225 /* Bronx.plist in Resources */,
+				B961E9B2210B73690059987F /* Constants.plist in Resources */,
 				B9AF80792087825F00C74225 /* EMS-Stations.plist in Resources */,
-				B9AF807B2087826200C74225 /* Staten Island.plist in Resources */,
 				B9AF80812087826E00C74225 /* Brooklyn.plist in Resources */,
 				B9AF807D2087826500C74225 /* Queens.plist in Resources */,
+				B98ED195210B55BB00091E31 /* Staten Island.plist in Resources */,
+				B9650DE4210F428A00966D39 /* NYCFireBoxes.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +460,7 @@
 				B98ED15A210B3C3000091E31 /* DataProvider.swift in Sources */,
 				B98ED15B210B3C3000091E31 /* LocationDistance.swift in Sources */,
 				B98ED15C210B3C3000091E31 /* FireBox.swift in Sources */,
+				B961E9AB210B5F4A0059987F /* Constants.swift in Sources */,
 				B98ED15D210B3C3000091E31 /* EMSStation.swift in Sources */,
 				B98ED15E210B3C3000091E31 /* SearchViewController.swift in Sources */,
 				B98ED15F210B3C3000091E31 /* Location.swift in Sources */,
@@ -477,7 +472,6 @@
 				B98ED165210B3C3000091E31 /* Firehouse.swift in Sources */,
 				B98ED166210B3C3000091E31 /* CollectionsExt.swift in Sources */,
 				B98ED167210B3C3000091E31 /* FileUpdater.swift in Sources */,
-				B98ED168210B3C3000091E31 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

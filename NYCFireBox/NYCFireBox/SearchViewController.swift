@@ -59,8 +59,7 @@ class SearchViewController: UIViewController {
         mapView = Map(frame: CGRect(origin: CGPoint(x: 0,y :0),
                                        size: CGSize(width: view.bounds.size.width,
                                                     height: view.bounds.size.height)))
-        let startCoordinates = CLLocationCoordinate2D(latitude: NYCCoordinates.latitude,
-                                                      longitude: NYCCoordinates.longitude)
+        let startCoordinates = DataProvider.getDefaultCoordinates()
         mapView?.setupMapRegion(startCoordinates: startCoordinates, radius: 3000)
     }
 
@@ -74,18 +73,17 @@ class SearchViewController: UIViewController {
                 self?.locations.append(station)
             }
             self?.updateMap(withLocations: emsStations)
+            print("Count \(emsStations.count)")
+
         }
-        
-        let boroughs: [NYCBoroughs] = [.statenIsland, .queens, .manhattan, .brooklyn, .bronx]
-        for borough in boroughs {
-            DataProvider.getFirehouses(forBorough: borough, completionHandler: { [weak self] (firehouses) in
-                for firehouse in firehouses {
-                    self?.locations.append(firehouse)
-                    print("\(firehouse.name.replacingOccurrences(of: ",", with: "")),\(firehouse.address.replacingOccurrences(of: ",", with: "")),\"\(firehouse.latitude!),\(firehouse.longitude!)\",\(borough.fullName.replacingOccurrences(of: ",", with: ""))")
-                }
-                self?.updateMap(withLocations: firehouses)
-            })
+
+        DataProvider.getFirehouses { [weak self] (firehouses) in
+            self?.locations.append(contentsOf: firehouses)
+            self?.updateMap(withLocations: firehouses)
+
+            print("Count \(firehouses.count)")
         }
+
         showNoResult(true)
     }
 
@@ -181,53 +179,53 @@ class SearchViewController: UIViewController {
 
     // MARK: Actions
     @objc private func onInfoButton(_ sender: UIBarButtonItem) {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let settings = UIAlertAction(title: "Settings", style: .default) { [weak self] (action) in
-            self?.onSettingsButton()
-        }
-        
-        let contact = UIAlertAction(title: "Contact Us", style: .default) { [weak self] (action) in
-            self?.open(email: NetworkConstants.InfoURL.contact)
-        }
+//        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+//        let settings = UIAlertAction(title: "Settings", style: .default) { [weak self] (action) in
+//            self?.onSettingsButton()
+//        }
+//
+//        let contact = UIAlertAction(title: "Contact Us", style: .default) { [weak self] (action) in
+//            self?.open(email: NetworkConstants.InfoURL.contact)
+//        }
+//
+//        let website = UIAlertAction(title: "Website", style: .default) { [weak self] (action) in
+//            self?.open(url: NetworkConstants.InfoURL.website)
+//        }
+//
+//        let liveIncidents = UIAlertAction(title: "Live Incidents", style: .default) { [weak self] (action) in
+//            self?.open(url: NetworkConstants.InfoURL.liveIncidents)
+//        }
+//
+//        let mobile = UIAlertAction(title: "Mobile MDT", style: .default) { [weak self] (action) in
+//            self?.open(url: NetworkConstants.InfoURL.mobileMDT)
+//        }
+//
+//        let fdnewyork = UIAlertAction(title: "FDNewYork", style: .default) { [weak self] (action) in
+//            self?.open(url: NetworkConstants.InfoURL.fdNewYork)
+//        }
+//
+//        let shareAction = UIAlertAction(title: "SHARE APP", style: .default) { [weak self] (action) in
+//            let activityViewController = UIActivityViewController(
+//                activityItems: ["Check out the NYCFireBox App!", URL(string:NetworkConstants.InfoURL.share)!],
+//                applicationActivities: nil)
+//            self?.present(activityViewController, animated: true, completion: nil)
+//        }
 
-        let website = UIAlertAction(title: "Website", style: .default) { [weak self] (action) in
-            self?.open(url: NetworkConstants.InfoURL.website)
-        }
-
-        let liveIncidents = UIAlertAction(title: "Live Incidents", style: .default) { [weak self] (action) in
-            self?.open(url: NetworkConstants.InfoURL.liveIncidents)
-        }
-
-        let mobile = UIAlertAction(title: "Mobile MDT", style: .default) { [weak self] (action) in
-            self?.open(url: NetworkConstants.InfoURL.mobileMDT)
-        }
-
-        let fdnewyork = UIAlertAction(title: "FDNewYork", style: .default) { [weak self] (action) in
-            self?.open(url: NetworkConstants.InfoURL.fdNewYork)
-        }
-        
-        let shareAction = UIAlertAction(title: "SHARE APP", style: .default) { [weak self] (action) in
-            let activityViewController = UIActivityViewController(
-                activityItems: ["Check out the NYCFireBox App!", URL(string:NetworkConstants.InfoURL.share)!],
-                applicationActivities: nil)
-            self?.present(activityViewController, animated: true, completion: nil)
-        }
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        actionSheet.addAction(settings)
-        actionSheet.addAction(contact)
-        actionSheet.addAction(website)
-        actionSheet.addAction(liveIncidents)
-        actionSheet.addAction(mobile)
-        actionSheet.addAction(fdnewyork)
-        actionSheet.addAction(shareAction)
-        actionSheet.addAction(cancel)
+//        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        actionSheet.addAction(settings)
+//        actionSheet.addAction(contact)
+//        actionSheet.addAction(website)
+//        actionSheet.addAction(liveIncidents)
+//        actionSheet.addAction(mobile)
+//        actionSheet.addAction(fdnewyork)
+//        actionSheet.addAction(shareAction)
+//        actionSheet.addAction(cancel)
 
         _ = resignFirstResponder()
         searchController.isActive = false
-        setActionSheet(actionSheet: actionSheet)
+//        setActionSheet(actionSheet: actionSheet)
 
-        present(actionSheet, animated: true, completion: nil)
+//        present(actionSheet, animated: true, completion: nil)
     }
     
     func onSettingsButton() {

@@ -6,6 +6,7 @@ class SearchQueryFormatter {
 
     let startQuery: String
     let maxQueryLength: Int
+    let keyboardType: UIKeyboardType
 
     init(appLocation: AppLocation) {
         self.appLocation = appLocation
@@ -13,9 +14,11 @@ class SearchQueryFormatter {
         case .NYC:
             startQuery = "0000"
             maxQueryLength = 4
+            keyboardType = .numberPad
         case .Boston:
             startQuery = ""
             maxQueryLength = 7
+            keyboardType = .numbersAndPunctuation
         }
     }
 

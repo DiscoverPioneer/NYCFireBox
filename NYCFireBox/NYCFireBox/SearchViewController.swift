@@ -94,7 +94,7 @@ class SearchViewController: UIViewController {
         searchController.searchBar.placeholder = "Enter box number"
         searchController.searchBar.delegate = self
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.keyboardType = .numberPad
+        searchController.searchBar.keyboardType = queryFormatter?.keyboardType ?? .numberPad
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
 

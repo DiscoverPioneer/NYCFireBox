@@ -25,7 +25,6 @@ struct Constants {
     let latitude: Double
     let fireboxFilename: String
 
-
     let shareURL: String?
     let contactURL: String?
     let websiteURL: String?
@@ -36,6 +35,8 @@ struct Constants {
 
     var locationsURL: [LocationURL]
     var emsStations: LocationURL?
+
+    let title: String
 
     init() {
         let bundleID = Bundle.main.bundleIdentifier
@@ -63,6 +64,8 @@ struct Constants {
         linkedAppURL = values["linkedAppURL"] as? String
         firedepURL = values["firedepURL"] as? String
         liveincidentsURL = values["liveIncidents"] as? String
+
+        title = values["title"] as! String
 
         locationsURL = []
         let locationsArray = values["locations"] as! [[String: Any]]

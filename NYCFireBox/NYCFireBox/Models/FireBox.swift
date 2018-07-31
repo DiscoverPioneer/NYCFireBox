@@ -25,12 +25,13 @@ class FireBox: Location {
 
     init(string: String) {
         let columns = string.components(separatedBy: ",")
+
         self.boxNumber = columns[safe: 3] ?? ""
         let address = columns[safe: 4] ?? ""
         let borough = NYCBoroughs(rawValue: columns[safe: 2] ?? "")?.fullName ?? ""
         let longitude = Double(columns[safe: 0] ?? "")
         let latitude = Double(columns[safe: 1] ?? "")
-        let note = columns[safe: 5]
+        let note = columns[safe: 5] == "" ? nil : columns[safe: 5]
 
         super.init(name: boxNumber,
                    address: address,
@@ -39,5 +40,9 @@ class FireBox: Location {
                    longitude: longitude,
                    latitude: latitude,
                    note: note)
+    }
+
+    func numberAndAddress() -> String {
+        return "Box: " + boxNumber + "\n" + fullAddress()
     }
 }

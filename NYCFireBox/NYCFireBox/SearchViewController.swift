@@ -77,15 +77,11 @@ class SearchViewController: UIViewController {
                 self?.locations.append(station)
             }
             self?.updateMap(withLocations: emsStations)
-            print("Count \(emsStations.count)")
-
         }
 
         DataProvider.getFirehouses { [weak self] (firehouses) in
             self?.locations.append(contentsOf: firehouses)
             self?.updateMap(withLocations: firehouses)
-
-            print("Count \(firehouses.count)")
         }
 
         showNoResult(true)
@@ -205,8 +201,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _ = resignFirstResponder()
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let storyboard = UIStoryboard(name: "BostonMain", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
 
         if let detailsVC = storyboard.instantiateViewController(withIdentifier: "FireBoxDetailsController") as? FireBoxDetailsController {
             navigationController?.pushViewController(detailsVC, animated: true)

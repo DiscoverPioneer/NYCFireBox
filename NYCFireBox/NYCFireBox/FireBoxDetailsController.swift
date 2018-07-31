@@ -38,7 +38,11 @@ class FireBoxDetailsController: UIViewController {
 
         guard let firebox = firebox else { return }
         title = "Box \(firebox.boxNumber)"
-        addressLabel.text = firebox.address + "\n" + (firebox.borough ?? "")
+        addressLabel.text = firebox.fullAddress()
+
+        if let note = firebox.note {
+             addressLabel.text = firebox.fullAddress() + "\n\n" + note
+        }
 
         firebox.toCoordinates { [weak self] (coordinates) in
             if let coordinates = coordinates {

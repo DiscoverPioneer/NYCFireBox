@@ -19,7 +19,7 @@ class DataProvider {
         let contents = try? String(contentsOfFile: filePath, encoding: .utf8)
         let rows = contents?.components(separatedBy: "\n")
         for row in rows ?? [] {
-            let firebox = FireBox(string: row)
+            let firebox = FireBox(string: row.replacingOccurrences(of: "\r", with: ""))
             fireBoxes.append(firebox)
         }
         callback(fireBoxes)

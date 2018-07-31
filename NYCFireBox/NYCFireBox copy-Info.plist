@@ -50,7 +50,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>BostonLaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>BostonMain</string>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

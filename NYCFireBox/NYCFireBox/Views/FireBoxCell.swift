@@ -10,8 +10,9 @@ class FireBoxCell: UITableViewCell {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var locationUnavailableLabel: UILabel!
     
+    
     func populate(withBox box: FireBox) {
-        addressLabel.text = box.address + "\n" + (box.borough ?? "")
+        addressLabel.text = box.numberAndAddress()
         mapView.layer.borderColor = UIColor.gray.cgColor
         mapView.delegate = self
         locationUnavailableLabel.isHidden = true

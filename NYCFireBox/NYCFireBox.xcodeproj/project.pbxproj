@@ -26,6 +26,7 @@
 		B9650DEF210F705100966D39 /* SearchQueryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9650DED210F705100966D39 /* SearchQueryFormatter.swift */; };
 		B9650DF12110721F00966D39 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9650DF02110721F00966D39 /* StringExt.swift */; };
 		B9650DF22110721F00966D39 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9650DF02110721F00966D39 /* StringExt.swift */; };
+		B9650DF621108E4500966D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E62084B902005C4BC8 /* Main.storyboard */; };
 		B98ED15A210B3C3000091E31 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B98ED15B210B3C3000091E31 /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
 		B98ED15C210B3C3000091E31 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
@@ -44,7 +45,6 @@
 		B98ED16B210B3C3000091E31 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D38209376F400CC46E4 /* Fabric.framework */; };
 		B98ED16C210B3C3000091E31 /* Pods_NYCFireBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8F97BEBA4607436E4173A5 /* Pods_NYCFireBox.framework */; };
 		B98ED171210B3C3000091E31 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
-		B98ED181210B3DDD00091E31 /* BostonMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98ED180210B3DDD00091E31 /* BostonMain.storyboard */; };
 		B98ED184210B3DF500091E31 /* BostonLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */; };
 		B98ED186210B3EA700091E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
 		B98ED187210B3EC200091E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3E92084B902005C4BC8 /* Assets.xcassets */; };
@@ -90,7 +90,6 @@
 		B9650DF02110721F00966D39 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		B98ED17D210B3C3000091E31 /* BostonFireBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonFireBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98ED17E210B3C3000091E31 /* NYCFireBox copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NYCFireBox copy-Info.plist"; path = "/Users/wf-gordanabadarovska/Desktop/Projects/NYCFireBox/NYCFireBox/NYCFireBox copy-Info.plist"; sourceTree = "<absolute>"; };
-		B98ED180210B3DDD00091E31 /* BostonMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BostonMain.storyboard; sourceTree = "<group>"; };
 		B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BostonLaunchScreen.storyboard; sourceTree = "<group>"; };
 		B98ED190210B4CC200091E31 /* BostonFireBoxes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BostonFireBoxes.csv; path = ../../../../../../Downloads/BostonFireBoxes.csv; sourceTree = "<group>"; };
 		B98ED193210B4E6200091E31 /* Boston.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Boston.csv; sourceTree = "<group>"; };
@@ -198,7 +197,6 @@
 			children = (
 				B9E7C3E62084B902005C4BC8 /* Main.storyboard */,
 				B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */,
-				B98ED180210B3DDD00091E31 /* BostonMain.storyboard */,
 				B98ED182210B3DF100091E31 /* BostonLaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -380,7 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98ED181210B3DDD00091E31 /* BostonMain.storyboard in Resources */,
+				B9650DF621108E4500966D39 /* Main.storyboard in Resources */,
 				B9650DE5210F428D00966D39 /* BostonFireBoxes.csv in Resources */,
 				B98ED171210B3C3000091E31 /* Map.xib in Resources */,
 				B98ED186210B3EA700091E31 /* Assets.xcassets in Resources */,

@@ -38,4 +38,6 @@ class FireBox: Location {
                    longitude: longitude,
                    latitude: latitude)
     }
+    
+    
 }

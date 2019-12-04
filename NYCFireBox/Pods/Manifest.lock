@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (4.8.2)
   - GoogleAnalytics (3.17.0)
   - OneSignal (2.8.4)
 
 DEPENDENCIES:
+  - Alamofire
   - GoogleAnalytics
   - OneSignal (< 3.0, >= 2.6.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - GoogleAnalytics
     - OneSignal
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   OneSignal: 7218a5a787f6685de81bdb487e696439e8c8f59b
 
-PODFILE CHECKSUM: 37785dfd225919c243c76fa30bb009b216c57898
+PODFILE CHECKSUM: 265bf9d80cd0670c9874c7eb1a79bc35a903a787
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

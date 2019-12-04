@@ -31,6 +31,11 @@ class FireBoxDetailsController: UIViewController {
                                                            style: .done,
                                                            target: self,
                                                            action: #selector(onBack(_:)))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hydrants",
+                                                           style: .done,
+                                                           target: self,
+                                                           action: #selector(fetchHydrants(_:)))
     }
 
     private func setupViews() {
@@ -51,6 +56,9 @@ class FireBoxDetailsController: UIViewController {
     }
 
     func color(forAnnotation annotation: MKAnnotation) -> UIColor {
+        if annotation.title == "*" {
+            return .yellow
+        }
         return annotation.title ?? "" == firebox?.boxNumber ?? "" ? .blue : .red
     }
 
@@ -107,6 +115,18 @@ class FireBoxDetailsController: UIViewController {
 
     @objc private func onBack(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func fetchHydrants(_ sender: UIBarButtonItem) {
+        if let lat = firebox?.latitude, let long = firebox?.longitude {
+            let location = CLLocation(latitude: lat, longitude: long)
+            APIController().fetchHydrantsNearLocation(location: location) { (hydrants) in
+                for hydrant in hydrants {
+                    self.mapView.mapView.addAnnotationToLocation(hydrant.location, title: "*", subtitle: nil, image: nil)
+                }
+            }
+
+        }
     }
 }
 

@@ -12,6 +12,8 @@ class SearchViewController: UIViewController {
     private var mapView: Map?
     private var noResultsLabel = UILabel()
     private var mapNavButton: UIBarButtonItem?
+    private var searchNavButton: UIBarButtonItem?
+
     private var kStartQuery = "0000"
 
     override func viewDidLoad() {
@@ -23,6 +25,7 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         GoogleAnalyticsController.shared.trackScreen(name: "SearchViewController")
+        mapView?.mapView.hideAllGadgets = true
     }
 
     override func resignFirstResponder() -> Bool {
@@ -101,12 +104,14 @@ class SearchViewController: UIViewController {
 
        
         let infoButton = UIBarButtonItem(image: UIImage(named:"Info"), style: .plain, target: self, action: #selector(onInfoButton(_:)))
+        searchNavButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchByAddressTapped))
+        
         mapNavButton = UIBarButtonItem(title: "Map",
                                         style: .plain,
                                         target: self,
                                         action: #selector(onMapButton(_:)))
         self.navigationItem.leftBarButtonItems = [infoButton]
-        self.navigationItem.rightBarButtonItem = mapNavButton
+        self.navigationItem.rightBarButtonItems = [searchNavButton!, mapNavButton!]
     }
 
     private func showNoResult(_ shouldShow: Bool) {
@@ -115,7 +120,7 @@ class SearchViewController: UIViewController {
         tableView.backgroundView = shouldShowMap ? mapView : noResultsLabel
         tableView.backgroundView?.isHidden = !shouldShow
 
-        navigationItem.rightBarButtonItem = shouldShowMap ? nil : mapNavButton
+        navigationItem.rightBarButtonItems = shouldShowMap ? [searchNavButton!] : [searchNavButton!, mapNavButton!]
     }
 
     private func clearSearch() {
@@ -330,5 +335,62 @@ extension SearchViewController: UISearchBarDelegate {
         if (searchBar.text ?? "").isEmpty {
             searchBar.text = kStartQuery
         }
+    }
+}
+
+extension SearchViewController {
+    @IBAction func searchByAddressTapped() {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Search for Box", message: "Enter Full Address", preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.placeholder = "Address"
+        }
+
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Search", style: .default, handler: { [weak alert] (_) in
+            if let text = alert?.textFields?[0].text {
+                self.searchAddress(address: text)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in }))
+
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func searchAddress(address: String) {
+        let geoCoder = CLGeocoder()
+
+        geoCoder.geocodeAddressString(address) { [weak self] (placemarks, error) in
+            if error == nil {
+                
+                if let longitude = placemarks?.first?.location?.coordinate.longitude,
+                    let latitude = placemarks?.first?.location?.coordinate.latitude {
+                    let myLocation = CLLocation(latitude: latitude, longitude: longitude)
+                    self?.locations.append((Location(name: "Searched Address", address: address, borough: nil, area: nil, longitude: longitude, latitude: latitude)))
+                    var boxes = self?.fireBoxes
+                    
+                    boxes?.sort { (left, right) -> Bool in
+                        myLocation.distance(from: left.location) < myLocation.distance(from: right.location)
+                    }
+                    
+                    boxes?.sort(by: { $0.distance(to: myLocation) < $1.distance(to: myLocation) })
+                    
+                    if let self = self {
+                        self.filteredBoxes = [boxes![0],boxes![1],boxes![2], boxes![3]]
+                        self.showNoResult(false)
+                        self.tableView.reloadData()
+                        self.navigationItem.rightBarButtonItems = [self.searchNavButton!, self.mapNavButton!]
+                    }
+
+                }
+                
+
+            } else {
+            }
+        }
+
     }
 }

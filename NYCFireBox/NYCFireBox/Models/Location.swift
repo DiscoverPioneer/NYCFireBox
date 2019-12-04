@@ -12,7 +12,15 @@ class Location {
     var area: String?
     var longitude: Double?
     var latitude: Double?
-
+    var location: CLLocation {
+        get {
+            guard let latitude = latitude, let longitude = longitude else {
+                print("NANA")
+                return CLLocation()
+            }
+            return CLLocation(latitude: latitude, longitude: longitude)
+        }
+    }
     init(name: String, address: String, borough: String?, area: String?, longitude: Double?, latitude: Double?) {
         self.name = name
         self.longitude = longitude
@@ -24,6 +32,15 @@ class Location {
 
     func fullAddress() -> String {
         return address + (borough ?? "") + (area ?? "")
+    }
+    
+    func distance(to location: CLLocation) -> CLLocationDistance {
+        guard let latitude = latitude, let longitude = longitude else {
+            print("NANA")
+            return Double.nan
+        }
+        let thisLocation = CLLocation(latitude: latitude, longitude: longitude)
+        return location.distance(from: thisLocation)
     }
 
     func geoCodeAddress(callback: @escaping LocationCallback) {

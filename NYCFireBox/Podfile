@@ -8,4 +8,6 @@ target 'NYCFireBox' do
   # Pods for NYCFireBox
 	pod 'GoogleAnalytics'
     pod 'OneSignal', '>= 2.6.2', '< 3.0'
+    pod 'Alamofire'
+
 end

@@ -10,7 +10,7 @@ private enum MapType: Int {
 
 class Map: UIView {
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: PioneerMapView!
     @IBOutlet weak var mapTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var userLocationButton: UIButton!
 
@@ -75,8 +75,8 @@ class Map: UIView {
     @IBAction func onMapTypeChanged(_ sender: UISegmentedControl) {
         let selectedMapType = MapType(rawValue: sender.selectedSegmentIndex) ?? .standard
         switch selectedMapType {
-        case .satellite: mapView.mapType = .satellite
-        case .hybrid: mapView.mapType = .hybrid
+        case .satellite: mapView.mapType = .satelliteFlyover
+        case .hybrid: mapView.mapType = .hybridFlyover
         case .standard: mapView.mapType = .standard
         }
     }
@@ -104,7 +104,15 @@ extension Map: MKMapViewDelegate {
         if let annotationName = annotation.title ?? "" {
             annotationView.markerTintColor = markerColors[annotationName] ?? .red
         }
+        
+        if annotation.title == "*" {
+            annotationView.markerTintColor = .yellow
+            annotationView.displayPriority = .required
+        }
 
+        if annotationView.markerTintColor == .blue {
+            annotationView.displayPriority = .required
+        }
         return annotationView
     }
 }

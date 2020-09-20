@@ -11,6 +11,7 @@ import CoreLocation
 import Fabric
 import Crashlytics
 import OneSignal
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

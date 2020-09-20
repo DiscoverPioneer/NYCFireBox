@@ -1,0 +1,41 @@
+{
+  "stickers" : [
+    {
+      "filename" : "LoadUpTheBox.sticker"
+    },
+    {
+      "filename" : "TransmitTheBox.sticker"
+    },
+    {
+      "filename" : "10-8.sticker"
+    },
+    {
+      "filename" : "1075.sticker"
+    },
+    {
+      "filename" : "JobTown.sticker"
+    },
+    {
+      "filename" : "GoingToWork.sticker"
+    },
+    {
+      "filename" : "Dancing in the street.sticker"
+    },
+    {
+      "filename" : "BoroOfFire.sticker"
+    },
+    {
+      "filename" : "YouKnowDaBox.sticker"
+    },
+    {
+      "filename" : "GoWithUrgent.sticker"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "grid-size" : "small"
+  }
+}

@@ -35,12 +35,38 @@
 		E3079D3A209376F500CC46E4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D38209376F400CC46E4 /* Fabric.framework */; };
 		E3079D3B209376F500CC46E4 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D39209376F400CC46E4 /* Crashlytics.framework */; };
 		E3079D412093797700CC46E4 /* GoogleAnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3079D402093797700CC46E4 /* GoogleAnalyticsController.swift */; };
+		E317B06B2398267100651ADA /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E317B06A2398267100651ADA /* Stickers.xcassets */; };
+		E317B06F2398267100651ADA /* NYC Fire Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E317B0682398266E00651ADA /* NYC Fire Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E3603D642285FF060083A902 /* PioneerMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3603D632285FF060083A902 /* PioneerMapView.swift */; };
 		E3603D662285FF2D0083A902 /* ImageAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3603D652285FF2D0083A902 /* ImageAnnotation.swift */; };
 		E3603D69228605480083A902 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3603D67228605470083A902 /* APIController.swift */; };
 		E3603D6A228605480083A902 /* APIController+OpenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3603D68228605470083A902 /* APIController+OpenData.swift */; };
 		E3C261E92095023A00F4B1B9 /* FileUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C261E82095023A00F4B1B9 /* FileUpdater.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E317B06D2398267100651ADA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9E7C3D72084B902005C4BC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E317B0672398266E00651ADA;
+			remoteInfo = "NYC Fire Stickers";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E317B0702398267100651ADA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E317B06F2398267100651ADA /* NYC Fire Stickers.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E8F97BEBA4607436E4173A5 /* Pods_NYCFireBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +103,9 @@
 		E3079D39209376F400CC46E4 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		E3079D3C2093783B00CC46E4 /* NYCFireBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3079D402093797700CC46E4 /* GoogleAnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsController.swift; sourceTree = "<group>"; };
+		E317B0682398266E00651ADA /* NYC Fire Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NYC Fire Stickers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E317B06A2398267100651ADA /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		E317B06C2398267100651ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3603D632285FF060083A902 /* PioneerMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PioneerMapView.swift; sourceTree = "<group>"; };
 		E3603D652285FF2D0083A902 /* ImageAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnnotation.swift; sourceTree = "<group>"; };
 		E3603D67228605470083A902 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
@@ -86,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4B439469053E38B3EFF4BF8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9E7C3DC2084B902005C4BC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E7C3E12084B902005C4BC8 /* NYCFireBox */,
+				E317B0692398266E00651ADA /* NYC Fire Stickers */,
 				B9E7C3E02084B902005C4BC8 /* Products */,
 				B9533444208F6A3B001BCCD5 /* Frameworks */,
 				D93467484F070381724F970A /* Pods */,
@@ -153,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E7C3DF2084B902005C4BC8 /* NYCFireBox.app */,
+				E317B0682398266E00651ADA /* NYC Fire Stickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +255,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E317B0692398266E00651ADA /* NYC Fire Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				E317B06A2398267100651ADA /* Stickers.xcassets */,
+				E317B06C2398267100651ADA /* Info.plist */,
+			);
+			path = "NYC Fire Stickers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,15 +277,33 @@
 				B9E7C3DD2084B902005C4BC8 /* Resources */,
 				E3079D37209376D800CC46E4 /* ShellScript */,
 				CF66919EB7108ADBC88AB35C /* [CP] Embed Pods Frameworks */,
+				E317B0702398267100651ADA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E317B06E2398267100651ADA /* PBXTargetDependency */,
 			);
 			name = NYCFireBox;
 			productName = NYCFireBox;
 			productReference = B9E7C3DF2084B902005C4BC8 /* NYCFireBox.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E317B0672398266E00651ADA /* NYC Fire Stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E317B0732398267100651ADA /* Build configuration list for PBXNativeTarget "NYC Fire Stickers" */;
+			buildPhases = (
+				E317B0662398266E00651ADA /* Resources */,
+				4B439469053E38B3EFF4BF8B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NYC Fire Stickers";
+			productName = "NYC Fire Stickers";
+			productReference = E317B0682398266E00651ADA /* NYC Fire Stickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -263,6 +328,10 @@
 							};
 						};
 					};
+					E317B0672398266E00651ADA = {
+						CreatedOnToolsVersion = 11.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = B9E7C3DA2084B902005C4BC8 /* Build configuration list for PBXProject "NYCFireBox" */;
@@ -279,6 +348,7 @@
 			projectRoot = "";
 			targets = (
 				B9E7C3DE2084B902005C4BC8 /* NYCFireBox */,
+				E317B0672398266E00651ADA /* NYC Fire Stickers */,
 			);
 		};
 /* End PBXProject section */
@@ -302,6 +372,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E317B0662398266E00651ADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E317B06B2398267100651ADA /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -311,16 +389,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E3079D37209376D800CC46E4 /* ShellScript */ = {
@@ -384,6 +466,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E317B06E2398267100651ADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E317B0672398266E00651ADA /* NYC Fire Stickers */;
+			targetProxy = E317B06D2398267100651ADA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B9E7C3E62084B902005C4BC8 /* Main.storyboard */ = {
@@ -525,7 +615,7 @@
 				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 010304;
+				CURRENT_PROJECT_VERSION = 010306;
 				DEVELOPMENT_TEAM = 8XD358AHBH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,7 +624,7 @@
 				INFOPLIST_FILE = NYCFireBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pioneer.NYCFireBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -555,7 +645,7 @@
 				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 010304;
+				CURRENT_PROJECT_VERSION = 010306;
 				DEVELOPMENT_TEAM = 8XD358AHBH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -564,12 +654,51 @@
 				INFOPLIST_FILE = NYCFireBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pioneer.NYCFireBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireBox/Resources/NYCFireBox-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E317B0712398267100651ADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 010306;
+				DEVELOPMENT_TEAM = 8XD358AHBH;
+				INFOPLIST_FILE = "NYC Fire Stickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.3.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Pioneer.NYCFireBox.NYC-Fire-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E317B0722398267100651ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 010306;
+				DEVELOPMENT_TEAM = 8XD358AHBH;
+				INFOPLIST_FILE = "NYC Fire Stickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.3.3;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Pioneer.NYCFireBox.NYC-Fire-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -591,6 +720,15 @@
 			buildConfigurations = (
 				B9E7C3F22084B902005C4BC8 /* Debug */,
 				B9E7C3F32084B902005C4BC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E317B0732398267100651ADA /* Build configuration list for PBXNativeTarget "NYC Fire Stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E317B0712398267100651ADA /* Debug */,
+				E317B0722398267100651ADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

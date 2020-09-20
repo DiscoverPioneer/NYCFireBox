@@ -16,6 +16,7 @@
  */
 
 import Foundation
+import FacebookCore
 
 public class GoogleAnalyticsController {
     static let shared = GoogleAnalyticsController()
@@ -38,11 +39,14 @@ public class GoogleAnalyticsController {
         tracker.set(kGAIScreenName, value: name)
         guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
         tracker.send(builder.build() as [NSObject : AnyObject])
+        AppEvents.logEvent(AppEvents.Name.init(name))
+
     }
     
     func trackEvent(category: String, action: String, label: String, value: NSNumber) {
         guard let tracker = GAI.sharedInstance().defaultTracker else { return }
         guard let builder = GAIDictionaryBuilder.createEvent(withCategory: category, action: action, label: label, value: value) else {return}
         tracker.send(builder.build() as [NSObject : AnyObject])
+        AppEvents.logEvent(AppEvents.Name.init(category), parameters: [label:value])
     }
 }

@@ -59,6 +59,11 @@ class SearchViewController: UIViewController {
     }
 
     private func setupMapView() {
+        if #available(iOS 13.0, *) {
+            searchController.searchBar.searchTextField.backgroundColor = .white
+        } else {
+            // Fallback on earlier versions
+        }
         mapView = Map(frame: CGRect(origin: CGPoint(x: 0,y :0),
                                        size: CGSize(width: view.bounds.size.width,
                                                     height: view.bounds.size.height)))
@@ -101,8 +106,25 @@ class SearchViewController: UIViewController {
         searchController.searchBar.keyboardType = .numberPad
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
-
+        UINavigationBar.appearance().isTranslucent = false
+        
        
+        
+        //ios15
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
+            navigationController?.navigationBar.standardAppearance = appearance;
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+        } else {
+            // Fallback on earlier versions
+            navigationController?.navigationBar.barTintColor = .white
+            navigationController?.navigationBar.tintColor = .red
+        }
+        
+        
+        
         let infoButton = UIBarButtonItem(image: UIImage(named:"Info"), style: .plain, target: self, action: #selector(onInfoButton(_:)))
         searchNavButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchByAddressTapped))
         

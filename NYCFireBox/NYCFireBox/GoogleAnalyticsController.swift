@@ -5,48 +5,20 @@
 //  Copyright © 2018 Pioneer Mobile Applications. All rights reserved.
 //
 
-/*SETUP
- pod init
- pod 'GoogleAnalytics'
- pod install
- Add bridging header
- #import <GoogleAnalytics/GAI.h>
- #import <GoogleAnalytics/GAIDictionaryBuilder.h>
- #import <GoogleAnalytics/GAIFields.h>
- */
-
 import Foundation
-import FacebookCore
 
 public class GoogleAnalyticsController {
     static let shared = GoogleAnalyticsController()
     
     func registerApp(_ trackingID: String) {
-        guard let gai = GAI.sharedInstance() else {
-//            assert(false, "Google Analytics not configured correctly")
-            return
-        }
-        gai.tracker(withTrackingId: trackingID)
-        // Optional: automatically report uncaught exceptions.
-        gai.trackUncaughtExceptions = true
-        // Optional: set Logger to VERBOSE for debug information.
-        // Remove before app release.
-        gai.logger.logLevel = .verbose;
+        // Classic Google Analytics for iOS was removed with the CocoaPods migration.
     }
     
     func trackScreen(name: String) {
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        tracker.set(kGAIScreenName, value: name)
-        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-        tracker.send(builder.build() as [NSObject : AnyObject])
-        AppEvents.logEvent(AppEvents.Name.init(name))
-
+        print("Screen: \(name)")
     }
     
     func trackEvent(category: String, action: String, label: String, value: NSNumber) {
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        guard let builder = GAIDictionaryBuilder.createEvent(withCategory: category, action: action, label: label, value: value) else {return}
-        tracker.send(builder.build() as [NSObject : AnyObject])
-        AppEvents.logEvent(AppEvents.Name.init(category), parameters: [label:value])
+        print("Event: \(category), action: \(action), label: \(label), value: \(value)")
     }
 }

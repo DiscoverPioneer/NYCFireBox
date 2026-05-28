@@ -76,6 +76,18 @@ class DataProvider {
         return emsStations
     }
 
+    class func getBundledLocations() -> [Location] {
+        var locations: [Location] = []
+        locations.append(contentsOf: getLocalEMSStations())
+
+        let boroughs: [NYCBoroughs] = [.statenIsland, .queens, .manhattan, .brooklyn, .bronx]
+        for borough in boroughs {
+            locations.append(contentsOf: getLocalFirehouses(forBorough: borough))
+        }
+
+        return locations
+    }
+
     private class func loadData(fromURL url: URL, to localUrl: URL, completionHandler: @escaping () -> ()) {
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
@@ -147,7 +159,7 @@ extension DataProvider {
         
         //Check if file exists in documents, else pull from bundle
         if let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let fileLocation = documentsUrl.appendingPathComponent("/files/\(filename).plist", isDirectory: false)
+            let fileLocation = documentsUrl.appendingPathComponent("files/\(filename).plist", isDirectory: false)
             if FileManager.default.fileExists(atPath: fileLocation.path) {
                 url = fileLocation
                 print("Using File URL, not bundle")
@@ -158,7 +170,7 @@ extension DataProvider {
             url = Bundle.main.url(forResource: filename, withExtension: "plist")
         }
         if let URL = url {
-            if let plist = NSArray(contentsOf: URL) as? [[String:String]] {
+            if let plist = NSArray(contentsOf: URL) as? [[String: Any]] {
                 for dict in plist {
                     firehouses.append(Firehouse(dictionary: dict))
                 }
@@ -177,7 +189,7 @@ extension DataProvider {
         
         //Check if file exists in documents, else pull from bundle
         if let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let fileLocation = documentsUrl.appendingPathComponent("/files/\(filename).plist", isDirectory: false)
+            let fileLocation = documentsUrl.appendingPathComponent("files/\(filename).plist", isDirectory: false)
             if FileManager.default.fileExists(atPath: fileLocation.path) {
                 url = fileLocation
                 print("Using File URL, not bundle")
@@ -189,7 +201,7 @@ extension DataProvider {
             url = Bundle.main.url(forResource: filename, withExtension: "plist")
         }
         if let URL = url {
-            if let plist = NSArray(contentsOf: URL) as? [[String:String]] {
+            if let plist = NSArray(contentsOf: URL) as? [[String: Any]] {
                 for dict in plist {
                     firehouses.append(EMSStation(dictionary: dict))
                 }

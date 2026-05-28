@@ -82,6 +82,7 @@ class Location {
     func nearbyLocations(fromLocations locations: [Location], maxLocations: Int, callback: @escaping NearbyLocationsCallback ) {
         var distances: [LocationDistance] = []
         let taskGroup = DispatchGroup()
+        let distancesQueue = DispatchQueue(label: "com.pioneer.nycfirebox.nearbyLocations")
 
         toLocation({ (fireboxLocation) in
             guard let fireboxLocation = fireboxLocation else {
@@ -92,10 +93,12 @@ class Location {
             for destinationLocation in locations {
                 taskGroup.enter()
                 destinationLocation.toLocation({ (location) in
-                    taskGroup.leave()
+                    defer { taskGroup.leave() }
                     guard let location = location else { return }
                     let distance = fireboxLocation.distance(from: location)
-                    distances.append(LocationDistance(distance: distance, origin: self, destination: destinationLocation))
+                    distancesQueue.sync {
+                        distances.append(LocationDistance(distance: distance, origin: self, destination: destinationLocation))
+                    }
                 })
             }
 

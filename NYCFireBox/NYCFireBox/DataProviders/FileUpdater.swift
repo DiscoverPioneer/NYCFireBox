@@ -76,11 +76,12 @@ class Downloader {
                 
                 do {
                     if let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                        let downloadLocation = documentsUrl.appendingPathComponent("/files/\(filename).plist", isDirectory: false)
+                        let filesDirectory = documentsUrl.appendingPathComponent("files", isDirectory: true)
+                        let downloadLocation = filesDirectory.appendingPathComponent("\(filename).plist", isDirectory: false)
                         if FileManager.default.fileExists(atPath: downloadLocation.path) {
                             try FileManager.default.removeItem(at: downloadLocation)
                         } else {
-                            try FileManager.default.createDirectory(at: documentsUrl.appendingPathComponent("/files", isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+                            try FileManager.default.createDirectory(at: filesDirectory, withIntermediateDirectories: true, attributes: nil)
                         }
                         try FileManager.default.copyItem(at: tempLocalUrl, to: downloadLocation)
                         completion(true)

@@ -37,11 +37,19 @@ class Map: UIView {
     private func setupViews() {
         mapView.delegate = self
         mapView.showsUserLocation = true
-        mapTypeSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16),
-                                                        NSAttributedStringKey.foregroundColor: UIColor.lightGray],
+        if #available(iOS 13.0, *) {
+            contentView.backgroundColor = .systemBackground
+            mapTypeSegmentedControl.selectedSegmentTintColor = .systemRed
+            userLocationButton.tintColor = .systemRed
+        } else {
+            contentView.backgroundColor = .white
+            userLocationButton.tintColor = .red
+        }
+        mapTypeSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+                                                        NSAttributedString.Key.foregroundColor: UIColor.lightGray],
                                                        for: .normal)
-        mapTypeSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18),
-                                                        NSAttributedStringKey.foregroundColor: UIColor.gray],
+        mapTypeSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+                                                        NSAttributedString.Key.foregroundColor: UIColor.gray],
                                                        for: .selected)
         mapTypeSegmentedControl.selectedSegmentIndex = MapType.standard.rawValue
 
@@ -49,13 +57,15 @@ class Map: UIView {
 
     func addBorder(color: UIColor) {
         layer.borderColor = color.cgColor
-        layer.borderWidth = 2
-        layer.cornerRadius = 5
+        layer.borderWidth = 1
+        layer.cornerRadius = 8
+        layer.masksToBounds = true
     }
 
     func setupMapRegion(startCoordinates: CLLocationCoordinate2D, radius: Double) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(startCoordinates,
-                                                                  radius * 1.5, radius * 1.5)
+                                                                  radius * 1.5,
+                                                                  radius * 1.5)
         mapView.setRegion(coordinateRegion, animated: true)
         mapView.showsUserLocation = true
     }

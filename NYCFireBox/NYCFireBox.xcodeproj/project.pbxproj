@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8EC6A84BC2C41F55A730E7FE /* Pods_NYCFireBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8F97BEBA4607436E4173A5 /* Pods_NYCFireBox.framework */; };
 		B92B145820889ECF0060145F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145720889ECF0060145F /* DataProvider.swift */; };
 		B92B145C2089F6BA0060145F /* FireBoxDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */; };
 		B9533443208F5AAB001BCCD5 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9533442208F5AAB001BCCD5 /* Map.xib */; };
@@ -32,8 +31,6 @@
 		B9E7C3ED2084B902005C4BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E7C3EB2084B902005C4BC8 /* LaunchScreen.storyboard */; };
 		B9E7C3FA2084BBEB005C4BC8 /* FireBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */; };
 		B9F1A888208A3F1A002DCD1D /* LocationDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */; };
-		E3079D3A209376F500CC46E4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D38209376F400CC46E4 /* Fabric.framework */; };
-		E3079D3B209376F500CC46E4 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3079D39209376F400CC46E4 /* Crashlytics.framework */; };
 		E3079D412093797700CC46E4 /* GoogleAnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3079D402093797700CC46E4 /* GoogleAnalyticsController.swift */; };
 		E317B06B2398267100651ADA /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E317B06A2398267100651ADA /* Stickers.xcassets */; };
 		E317B06F2398267100651ADA /* NYC Fire Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E317B0682398266E00651ADA /* NYC Fire Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -69,9 +66,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E8F97BEBA4607436E4173A5 /* Pods_NYCFireBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17211DA8B0350251AEA11C45 /* Pods-NYCFireBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox.release.xcconfig"; sourceTree = "<group>"; };
-		998D2EAC3D4FCAA6EADEAD69 /* Pods-NYCFireBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox.debug.xcconfig"; sourceTree = "<group>"; };
 		B92B145720889ECF0060145F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		B92B145B2089F6BA0060145F /* FireBoxDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBoxDetailsController.swift; sourceTree = "<group>"; };
 		B9533442208F5AAB001BCCD5 /* Map.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Map.xib; sourceTree = "<group>"; };
@@ -99,8 +93,6 @@
 		B9E7C3EE2084B902005C4BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9E7C3F92084BBEB005C4BC8 /* FireBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBox.swift; sourceTree = "<group>"; };
 		B9F1A887208A3F1A002DCD1D /* LocationDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDistance.swift; sourceTree = "<group>"; };
-		E3079D38209376F400CC46E4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
-		E3079D39209376F400CC46E4 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		E3079D3C2093783B00CC46E4 /* NYCFireBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3079D402093797700CC46E4 /* GoogleAnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsController.swift; sourceTree = "<group>"; };
 		E317B0682398266E00651ADA /* NYC Fire Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NYC Fire Stickers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,9 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3079D3B209376F500CC46E4 /* Crashlytics.framework in Frameworks */,
-				E3079D3A209376F500CC46E4 /* Fabric.framework in Frameworks */,
-				8EC6A84BC2C41F55A730E7FE /* Pods_NYCFireBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				B9533445208F6A3C001BCCD5 /* CoreLocation.framework */,
-				0E8F97BEBA4607436E4173A5 /* Pods_NYCFireBox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,7 +170,6 @@
 				E317B0692398266E00651ADA /* NYC Fire Stickers */,
 				B9E7C3E02084B902005C4BC8 /* Products */,
 				B9533444208F6A3B001BCCD5 /* Frameworks */,
-				D93467484F070381724F970A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,8 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				E3D3A79A20C9AE880025EA05 /* NYCFireBox.entitlements */,
-				E3079D39209376F400CC46E4 /* Crashlytics.framework */,
-				E3079D38209376F400CC46E4 /* Fabric.framework */,
 				B92B145620889EAD0060145F /* DataProviders */,
 				B96192802084D7C3001F54BD /* Views */,
 				B961927D2084CC97001F54BD /* Extensions */,
@@ -246,15 +231,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D93467484F070381724F970A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				998D2EAC3D4FCAA6EADEAD69 /* Pods-NYCFireBox.debug.xcconfig */,
-				17211DA8B0350251AEA11C45 /* Pods-NYCFireBox.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		E317B0692398266E00651ADA /* NYC Fire Stickers */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,12 +247,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9E7C3F12084B902005C4BC8 /* Build configuration list for PBXNativeTarget "NYCFireBox" */;
 			buildPhases = (
-				FAB5C9F851B86CA642E40A33 /* [CP] Check Pods Manifest.lock */,
 				B9E7C3DB2084B902005C4BC8 /* Sources */,
 				B9E7C3DC2084B902005C4BC8 /* Frameworks */,
 				B9E7C3DD2084B902005C4BC8 /* Resources */,
-				E3079D37209376D800CC46E4 /* ShellScript */,
-				CF66919EB7108ADBC88AB35C /* [CP] Embed Pods Frameworks */,
 				E317B0702398267100651ADA /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -381,62 +354,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		CF66919EB7108ADBC88AB35C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireBox/Pods-NYCFireBox-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3079D37209376D800CC46E4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 2af9bd1ca0b9052b7e50085eec2ac32b7a87ba9b 608c2a652546802f51b6965129a9e62cd5bbba75a54216d5be57d81430fba1d8";
-		};
-		FAB5C9F851B86CA642E40A33 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NYCFireBox-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9E7C3DB2084B902005C4BC8 /* Sources */ = {
@@ -610,14 +527,13 @@
 		};
 		B9E7C3F22084B902005C4BC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 998D2EAC3D4FCAA6EADEAD69 /* Pods-NYCFireBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 010307;
+				CURRENT_PROJECT_VERSION = 020000;
 				DEVELOPMENT_TEAM = 8XD358AHBH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -625,9 +541,9 @@
 				);
 				INFOPLIST_FILE = NYCFireBox/Info.plist;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.4;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pioneer.NYCFireBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -641,14 +557,13 @@
 		};
 		B9E7C3F32084B902005C4BC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17211DA8B0350251AEA11C45 /* Pods-NYCFireBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = NYCFireBox/NYCFireBox.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 010307;
+				CURRENT_PROJECT_VERSION = 020000;
 				DEVELOPMENT_TEAM = 8XD358AHBH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,9 +571,9 @@
 				);
 				INFOPLIST_FILE = NYCFireBox/Info.plist;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.4;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pioneer.NYCFireBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

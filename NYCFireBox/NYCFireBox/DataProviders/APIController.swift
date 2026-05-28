@@ -7,7 +7,13 @@
 //
 
 import Foundation
-import Alamofire
+
+enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
+}
 
 struct APIConstants {
     
@@ -62,25 +68,38 @@ public class APIController {
             }
         }
         print("Preparing request to: \(url)\n With parameterse: \(newParams)")
-        Alamofire.request(url, method: type, parameters: newParams, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
-            guard let statusCode = response.response?.statusCode else {
-                completion(false, APIConstants.ErrorType.unknown.error(), nil)
-                return
-            }
-            var data = (response.result.value as? [String:Any])
-            print("Made request: Status Code = \(statusCode). Data=\(String(describing: data))")
-            
-            if data == nil {
-                data = ["data":response.result.value as? [[String:Any]] ?? [:]]
-            }
-            if let data = data, let error = data[APIConstants.Keys.error] as? String {
-                //  print("Made Request:\nURL:\(url)\nParameteres:\(parameters)\nError: \(error)")
-                completion(false, APIConstants.ErrorType.custom.error(message: error), data)
-                return
-            }
-            // print("Made Request:\nURL:\(url)\nParameteres:\(parameters)\nData: \(data)")
-            completion(response.result.isSuccess || statusCode == 200, nil, data)
+
+        guard let request = makeURLRequest(type: type, url: url, parameters: newParams, headers: headers) else {
+            completion(false, APIConstants.ErrorType.unknown.error(), nil)
+            return
         }
+
+        URLSession.shared.dataTask(with: request) { data, response, _ in
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, let data = data else {
+                DispatchQueue.main.async {
+                    completion(false, APIConstants.ErrorType.unknown.error(), nil)
+                }
+                return
+            }
+
+            let json = try? JSONSerialization.jsonObject(with: data)
+            var responseData = json as? [String:Any]
+            print("Made request: Status Code = \(statusCode). Data=\(String(describing: responseData))")
+
+            if responseData == nil {
+                responseData = ["data": json as? [[String:Any]] ?? []]
+            }
+            if let responseData = responseData, let error = responseData[APIConstants.Keys.error] as? String {
+                DispatchQueue.main.async {
+                    completion(false, APIConstants.ErrorType.custom.error(message: error), responseData)
+                }
+                return
+            }
+
+            DispatchQueue.main.async {
+                completion(200..<300 ~= statusCode, nil, responseData)
+            }
+        }.resume()
     }
     
     func makeRequest(type: HTTPMethod, url: String, parameters: [String:Any?]?, completion: @escaping(_ success: Bool, _ error: APIConstants.Error?, _ data: [String:Any]?) -> Void) {
@@ -97,5 +116,27 @@ public class APIController {
     
     func makeNonTokenRequest(type: HTTPMethod, url: String, parameters: [String:Any?]?, completion: @escaping(_ success: Bool, _ error: APIConstants.Error?, _ data: [String:Any]?) -> Void) {
         request(type: type, url: url, parameters: parameters, completion: completion)
+    }
+
+    private func makeURLRequest(type: HTTPMethod, url: String, parameters: [String:Any], headers: [String:String]?) -> URLRequest? {
+        guard var components = URLComponents(string: url) else { return nil }
+
+        if type == .get, !parameters.isEmpty {
+            components.queryItems = parameters.map { key, value in
+                URLQueryItem(name: key, value: String(describing: value))
+            }
+        }
+
+        guard let requestURL = components.url else { return nil }
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = type.rawValue
+        headers?.forEach { request.setValue($0.value, forHTTPHeaderField: $0.key) }
+
+        if type != .get, !parameters.isEmpty {
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = try? JSONSerialization.data(withJSONObject: parameters)
+        }
+
+        return request
     }
 }

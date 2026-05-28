@@ -8,10 +8,9 @@
 
 import UIKit
 import CoreLocation
-import Fabric
-import Crashlytics
-import OneSignal
-import FacebookCore
+#if canImport(OneSignalFramework)
+import OneSignalFramework
+#endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,22 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var locationManager = CLLocationManager()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         locationManager.requestWhenInUseAuthorization()
-        Fabric.with([Crashlytics.self])
-        GoogleAnalyticsController.shared.registerApp("UA-118289028-1")
-        
-        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
-        OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: "ab30806b-ca26-4abb-908c-3a9b93c7ef2a",
-                                        handleNotificationAction: nil,
-                                        settings: onesignalInitSettings)
-        
-        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
 
-        OneSignal.promptForPushNotifications(userResponse: { accepted in
+#if canImport(OneSignalFramework)
+        OneSignal.initialize("ab30806b-ca26-4abb-908c-3a9b93c7ef2a", withLaunchOptions: launchOptions)
+        OneSignal.Notifications.requestPermission({ accepted in
             print("User accepted notifications: \(accepted)")
-        })
+        }, fallbackToSettings: false)
+#endif
         
         return true
     }
@@ -61,4 +53,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
-
